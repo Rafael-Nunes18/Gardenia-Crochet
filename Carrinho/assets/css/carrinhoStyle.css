@@ -17,10 +17,8 @@ body{
 { 
   display: grid;
   grid-template-columns: 1fr 2fr;
-  height: 100vh;
- /*  display: flex;
-  justify-content: space-between;
-  */
+  gap: 10vh;
+
 
 }
 
@@ -28,7 +26,11 @@ body{
 {
   display: flex;
   flex-direction: column;
+  align-self: start;
+  gap: 3vh;
+  margin: 1vh 1vh 1vh 1vh;
   
+
 }
 
 .forma-pagamento
@@ -37,17 +39,49 @@ body{
     font-size: 10vh;
     font-weight: 100;
     color: var(--marrom);
+    width: 50vh; 
+    border-bottom: 0.4vh solid var(--marrom);
 }
 
-span
+.texto-esquerda
 {
-    font-family: "Lobster", sans-serif;
-    font-size: 6vh;
-    font-weight: 100;
-    color: var(--marrom);
+font-family: "Lobster", sans-serif;
+font-size: 9vh;
+font-weight: 100;
+color: var(--marrom);
+
+}
+
+.linha
+{
+  border-bottom: 0.4vh solid var(--marrom);
 }
 
 .svg{
-    height: 4vh;
+    height: 9vh;
+}
 
+.pix
+{
+  height: 11vh;
+  
+}
+
+.quadros
+{
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;  
+    
+}
+
+.aba {
+  background-color: var(--cinza-claro-azulado);
+  border-radius: 2vh;
+  padding: 1vh 2vh;
+  
+ display: flex;
+ justify-content: space-between;
+ 
+  
 }
