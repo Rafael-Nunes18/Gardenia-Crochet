@@ -1,87 +1,99 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
-.tela-esquerda
-{
- padding: 1vh;
- margin: 5vh;
+.tela-esquerda {
+  padding: 1vh;
+  margin: 5vh;
 
 }
 
-body{
-    background-color: var(--bege-claro);
-    color: var(--cinza-azulado);
+body {
+  background-color: var(--bege-claro);
+  color: var(--cinza-azulado);
 }
 
-.tela
-{ 
+.tela {
   display: grid;
   grid-template-columns: 1fr 2fr;
   gap: 10vh;
-
-
 }
 
-.tela-esquerda
-{
+.tela-esquerda {
   display: flex;
   flex-direction: column;
   align-self: start;
   gap: 3vh;
   margin: 1vh 1vh 1vh 1vh;
-  
-
 }
 
-.forma-pagamento
-{
-    font-family: "Lobster", sans-serif;
-    font-size: 10vh;
-    font-weight: 100;
-    color: var(--marrom);
-    width: 50vh; 
-    border-bottom: 0.4vh solid var(--marrom);
+.forma-pagamento {
+  font-family: "Lobster", sans-serif;
+  font-size: 10vh;
+  font-weight: 100;
+  color: var(--marrom);
+  width: 50vh;
+  border-bottom: 1.4vh solid var(--marrom);
+  white-space: nowrap;
 }
 
-.texto-esquerda
-{
-font-family: "Lobster", sans-serif;
-font-size: 9vh;
-font-weight: 100;
-color: var(--marrom);
-
+.texto-esquerda {
+  font-family: "Lobster", sans-serif;
+  font-size: 9vh;
+  font-weight: 100;
+  color: var(--marrom);
 }
 
-.linha
-{
-  border-bottom: 0.4vh solid var(--marrom);
+.linha {
+  border-bottom: 0.8vh solid var(--marrom);
 }
 
-.svg{
-    height: 9vh;
+.svg {
+  height: 9vh;
 }
 
-.pix
-{
+.pix {
   height: 11vh;
-  
 }
 
-.quadros
-{
-    display: flex;
-    flex-direction: column;
-    gap: 2vh;  
-    
+.quadros {
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
 }
 
 .aba {
   background-color: var(--cinza-claro-azulado);
   border-radius: 2vh;
   padding: 1vh 2vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.tela-direita {
+  display: flex;
+  flex-direction: column;
+  margin: 10vh 20vh 2vh 25vh;
+}
+
+.banner-carrinho {
+  background-color: var(--cinza-claro-azulado);
+  border-radius: .5vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: normal;
   
- display: flex;
- justify-content: space-between;
- 
+  font-family: "Lobster", sans-serif;
   
+  font-size: 9vh;
+  font-weight: 100;
+  color: var(--marrom);
+}
+
+.produtos
+{
+  font-family: "Lobster", sans-serif;
+  display: flex;
+  flex-direction: column; 
+  color: #ffff;
 }
