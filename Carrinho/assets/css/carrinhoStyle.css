@@ -22,17 +22,25 @@ body {
   flex-direction: column;
   align-self: start;
   gap: 3vh;
-  margin: 1vh 1vh 1vh 1vh;
+  margin: 0.09vh 1vh 0vh 1vh;
+  
 }
 
 .forma-pagamento {
   font-family: "Lobster", sans-serif;
+
   font-size: 10vh;
   font-weight: 100;
   color: var(--marrom);
   width: 50vh;
-  border-bottom: 1.4vh solid var(--marrom);
   white-space: nowrap;
+}
+
+.line2
+{
+  width: 175%;
+  border-bottom: 0.5vw solid var(--marrom);
+  border-radius: 0.2vw;
 }
 
 .texto-esquerda {
@@ -43,7 +51,8 @@ body {
 }
 
 .linha {
-  border-bottom: 0.8vh solid var(--marrom);
+  border-bottom: 0.5vw solid var(--marrom);
+  border-radius: 0.2vw;
 }
 
 .svg {
@@ -73,10 +82,79 @@ body {
 .tela-direita {
   display: flex;
   flex-direction: column;
-  margin: 10vh 20vh 2vh 25vh;
+  column-width: 15vh;
+ margin: 12vh 2vw 2vh 23vw;
+          /*vh, vw, vh, vw*/
+  
 }
 
+
 .banner-carrinho {
+    background-color: var(--cinza-claro-azulado);
+    border-radius: 0.5vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: normal;
+    font-family: "Lobster", sans-serif;
+    font-size: 9vh;
+    font-weight: 100;
+    color: var(--marrom);
+}
+
+h3 {
+    font-size: 7vh;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+}
+
+.produtos {
+    list-style: none;
+    font-family: "Lobster", sans-serif;
+    display: flex;
+    flex-direction: column;
+    color: #ffffff;
+    gap: 2vh;
+    font-size: 5vh;
+    align-self: flex-end;
+}
+
+.texto-produtos {
+    margin-left: 50%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.imagem {
+    margin-top: 10vh;
+    height: 40vh;
+    width: 20vw;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.efetuar-pagamento {
+    display: flex;
+}
+
+.pagamentos {
+    height: 15vh;
+    width: 60vh;
+    background-color: var(--cinza-claro-azulado);
+    border-radius: 2.5vh;
+    padding: 1vh 2vh;
+    font-family: "Lobster", sans-serif;
+    font-size: 8vh;
+    font-weight: 300;
+    margin: 5vh 0 0 7vw;
+    color: #ffffff;
+}
+
+
+
+/* .banner-carrinho {
   background-color: var(--cinza-claro-azulado);
   border-radius: .5vh;
   display: grid;
@@ -90,10 +168,53 @@ body {
   color: var(--marrom);
 }
 
-.produtos
+h3
 {
-  font-family: "Lobster", sans-serif;
+  font-size: 7vh;
+  font-weight: 600;
   display: flex;
-  flex-direction: column; 
-  color: #ffff;
+ justify-content: space-between;
 }
+
+.produto {
+  display: flex;              
+  align-items: center;        
+  gap: 2vh;                  
+}
+
+.imagem {
+  height: 10vh;              
+  width: 10vh;               
+  background-color: #d3d3d3;
+  flex-shrink: 0;            
+}
+
+.texto-produtos {
+  margin: 0;                  
+  font-size: 4vh;           
+  display: flex;
+  justify-content: space-between; 
+  width: 100%;              
+  color: white;             
+}
+
+.efetuar-pagamento
+{
+display: flex;
+
+}
+
+.pagamentos
+{
+  height: 15vh;
+  width:  60vh;
+  background-color: var(--cinza-claro-azulado);
+  border-radius: 2.5vh;
+  padding: 1vh 2vh;
+  font-family: "Lobster", sans-serif;
+  font-size: 8vh;
+  font-weight: 300;
+  margin: 5vh 0vw 0vh 7vw;
+  color: var(#ffff);
+}
+*/
