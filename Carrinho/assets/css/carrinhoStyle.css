@@ -7,19 +7,26 @@
 body {
   background-color: var(--bege-claro);
   color: var(--cinza-azulado);
+  padding: 10vh;
+  margin: -2% 0% 0% -2%;
+  
+      /*  5vh 0 1vh 6vh; */
+      
 }
 
 .tela {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  gap: 10vh;
+  /* gap: 20vh; */
+  gap: 20%;
+
 }
 
 
 .tela-esquerda {
   padding: 1vh;
-  margin: 8% 0 10% 1%;
-      /*  5vh 0 1vh 6vh; */
+  margin: 0% 0 10% 1%;
+       /* 5vh 0 1vh 6vh; */
 }
 
 
@@ -28,7 +35,7 @@ body {
   flex-direction: column;
   align-self: start;
   gap: 3vh;
-  margin: 0.09vh 1vh 0vh 1vh;
+  /* margin: 0.09vh 1vh 0vh 1vh; */
 
 }
 
@@ -67,8 +74,13 @@ body {
   border-radius: 0.2vw;
 }
 
-.svg {
-  height: 9vh;
+.svg {  height: 9vh;
+  transition: transform 0.4s ease;
+}
+
+.svg:hover{
+  transform: red;
+  cursor: pointer;
   
 }
 
@@ -116,19 +128,17 @@ transform: rotate(90deg);
 
 .tela-direita
 {
-  padding: 1vh;
-  margin: 4% 0% 10% 35%;
+  display: flex;
+  flex-direction: column;
+  column-width: 5vh;
+  padding: 0.5vh;
+  margin: 0% 0% 10% 25%;
 
 }
 
 .tela-direitaa
 {
-  display: flex;
-  flex-direction: column;
-  column-width: 5vh;
-  margin: 0.09vh 1vh 0vh 1vh;
-
-  
+  /* margin: 0.09vh 1vh 0vh 1vh; */
   /*
   para substituir as duas linhas acima
   margin: 15% 0 0 30%;
@@ -145,6 +155,25 @@ transform: rotate(90deg);
   font-family: "Lobster", sans-serif;
   font-size: 1.5rem;
   color: var(--marrom);
+}
+
+.linha-carrinho
+{
+  /*
+  border-bottom: 0.5vw solid var(--marrom);
+  border-radius: 0.2vw;
+  */
+  margin-left: 4%;
+  border-radius: 0.9vw;
+  width: 75%;
+  /*60vh*/
+  height: 0.8vh;
+  background-color: var(--marrom); 
+}
+
+.titulo-texto
+{
+  padding: 1vh;
 }
 
 h3 {
@@ -172,6 +201,7 @@ h3 {
   justify-content: flex-start;
   align-items: flex-end;
   margin: 2vh 2vh 2vh 2vh;
+  gap: 2vh;
   
 
 }
@@ -183,39 +213,56 @@ h3 {
   height: 40%;
 
   background-color: #0000;
-  margin: 5% 0% 0% 9.5%;
+  margin: 5% 0% 0% 2.5%;
 }
 
 .texto-produto {
- 
   margin: 0;
   
-  font-size: 2.5rem;
-  font-weight: 700;
+  font-size: 2rem;
+  font-weight: 500;
+
   display: inline-flex;
   align-items:     center;
   justify-content: center;
 }
 
+.nome-produto, .quantidade, .preco {
+  font-family: "Lobster", sans-serif;
+}
+
+
+/* .pagamento
+{
+  display: flex;
+  justify-content: flex-start;
+} 
+
+ .soma
+{
+
+} */
 
 .efetuar-pagamento
 {
 display: flex;
+
 
 }
 
 .pagamentos
 {
   height: 15vh;
-  width:  60vh;
+  width:  45vw;
   background-color: var(--cinza-claro-azulado);
   border-radius: 2.5vh;
+  border-color: transparent;
   padding: 1vh 2vh;
   font-family: "Poppins", sans-serif;
-  font-size: 7vh;
+  font-size: 3vw;
   font-weight: 500;
   margin: 5vh 0vw 0vh 7vw;
-  color: var(#ffff);
+  color: #ffff;
 }
 
 .pagamentos:hover{
@@ -258,15 +305,15 @@ display: flex;
    display: flex;
    align-items: center;
 
-    font-size: 6vh;
+    font-size: 4vh;
     text-align: center;
-    white-space: nowrap;
-      }
+    justify-content: center;
+  }
   .line2
   {
     border-radius: 1.2vw;
     width: 60vh;
-    height: 0.9vh;
+    height: 0.5vh;
     background-color: var(--marrom); 
   } 
   
@@ -279,8 +326,9 @@ display: flex;
   } 
   .linha
   {
-    border-bottom: 0.3vw solid var(--marrom);
+    border-bottom: 0.8vw solid var(--marrom);
     border-radius: 1.0vw;
+    
   }
 
   .svg
@@ -324,14 +372,16 @@ display: flex;
   {
     padding: .5vh;
     margin: 2% 0% 100% 0%;
+
+    display: flex;
+    flex-direction: column;
+    column-width: 1.5vh;
+    /* margin: 0.001vh .5vh 0vh .5vh; */
   }
 
   .tela-direitaa
   {
-    display: flex;
-    flex-direction: column;
-    column-width: 1.5vh;
-    margin: 0.001vh .5vh 0vh .5vh;
+
     
   }
 
@@ -350,7 +400,7 @@ display: flex;
   {
     font-size: 2.5rem;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
   }
 
   .produtos-lista
@@ -379,23 +429,31 @@ display: flex;
  
   .texto-produto
   {
+    font-family: "Lobster" sans-serif;
     font-size: 2rem;
     font-weight: 700;
  /* margin: 5vh 0vw 0vh 7vw; */
     color: #ffffff;
   }
 
-
+.efetuar-pagamento
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
   .pagamentos
   {
+    
     height: 8vh;
     width: 60vh;
     
     border-radius: 1.75vh;
-    padding: .5vh .75vh;
+    /* padding: .5vh .75vh; */
     font-size: 3.5vh;
     font-weight: 500;
 /*  margin: 5vh 0vw 0vh 7vw; */
+margin-right: 5vh;
 
 
   }
