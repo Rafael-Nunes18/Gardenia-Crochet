@@ -20,10 +20,13 @@ CPF NVARCHAR(14) UNIQUE NOT NULL,
 ID_Endereço INT,FOREIGN KEY(ID_Endereço) REFERENCES Endereço(ID_Endereço)
 );
 
+
 CREATE TABLE StatusPedido(
 ID_Status INT PRIMARY KEY IDENTITY NOT NULL,
 Status_Entrega NVARCHAR(35) NOT NULL
 );
+
+
 
 CREATE TABLE Categoria(
 ID_Categoria INT PRIMARY KEY NOT NULL IDENTITY,
@@ -153,3 +156,100 @@ VALUES
 (5, 9, 4, 19.90),
 (5, 6, 1, 79.90);
 
+
+CREATE TABLE Log_Cliente(
+ID_LogCliente INT PRIMARY KEY IDENTITY,
+ID_Cliente INT, CONSTRAINT f_k_Idcliente FOREIGN KEY(ID_Cliente) REFERENCES Cliente(ID_Cliente),
+DataInsercao DATE
+);
+
+CREATE TRIGGER trg_Cliente1
+ON Cliente
+AFTER INSERT
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    INSERT INTO Log_Cliente (ID_Cliente, DataInsercao)
+    SELECT ID_Cliente, DATEADD(HOUR, -3, SYSUTCDATETIME())
+    FROM inserted;
+END;
+
+INSERT INTO Cliente(Nome,Telefone,Email,CPF,ID_Endereço) VALUES
+('Rafael Toledo Nunes','(11) 98541-1716', 'rafael.nunes@gmail.com.br','472.581.246-61',10);
+
+SELECT * FROM Log_Cliente;
+
+
+
+
+CREATE PROCEDURE CadastrarEndereco_Cliente
+    @CEP VARCHAR(9),
+    @Rua NVARCHAR(86),
+    @Complemento NVARCHAR(10),
+    @Estado NVARCHAR(5)
+AS 
+BEGIN
+    INSERT INTO Endereço (CEP, Rua, Complemento, Estado)
+    VALUES (@CEP, @Rua, @Complemento, @Estado);
+END;
+
+
+EXEC CadastrarEndereco_Cliente 
+'01311-200', 'Avenida Paulista', 'Apto 42B', 'SP';
+    SELECT * FROM Endereço
+
+
+
+CREATE PROCEDURE CadastrarCliente1
+
+@Nome VARCHAR(75),
+@Telefone VARCHAR(15),
+@Email NVARCHAR(86),
+@CPF NVARCHAR(14),
+@ID_Endereço INT
+
+AS 
+BEGIN
+
+INSERT INTO Cliente(Nome, Telefone, Email, CPF, ID_Endereço)
+VALUES(@Nome, @Telefone, @Email, @CPF, @ID_Endereço)
+
+END
+
+
+EXEC CadastrarCliente1 'Kaique Bezerra', '(21) 99999-8787', 'kaique.b@gmail.com', '234.543.661-36', 11
+
+SELECT * FROM Cliente;
+
+
+CREATE PROCEDURE CadastrarPedido
+@Data_Pedido DATE,
+@ID_Cliente INT,
+@ID_Status INT 
+AS
+BEGIN
+IF NOT EXISTS(SELECT 1 FROM Cliente WHERE ID_Cliente = @ID_Cliente)
+BEGIN
+RAISERROR('Nao e possivel encontrar o cliente', 16,1)
+RETURN;
+END
+
+IF @ID_Status NOT IN(1,2,3,4,5,6,7,8,9,10)
+BEGIN
+RAISERROR('nao foi possivel saber o status', 16, 1)
+RETURN;
+END 
+
+INSERT INTO Pedido(Data_Pedido,ID_Cliente,ID_Status) VALUES
+(@Data_Pedido, @ID_Cliente, @ID_Status)
+END;
+
+EXEC CadastrarPedido '2025-10-17', 4, 11
+SELECT * FROM Pedido;
+
+CREATE TABLE Carrinho(
+ID_Carrinho INT PRIMARY KEY IDENTITY NOT NULL,
+ID_Pedido INT CONSTRAINT f_k_pedido FOREIGN KEY(ID_Pedido) REFERENCES Pedido(ID_Pedido)
+
+)
