@@ -1,11 +1,138 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/styleGlobal.css">
+    <link rel="stylesheet" href="assets/css/teste2.css">
+    <script defer src="assets/js/carrinho.js"></script>
+    <title>Meu Carrinho - Cartao</title>
 </head>
+
 <body>
-    
+    <main class="tela">
+        <aside class="tela-esquerda">
+
+            <p class="forma-pagamento">Formas de Pagamento:</p>
+            <div class="line2"></div>
+
+            <ul class="quadros">
+                <li class="aba boleto">
+                    <span class="texto-esquerda boleto">Boleto</span>
+                    <img src="assets/img/svg/Boleto.svg" alt="boleto-image" class="svg">
+                    <a href="carrinhoBoleto.html"><img src="assets/img/svg/Seta.svg" alt="Seta image" class="seta"></a>
+                </li>
+                <div class="linha"></div>
+                <li class="aba cartao">
+                    <span class="texto-esquerda cartao">Cartão</span>
+                    <img src="assets/img/svg/Card.svg" alt="cartao-image" class="svg">
+                    <a href="carrinhoCartao.html"> <img src="assets/img/svg/Seta.svg" alt="Seta image"
+                            class="carton"></a>
+                </li>
+                <section class="pagamento-cartao">
+                    <ul class="cartao-secoes">
+                        <form class="lado-esquerdo">
+
+                            <section class="cartaoNumero-input">
+                                <label for="campo-senha" class="titulo-inserirNumeros"> Número do cartão de crédito:</label>
+                                <input type="number" class="inserirNumeros" placeholder="4603 0986 3980 5594/ numero de telefone do thiago">
+                            </section>
+
+                            <section class="cpfTitular-input">
+
+                                <label for="number" class="titulo-inserirCPF">CPF do Titular:</label>
+                                <input type="number" class="inserirCPF" placeholder="colocar o rg ou cpf do thiago aqui">
+
+                            </section>
+
+                            <section class="validade-input">
+                                <label for="number" class="titulo-validade">Validade:</label>
+                                <input type="number" class="validade" placeholder="Mês">
+                                <input type="number" class="validade" placeholder="Ano">
+                            </section>
+
+
+                        </form>
+
+                        <form class="lado-direito">
+                            <section class="cartaoNome-input">
+                            <label for="text" class="titulo-cartaoNome">Nome impresso no cartão de crédito</label>
+                            <input type="text" class="cartaoNome" placeholder="Thiago Oliveira Augusto">
+                            </section>
+
+                            <section class="codigoSeguranca-input">
+                            <label for="number" class="titulo-codigoSeguranca">Código de Segurança:</label>
+                            <input type="number" class="codigoSeguranca" placeholder="CVV">
+                            </section>
+                        </form>
+
+
+
+                    </ul>
+                </section>
+
+                <div class="linha"></div>
+                <li class="aba pix">
+                    <span class="texto-esquerda piX">Pix</span>
+                    <img src="assets/img/svg/PIX.svg" alt="pix-image" class="svg-pix">
+                    <a href="carrinhoPIX.html"><img src="assets/img/svg/Seta.svg" alt="Seta image" class="seta"></a>
+
+                </li>
+                <div class="linha"></div>
+
+            </ul>
+        </aside>
+        <aside class="tela-direita">
+            <div class="banner-carrinho">
+                <h3 class="titulo-texto">Meu carrinho:</h3>
+                <div class="linha-carrinho"></div>
+                <ul class="produtos-lista">
+                    <li class="produto">
+                        <img src="assets/img/png/tela_teste.jpg" alt="" class="imagem">
+                        <div class="texto-produto">
+                            <p class="nome-produto">Produto 1 </p>
+                            <p class="quantidade">(qnt)</p>
+                            <p class="preco">!(R$)</p>
+                        </div>
+                    </li>
+                    <div class="linha-carrinho"></div>
+
+                    <li class="produto">
+                        <img src="assets/img/png/tela_teste.jpg" alt="" class="imagem">
+                        <div class="texto-produto">
+                            <p class="nome-produto">Produto 2 </p>
+                            <p class="quantidade">(qnt)</p>
+                            <p class="preco">!(R$)</p>
+                            </p>
+                        </div>
+                    </li>
+                    <div class="linha-carrinho"></div>
+
+
+                    <li class="produto">
+                        <img src="assets/img/png/tela_teste.jpg" alt="" class="imagem">
+                        <div class="texto-produto">
+                            <p class="nome-produto">Produto 3
+                            <p class="quantidade">(qnt)</p>
+                            <p class="preco">!(R$)</p>
+                            </p>
+                        </div>
+                    </li>
+
+                    <div class="linha-carrinho"></div>
+
+                </ul>
+                <div class="pagamento">
+                    <h3 class="total-pagar">Total: <p class="soma">199</p> R$</h3>
+                </div>
+            </div>
+            <div class="efetuar-pagamento">
+                <button type="submit" class="pagamentos">Finalizar Pedido</button>
+            </div>
+
+        </aside>
+    </main>
 </body>
+
 </html>
