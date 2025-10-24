@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aurum Lab -- Cadastro</title>
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/cadastro.css">
+
+</head>
+
+<body>
+    <main class="cadastro-inteiro">
+        <header class="tela-cadastro">
+            <div class="textos-cadastro">
+                <p class="titulo">Cadastro</p>                <p class="subtitulo">Crie uma nova conta de usuário para o Aurum Lab</p>
+            </div>
+            <img src="assets/img/icone-logo.svg" alt="Logo Aurum Lab" class="logo">
+        </header>
+        <main class="cadastro-paineis">
+            <section class="paineis">
+                <form class="painel-esquerdo">
+                    <section class="painel-superior-esquerdo">
+                        <label for="nome">Nome completo:</label>
+                        <input type="nome" class="nome" placeholder="seu nome" required>
+
+
+                    </section>
+                    <section class="painel-inferior-esquerdo">
+                        <form action="./enviar" class="campo-email">
+                            <label for="email">E-mail do usuário:</label>
+                            <input type="email" class="email" placeholder="email@email.com" required>
+                        </form>
+                    </section>
+                </form>
+                <form class="painel-direito">
+                    <section class="painel-superior-direito">
+
+                        <div class="campo-senha">
+                            <label for="senha" class="senha">Senha do Usuário:</label>
+                            <input type="password" class="senha" placeholder="sua senha" required>
+
+                            <span class="icone-olho">
+                            </span>
+                        </div>
+
+                    </section>
+                    <section class="painel-inferior-direito">
+                        <label for="senha" class="senha-confirma">Confirmar Senha:</label>
+                        <input type="password" id="confirma-senha" placeholder="confirme sua senha" required>
+                        <!-- <span class="icone-olho">
+                            <img src="assets/icon/eye.svg" alt="" class="olho">
+                        </span> -->
+                        <p class="texto-aviso">A senha deve conter letras, numeros e caracteres especiais para maior
+                            seguranca
+                        </p>
+
+
+                    </section>
+                </form>
+            </section>
+            <div class="botoes">
+                <button type="submit" class="botao-cadastro">ENTRAR</button>
+                <a href="login.html" class="botao-voltar">Voltar</a>
+            </div>
+        </main>
+    </main>
+</body>
+
+</html>
+
+
+</body>
+
+</html>
