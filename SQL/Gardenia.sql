@@ -166,7 +166,7 @@ SELECT * FROM Log_ProdutoPedido;
 /**********PROCEDURE1************/
 CREATE PROCEDURE CadastrarEndereco
     @CEP VARCHAR(9),
-    @Rua NVARCHAR(86),
+    @Rua VARCHAR(86),
     @Complemento VARCHAR(10),
     @Municipio VARCHAR(45),
     @Estado VARCHAR(5)
