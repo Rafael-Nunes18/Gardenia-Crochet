@@ -169,8 +169,9 @@ p.soma
     justify-content: center;
     align-items: center;
     /* height: 100%; */
-    height: 10vw;
-    width: 28vw;
+    /* height: 15vh; */
+    height: 7.5vw;
+    width: 24.5vw;
     background-color: var(--cinza-claro-azulado);
     border-radius: 2vw;
     border-color: transparent;
@@ -179,7 +180,7 @@ p.soma
     font-size: 3vw;
     font-weight: 500;
     color: #FFFF;
-    margin: 10% 0% 10% 12%;
+    margin: 10% 0% 10% 14.5%;
 }
 
 .pagamentos:hover {
@@ -197,7 +198,7 @@ p.soma
     width: 3vw;
     height: 100%;
     background-color: var(--marrom);
-    border-radius: .5vw;
+    border-radius: .1vw;
 }
 
 /* ============================
@@ -213,9 +214,12 @@ p.soma
     gap: 2vw;
     background-color: var(--cinza-claro-azulado);
     border-radius: 1vh;
-    height: 75vh;
+    /* height: 68vh; */
+    height: 50%;
     width:  45vw;
-    gap: 18vh;
+    /* width: 100%; */
+    /* gap: 12vh; */
+    gap: 30%;
 }
 
 .linha-superior
@@ -224,7 +228,7 @@ p.soma
   justify-content: flex-start;
   align-items: center;
 
-  margin: 0% 1% 0% 8%;
+  margin: 0% .1% 0% 5%;
   
 
 }
@@ -232,6 +236,7 @@ p.soma
 .titulo-esquerda
 {
   font-family: "Lobster", sans-serif;
+  /*   font-size: 2.5rem; */
   font-size: 3.8vw;
   font-weight: 500;
 
@@ -259,7 +264,8 @@ display: grid;
 grid-template-columns: 1fr;
 justify-self: center;
 
-gap: 10vh;
+/* gap: 5vh; */
+gap: 25%;
 
 
 }
@@ -278,7 +284,8 @@ color: #FFFF;
   margin-bottom: 5vw;
   border-radius: 1vh;
   border-color: transparent;
-  height: 7vh;
+  /* height: 7vh; */
+  height: 60%;
   font-size: 1rem;
   text-align: center;
  
@@ -287,7 +294,7 @@ color: #FFFF;
   font-weight: 800;
 }
 
-.barra-lateral
+.barra-do-fundo
 {
     /* width: 8vw;
     height: .8vh;
