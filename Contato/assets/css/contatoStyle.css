@@ -9,4 +9,316 @@ body
     font-family: "Noto Sans", sans-serif; 
 }
 
+.cabecalho-contato
+{
+    /* display: inline-flex;
+    align-items: center; */
+    /*Jeito 1 acima*/
+     display: flex;
+    align-items: center;
+    justify-content: space-around; 
 
+    background-color: var(--cinza-azulado);
+    /* margin: 1% 3% 2% 3%; */
+    width: 100vw;
+    /* height: 15.6vh; */
+    height: 13vh;
+    gap: 2vw;
+}
+
+.logo
+{
+    /* width: 6.1%; */
+    width: 5.5%;
+    /* margin-left: 1.5%; */
+    
+}
+
+.buscar-container
+{
+  border: 2px solid #ffffff;   
+  border-radius: 1px;           
+  background-color: transparent; 
+ 
+    border-radius: .5vh;
+    width: 40%;
+    height: 33.5%;
+    text-align: start;
+    font-family: "Lobster", sans-serif;
+    display: grid;
+    grid-template-columns: 1fr .1fr;
+    align-items: center;
+}
+
+#busca::placeholder
+{
+    color: #ffff;
+}
+#busca
+{
+    /* margin-bottom: 1%; */
+    outline: none;
+    border: none;
+    width: 100%;
+    height: 90%;
+    background-color: transparent;
+    text-align: start;
+    font-family: "Lobster", sans-serif;
+    padding-left: 1vw;
+    margin-bottom: 1.5%;
+    font-size: 1.5vw;
+
+    color: #ffffff;
+}
+
+input[type="search"]::-webkit-search-cancel-button
+{
+    display: none;
+}
+
+.img-lupa
+{
+    /* height: 95%; */
+    /* margin: -5% 0% 0% 20%; */
+
+    height: 85%;
+    width: 75%;
+    margin: -15% 0% 0% 25%;
+    
+    cursor: pointer;
+    /* Colocar um js pra interagir com o #busca */
+}
+
+.carrinho, .conta 
+{
+    display: flex;
+    align-items: center;
+    gap: .9vw;
+}
+
+.carrinho-texto
+{
+    font-family: "Poppins", sans-serif;
+    color: #ffff;
+    font-size: 1.5vw;
+    font-weight: 700;
+}
+
+.carrinho-texto:hover
+{
+    cursor: pointer;
+    color: #e0e0e0	;
+}
+
+.icone-carrinho
+{
+    width: 2.5vw;
+}
+.icone-carrinho:hover
+{
+    cursor: pointer;
+}
+
+.conta
+{
+    margin-right: 1.5%;
+
+}
+
+.conta-texto
+{
+    font-family: "Poppins", sans-serif;
+    color: #ffff;
+    font-size: 1.48vw;
+    font-weight: 700;
+}
+
+.conta-texto:hover
+{
+    cursor: pointer;
+    color: #e0e0e0	;
+}
+
+.icone-conta
+{
+    width: 2.5vw;
+}
+.icone-conta:hover
+{
+    cursor: pointer;
+}
+
+.barra-separadora
+{
+    width: 100%;
+    height: 2vh;
+    background-color: var(--marrom);
+}
+.contato
+{
+    background-color: var(--bege-claro);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.informacoes
+{
+    display: grid;
+    grid-template-columns: 1fr;
+
+    margin: 6% 0% 0% 9%;
+
+    /* gap: 2vh; */
+}
+
+.titulo-informacoes
+{
+    color: var(--marrom);
+    text-align: start;
+    font-family: "Lobster", sans-serif;
+    font-weight: 100;
+    font-size: 3.5vw;
+}
+
+.contatos
+{
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+    align-self: start;
+    padding-bottom: 10vh;
+}
+
+.linha
+{
+    list-style: none;
+    display: inline-flex;
+    align-items: center;    
+}
+
+.texto-informacoes
+{
+    font-family: "Poppins", sans-serif;
+    font-size: 1vw;
+    margin-left: 3%;
+    font-weight: 800;
+    color: var(--marrom);
+}
+
+.icone-contato
+{
+    height: 2.5vw;
+    width: 2.1vw;
+
+}
+
+.texto-informacoes:hover, .icone-contato:hover
+{
+    cursor: pointer;
+}   
+
+.inserir-mensagem
+{
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 14% 9% 0% 0%;
+}
+
+.lista-inserir
+{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5vh;
+}
+
+.inserir
+{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 1.5vh;
+}
+
+.titulo-caixa
+{
+    font-family: "Lobster", sans-serif;
+    /* font-size: 2.5rem; */
+    font-size: 2.2vw;
+    font-weight: 500;
+
+    color: var(--marrom);
+}
+
+#inserir-dados
+{   
+    border: 2px solid #362e26;
+
+  border-radius: 10px;        
+  height: 7vh;
+  width: 35vw;  
+  background-color: transparent; 
+
+  font-family: "Poppins", sans-serif;
+  font-size: 1.0vw;
+  font-weight: 700;
+  text-align: left;
+  padding-left: 2%;
+}
+#inserir-dados::placeholder
+{
+    color: var(--marrom);
+}
+
+/* .mensagem
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+} */
+
+.botao-envio
+{
+    margin: 7% 0 0 20%;
+    width: 20vw;
+    height: 4.6vh;
+    border-radius: 10px;
+
+    font-size: 1.5vw;
+    font-weight: 700;
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    border: transparent;
+
+    color: var(--marrom);
+    background-color: var(--cinza-claro-azulado);
+
+    margin-bottom: 3.5vh;
+}
+
+.botao-envio:hover
+{
+    cursor: pointer;
+}
+
+footer
+{
+    background-color: var(--marrom);
+    /* height: 3.9vh; */
+    height: 1.88vw;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 1%;
+    gap: 1.5vw;
+
+}
+
+
+.svg-footer
+
+{
+    height: 1.8vw;
+}
+
+.svg-footer:hover
+{
+ cursor: pointer;   
+}

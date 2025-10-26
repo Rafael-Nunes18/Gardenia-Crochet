@@ -11,57 +11,72 @@
 
 <body>
     <header class="cabecalho-contato">
-        <img src="img/logo.gardenia.png" alt="" class="logo">
-        <input type="search" name="busca" id="busca" placeholder="O que você está buscando?" class="campo-busca">
-        <span class="icone-lupa">
-            <img src="img/lupa.png" alt="">
-        </span>
-        <h3 class="carrinho">
-            Carrinho
-            <span class="icone-carrinho">
-                <img src="img/cart.png" alt="">
-            </span>
-        </h3>
-        <h3 class="conta">
-            Minha conta
-            <span class="icone-usuario">
-                <img src="img/user.png" alt="">
-            </span>
-        </h3>
+        <img src="assets/img/logo.gardenia.png" alt="" class="logo">
+        <div class="buscar-container">
+            <input type="search" name="busca" id="busca" placeholder="O que você está buscando?" class="campo-busca">
+            <img src="assets/svg/lupa.svg" alt="lupa" onclick="" class="img-lupa">
+        </div>
+        <div class="carrinho">
+            <p class="carrinho-texto">Carrinho</p>
+            <img src="assets/svg/carrinho.svg" alt="" class="icone-carrinho">
+        </div>
+        <div class="conta">
+            <p class="conta-texto">Minha conta</p>
+            <img src="assets/svg/pessoa.svg" alt="" class="icone-conta">
+        </div>
     </header>
+    <div class="barra-separadora"></div>
     <main class="contato">
         <aside class="informacoes">
-            <h1 class="titulo-informacoes">
-                Contato
-            </h1>
-            <img src="img/whatsapp.png" alt="" class="icone-contato">
-            <p>5535998300652</p>
-            <img src="img/telefone.png" alt="" class="icone-contato">
-            <p>35 3464-1020</p>
-            <img src="img/email.png" alt="" class="icone-contato">
-            <p>gardeniacrochet86@gmail.com</p>
-            <img src="img/local.png" alt="" class="icone-contato">
-            <p>R.Niteroi, 180 - São Caetano do Sul/SP. 09510-200</p>
+            <p class="titulo-informacoes">Contato</p>
+            <ul class="contatos">
+                <li class="linha whatsApp">
+                    <img src="assets/svg/whatsapp.svg" alt="" class="icone-contato">
+                    <p class="texto-informacoes">5535998300652</p>
+                </li>
+
+                <li class="linha telefone">
+                    <img src="assets/svg/telefone.svg" alt="" class="icone-contato">
+                    <p class="texto-informacoes">35 3464-1020</p>
+                </li>
+
+                <li class="linha email">
+                    <img src="assets/svg/email.svg" alt="" class="icone-contato">
+                    <p class="texto-informacoes">gardeniacrochet86@gmail.com</p>
+                </li>
+
+                <li class="linha localizacao">
+                    <img src="assets/svg/localizacao.svg" alt="" class="icone-contato">
+                    <p class="texto-informacoes">R.Niteroi, 180 - São Caetano do Sul/SP. 09510-200</p>
+                </li>
+            </ul>
         </aside>
-        <section class="mensagem-direta">
-
+        <aside class="inserir-mensagem">    
             <form action="" class="mensagem">
-                <label for="email">E-mail:</label>
-                <input type="email" name="email" id="" placeholder="email@email.com">
-
-                <label for="telefone">Telefone:</label>
-                <input type="tel" name="" placeholder="(00) 9999-8888" id="">
-
-                <label for="mensagem">Mensagem:</label>
-                <input type="text" name="mensagem" id="" placeholder="Digite sua mensagem aqui">
-
-                <button type="submit" class="botao-envio">Enviar</button>
+                <ul class="lista-inserir">
+                    <li class="inserir">
+                        <label for="email" class="titulo-caixa">E-mail:</label>
+                        <input type="email" name="email" id="inserir-dados" placeholder="email@email.com">
+                    </li>
+                    <li class="inserir">
+                        <label for="telefone" class="titulo-caixa">Telefone:</label>
+                        <input type="tel" name="telefone" id="inserir-dados" placeholder="(00) 9999-8888" >
+                    </li>
+                    <li class="inserir">
+                        <label for="mensagem" class="titulo-caixa">Mensagem:</label>
+                        <input type="text" name="mensagem" id="inserir-dados" placeholder="Digite sua mensagem aqui">
+                    </li>
+                </ul>
+                <button type="submit" class="botao-envio">ENVIAR</button>
             </form>
-        </section>
+
+
+        </aside>
     </main>
+    <!-- colocar um background no footer -->
     <footer>
-        <img src="img/instagram.png" alt="">
-        <img src="img/facebook.png" alt="">
+        <img src="assets/svg/instagram.svg" alt="" class="svg-footer instagram">
+        <img src="assets/svg/facebook.svg" alt="" class="svg-footer facebook">
     </footer>
 </body>
 
