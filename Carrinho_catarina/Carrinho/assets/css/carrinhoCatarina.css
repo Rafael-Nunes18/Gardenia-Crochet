@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+/* 
+  font-family: "Poppins", sans-serif;
+  font-family: "Lobster", sans-serif;
+*/
+
+body
+{
+    box-sizing: border-box;
+    background-color: var(--bege-claro);
+
+}
+
+.tela
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+}
+
+.lado-esquerdo
+{
+    display: grid;
+    grid-template-columns: 1fr;
+    border-radius: 1vw;
+    background-color: transparent;
+
+    margin: 10% 2% 0 2.5%;
+}
+
+.titulo-esquerda, .titulo-direita
+{
+    font-family: "Lobster", sans-serif;
+    font-size: 2.9vw;
+    color: var(--marrom);
+    text-align: center;
+}
+
+.carrinho
+{
+    display: grid;
+    grid-template-columns: 1fr;
+    border: 5px solid var(--cinza-claro-azulado);
+    border-radius: .5vw;
+    padding: 2% 2%;
+}
+
+.produto-selecionado
+{
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* gap: 1vh; */
+
+}
