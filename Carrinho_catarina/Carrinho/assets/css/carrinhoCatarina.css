@@ -42,25 +42,84 @@ body
 
 .carrinho
 {
-    display: grid;
-    grid-template-columns: 1fr;
+    
     border: 5px solid var(--cinza-claro-azulado);
     border-radius: .5vw;
     padding: 3.5% 2%;
 }
 
+
+.produtos
+{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3vw;
+    margin: 2% 2%;
+    
+    
+}
 .produto-selecionado
 {
     list-style: none;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    /* gap: 1vh; */
-
 }
 
 .produto-img
 {
-    width: 60%;
-    height: 100%;
+    width: 65%;
+    height: 100%;   
+}
+
+.produto-dados
+{
+    /* display: flex;
+    flex-direction: column; */
+    display: grid;
+    grid-template-columns: 1fr;
+    /* display: flex;
+    flex-direction: column;
+    align-items: normal;
+    gap: .2vw; */
+}
+
+.produto-nome
+{
+    margin-bottom: 10%;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 1.3vw;
+    font-weight: 800;
+    color: var(--marrom);
+}
+
+.produto-dados
+{
+    margin-top: 4%;
+}
+
+.produto-quantidade, .produto-info
+{
+    display: inline-flex;
+    margin-top: 6%;
+}
+
+.produto-quantidade
+{
+    gap: 19vw;
+}
+
+.produto-info
+{
+    background-color: wheat;
+    
+}
+
+
+.produto-infos
+{
+    /* display: flex;
+    flex-direction: column; */
 
 }
+
