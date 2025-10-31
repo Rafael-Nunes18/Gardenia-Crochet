@@ -26,7 +26,6 @@ ID_Endereco INT CONSTRAINT F_K_Endereco FOREIGN KEY(ID_Endereco) REFERENCES Ende
 CREATE TABLE Pedido(
 ID_Pedido INT PRIMARY KEY IDENTITY NOT NULL,
 Data_Pedido DATE NOT NULL,
-Valor_Total DECIMAL(10,2) NOT NULL,
 ID_Cliente INT CONSTRAINT F_K_Cliente FOREIGN KEY(ID_Cliente) REFERENCES Cliente(ID_Cliente)
 );
 
@@ -43,6 +42,7 @@ CREATE TABLE ProdutoPedido (
 ID_Pedido INT NOT NULL,
 ID_Produto INT NOT NULL,
 Quantidade INT NOT NULL DEFAULT 1,
+Valor_Total DECIMAL(10,2) NOT NULL,
 Status_Produto VARCHAR(25) NOT NULL CHECK (Status_Produto IN('Pedido feito','Pedido Não feito','Produto a caminho','Produto Entregue')),
 PRIMARY KEY (ID_Pedido, ID_Produto),
 CONSTRAINT F_K_Pedido FOREIGN KEY (ID_Pedido) REFERENCES Pedido(ID_Pedido),
