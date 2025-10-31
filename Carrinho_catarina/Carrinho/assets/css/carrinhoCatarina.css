@@ -62,31 +62,26 @@ body
 {
     list-style: none;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    /* grid-template-columns: 1fr 1fr 1fr; */
+    grid-template-columns: .1fr 1fr;
 }
 
 .produto-img
 {
-    width: 65%;
+    width: 12.5vw;
     height: 100%;   
+    margin-right: 2vw;
 }
 
 .produto-dados
 {
-    /* display: flex;
-    flex-direction: column; */
     display: grid;
     grid-template-columns: 1fr;
-    /* display: flex;
-    flex-direction: column;
-    align-items: normal;
-    gap: .2vw; */
 }
 
 .produto-nome
 {
-    margin-bottom: 10%;
-
+    margin-bottom: 0%;
     font-family: "Poppins", sans-serif;
     font-size: 1.3vw;
     font-weight: 800;
@@ -104,22 +99,22 @@ body
     margin-top: 6%;
 }
 
-.produto-quantidade
-{
-    gap: 19vw;
-}
+
 
 .produto-info
 {
     background-color: wheat;
-    
 }
 
 
 .produto-infos
 {
-    /* display: flex;
-    flex-direction: column; */
+    margin-left: 10%;
+}
 
+.teste
+{
+    display: inline-flex;
+    margin-left: 100%;
 }
 
