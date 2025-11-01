@@ -1,0 +1,34 @@
+
+<!DOCTYPE HTML>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Dropdown com ícones (exemplo)</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h2>Forma de pagamento</h2>
+
+  <!-- select nativo (mantido para submissão). Use data-icon para indicar caminho do ícone -->
+  <div class="select-wrapper">
+    <select id="nativeSelect" name="payment">
+      <option value="" selected>Não selecionado</option>
+      <option value="pix" data-icon="icons/pix.svg">PIX</option>
+      <option value="cartao" data-icon="PIX.svg">Cartão</option>
+      <option value="boleto" data-icon="icons/boleto.svg">Boleto</option>
+    </select>
+
+    <!-- UI custom criada pelo JS (inicialmente vazia) -->
+    <div id="customSelect" class="custom-select" tabindex="0" aria-haspopup="listbox" aria-expanded="false">
+      <span class="custom-selected">Não selecionado</span>
+      <span class="custom-chevron">▾</span>
+
+      <ul class="custom-options" role="listbox" tabindex="-1" aria-hidden="true"></ul>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

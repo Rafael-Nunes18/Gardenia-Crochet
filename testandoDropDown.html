@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <style>
+        body{
+            font-family: Helvetica, sans-serif;
+            background: #23242a;
+            min-height: 100vh;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+            .dropdown{
+                min-width: 15em;
+                position: relative;
+                margin: 2em;
+
+            }
+
+            .dropdown{
+                box-sizing: border-box;
+            }
+
+            .select
+            {
+                background: #2a2f3b;
+                color: #fff;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                border: 2px #2a2f3b solid;
+                border-radius: .5em;
+                padding: 1em;
+                cursor: pointer;
+                transition: background 0.3s;
+            }
+
+            .select-clicked
+            {
+                border: 2px #26489a solid;
+                box-shadow: 0 0 0.8em #27489a;
+            }
+
+            .select:hover
+            {
+                background: #323841;
+            }
+
+            .caret
+            {
+                width: 0;
+                height: 0;
+                border: 0 5px solid transparent;
+                /* border-left: 0 5px solid transparent; */
+                /* border-right: 0 5px solid transparent; */
+                border-top: 6px solid #fff;
+                transition: .3s;
+            }
+
+            .caret-rotate
+            {
+                transform: rotate(180deg);
+            }
+
+            .menu
+            {
+                list-style: none;
+                padding: 0.2em 0.5em;
+                background-color: #323741;
+                border:  1px #374a43 solid;
+                box-sizing: 0 0.5em 1em rgba(0, 0,0, 0.2);
+                border-radius: .5em;
+                color: #9fa5b5;
+                position: absolute;
+                top: 3em;
+                left: 50%;
+                width: 100%;
+                transform: translateX(-50%);
+                opacity: 0;
+                display: none;
+                transition: .2s;
+                z-index: 1;
+            }
+            .menu li
+            {
+                padding: 0.7em .5em;
+                margin: 0.3em 0;
+                border-radius: .5em;
+                cursor: pointer;
+
+            }
+
+            .menu li:hover
+            {
+                background: #2a2d35;
+            }
+
+            .active
+            {
+                background: #23242a;
+            }
+
+            .menu-open
+            {
+                display: block;
+                opacity: 1;
+            }
+    </style>
+    
+    <div class="dropdown">
+        <div class="select">
+            <span class="selected">Figma</span>
+            <div class="caret"></div>
+        </div>
+    
+    <ul class="menu">
+        <li>Framer</li>
+        <li>Sketch</li>
+        <li class="active">Figma</li>
+        <li>Adobe XD</li>
+    </ul>
+    </div>
+
+        <div class="dropdown">
+        <div class="select">
+            <span class="selected">Facebook</span>
+            <div class="caret"></div>
+        </div>
+    
+    <ul class="menu">
+        <li class="active">Facebook</li>
+        <li>Instagram</li>
+        <li>Twitter</li>
+        <li>Linkedin</li>
+        <li>Tik Tok</li>
+    </ul>
+    </div>
+
+    <script>
+        const drodown1 = document.querySelectorAll('.dropdown');
+
+        dropdown1.forEach(dropdown => {
+            select.display
+        })
+
+
+        const dropdowns = document.querySelectorAll('.dropdown');
+
+        dropdowns .forEach(dropdown => {
+        const select = dropdown.querySelector('.select');           
+        const caret = dropdown.querySelector('.caret');           
+        const menu = dropdown.querySelector('.menu');           
+        const options = dropdown.querySelectorAll('.menu li');           
+        const selected = dropdown.querySelector('.selected');           
+            select.addEventListener('click', () =>
+        {
+            select.classList.toggle('select-clicked');
+            caret.classList.toggle('caret-rotate');
+            menu.classList.toggle('menu-open');
+        });
+    options.forEach(option =>
+        {
+            option.addEventListener('click', () =>{
+            selected.innerText = option.innerText; // aqui ele igualará os textos assim que selecionado
+
+            select.classList.remove('select-clicked');
+
+            caret.classList.remove('caret-rotate');
+
+            menu.classList.remove('menu-open');
+
+            options.forEach(option => {
+                option.classList.remove('active');
+            });
+            option.classList.add('active');
+        });
+        });
+    });
+
+    </script>
+</body>
+</html>

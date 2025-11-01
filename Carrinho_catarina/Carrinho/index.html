@@ -8,99 +8,155 @@
     <link rel="stylesheet" href="assets/css/carrinhoCatarina.css">
 </head>
 <body>
+
+    <style>
+        .botao-prosseguir
+        {
+            /* display: none; */
+        }
+    </style>
+    <a href="https://chatgpt.com" class="oi"> 
+    <img src="assets/img/svg/icone-voltar.svg" alt="voltar-icone" class="icone-voltar">
+    <p class="texto-voltar">Volte para a Tela Inicial</p> 
+    </a>
     <main class="tela">
         <aside class="lado-esquerdo">
             <p class="titulo-esquerda">Seu Carrinho</p>
-            
-            <section class="carrinho">
+            <main class="carrinho">
                 <ul class="produtos">
                     <li class="produto-selecionado">
                         <img src="assets/img/png/foto1.png" alt="" class="produto-img">
                         <div class="produto-dados">
-                        <p class="produto-nome">    Bolero pontos altos        </p>
-                        <p class="produto-dados">  Tamanho: PP, Cor: Azul bebe     </p>
-                        <span id="ID">00000</span>
+                        <p class="produto-nome">    Bolero pontos altos</p>
+                        <div class="produto-informacoes">
+                        <p class= "produto-conteudo">  Tamanho: PP </p>
+                        <p class= "produto-conteudo">  Cor: Azul bebe </p>
+                        <span id="ID">ID: 00000</span>
                         <p class="produto-preco">RS$ 80,00</p>
                         </div>
-                        <div class="produto-infos">
-                            <section class="produto-quantidade">
-                                <span class="produto-diminuir">-</span>
-                                <p class="produto-quantia"> 1 </p>
-                                <span class="produto-aumentar"> +</span>
-                            </section>
                         </div>
-                    </li>
+                            <section class="produto-quantidade">
+                                <div class="produto-coordenar">
+                                <span class="produto-diminuir">-</span>
+                                <p class="produto-quantia">1</p>
+                                <span class="produto-aumentar"> +</span>
+                                </div>
+                            </section>
+                            </li>
                     <div class="linha-divisoria"></div>
+
+
                     <li class="produto-selecionado">
                         <img src="assets/img/png/foto2.png" alt="" class="produto-img">
-                        <p class="produto-nome">    Bolsa Mar        </p>
-                        <p class="produto-dados">  Tamanho: M, Cor: Azul</p>
-                        <span id="ID">00001</span>
-                        <div class="produto-infos">
-                            <p class="produto-preco">RS$ 120,00</p>
-                            <section class="produto-quantidade">
-                                <span class="produto-diminuir">-</span>
-                                <p class="produto-quantia"> 1 </p>
-                                <span class="produto-aumentar"> +</span>
-                            </section>
+                        <div class="produto-dados">
+                        <p class="produto-nome">    Bolsa Mar</p>
+                        <div class="produto-informacoes">
+                        <p class= "produto-conteudo"> Tamanho: M </p>
+                        <p class= "produto-conteudo">  Cor: Azul </p>
+                        <span id="ID">ID: 00001</span>
+                        <p class="produto-preco">R$ 120,00</p>
                         </div>
-
-                    </li>
+                        </div>
+                            <section class="produto-quantidade">
+                                <div class="produto-coordenar">
+                                <span class="produto-diminuir">-</span>
+                                <p class="produto-quantia">1</p>
+                                <span class="produto-aumentar"> +</span>
+                                </div>
+                            </section>
+                            </li>
                     <div class="linha-divisoria"></div>
-                    <li class="produto-selecionado">
-                        <img src="assets/img/png/foto1.png" alt="" class="produto-img">
-                        <p class="produto-nome">    Vestudi Lolita Luxo        </p>
-                        <p class="produto-dados">  Tamanho: G, Cor: Branco</p>
-                        <span id="ID">00002</span>
-                        <div class="produto-infos">
-                            <p class="produto-preco">RS$ 430,00</p>
-                            <section class="produto-quantidade">
-                                <span class="produto-diminuir">-</span>
-                                <p class="produto-quantia"> 1 </p>
-                                <span class="produto-aumentar"> +</span>
-                            </section>
+
+                                        <li class="produto-selecionado">
+                        <img src="assets/img/png/foto3.png" alt="" class="produto-img">
+                        <div class="produto-dados">
+                        <p class="produto-nome">    Vestido Lolita Luxo </p>
+                        <div class="produto-informacoes">
+                        <p class= "produto-conteudo">  Tamanho: G </p>
+                        <p class= "produto-conteudo">  Cor: Branco </p>
+                        <span id="ID">ID: 00003</span>
+                        <p class="produto-preco">R$ 430,00</p>
                         </div>
-                    </li>
+                        </div>
+                            <section class="produto-quantidade">
+                                <div class="produto-coordenar">
+                                <span class="produto-diminuir">-</span>
+                                <p class="produto-quantia">1</p>
+                                <span class="produto-aumentar"> +</span>
+                                </div>
+                            </section>
+                            </li>
                     <div class="linha-divisoria"></div>
                 </ul>
-            </section>
+            </main>
         </aside>
 
         <aside class="lado-direito">
             <p class="titulo-direita">Finalize sua compra</p>
-            <section class="informacoes-endereco">
+            <main class="informacoes-endereco">
                 <p class="endereco-titulo">Informe seu endereço</p>
-                
-                <div class="endereco-rua">
-                <h2 class="rua titulo">Rua:</h2>
-                <input type="text" name="" id="" placeholder="Insira sua rua">
+                <section class="inserir-informacoes">
+                <div class="enderecos ruas">
+                <h2 class="ruas titulo">Rua:</h2>
+                <input type="text" name="" id="rua" class="inputs" placeholder="Insira sua rua">
                 </div>
 
-                <div class="endereco-numero">
+                <div class="enderecos numeros">
                 <h2 class="numero titulo">Número:</h2>
-                <input type="text" name="" id="" placeholder="Insira o número">
+                <input type="text" name="" id="numer0" class="inputs" placeholder="Insira o número">
                 </div>
 
-                <div class="endereco-estado">
-                    <h2 class="estado titulo">Estado:</h2>
-                    <input type="text" name="" id="estado" placeholder="Insira o estado">
+                <div class="enderecos estados">
+                    <h2 class="estados titulo">Estado:</h2>
+                    <input type="text" name="" id="estado" class="inputs" placeholder="Insira o estado">
                 </div>
 
-                <div class="endereco-cidade">
+                <div class="enderecos cidades">
                     <h2 class="cidade titulo">Cidade:</h2>
-                    <input type="text" name="" id="cidade" placeholder="Insira a cidade">
+                    <input type="text" name="" id="cidade" class="inputs" placeholder="Insira a cidade">
                 </div>
 
-                <div class="endereco-bairro">
+                <div class="enderecos bairros">
                     <h2 class="bairro titulo">Bairro:</h2>
-                    <input type="text" name="" id="bairro" placeholder="Insira o bairro">
+                    <input type="text" name="" id="bairro" class="inputs" placeholder="Insira o bairro">
                 </div>
 
-                <div class="endereco-cep">
+                <div class="enderecos ceps">
                     <h2 class="cep titulo">CEP:</h2>
-                    <input type="text" name="" id="cep" placeholder="Insira o CEP">
+                    <input type="text" name="" id="cep" class="inputs" placeholder="Insira o CEP">
                 </div>
-            </section>
+
+                <div class="enderecos nomes">
+                    <h2 class="cep titulo">Nome para entrega:</h2>
+                    <input type="text" name="" id="nome" class="inputs" placeholder="Insira o nome para entrega">
+                </div>
+</section>
+                <section class="formas-pagamento">
+                    <div class="pagamento-selecao">
+                    <h2 class="cep entrega">Forma de pagamento:</h2>
+                    <!-- <select name="escolhaPagamento" id="formaPagamento">
+                        <option value="">Não Selecionado</option>
+                        <option value="Pix">Pix </option>
+                        <option value="Cartao">Cartão</option>
+                        <option value="Boleto">Boleto</option>
+                    </select>                     -->
+                    <select name="escolhaPagamento" id="formaPagamento">
+                        <option value="" class="oi">Não Selecionado</option>
+                    </select>                    
+</div>
+                    <div class="pagamento-selecionado">
+                        <section class="tipo-selecionado">
+                        <img src="assets/img/png/pix.png" alt="image selecionada" class="img-selecionada">     
+
+                        <p class="texto-complementar">
+                            Finalize sua compra lendo o QRCode.
+                        </p>
+
+                        </section>
+                    </div>
+                </section>
+
+            </main>
             
             <a href="" class="botao-prosseguir">Prosseguir</a>
         </aside>

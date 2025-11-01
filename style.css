@@ -1,0 +1,113 @@
+/* estilo simples para o custom select */
+:root {
+  --bg: #f3f7f8;
+  --primary: #0645ad;
+  --text: #21303a;
+}
+
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+  padding: 24px;
+  background:#f0f4f6;
+  color: var(--text);
+}
+
+.select-wrapper {
+  position: relative;
+  width: 260px;
+}
+
+/* esconde o select nativo, mas ele continua no DOM para submissão */
+.select-wrapper select {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* trigger custom */
+.custom-select {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: linear-gradient(180deg,#ffffff,#eef3f5);
+  border: 1px solid rgba(0,0,0,0.08);
+  cursor: pointer;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.06);
+  user-select: none;
+  outline: none;
+}
+
+.custom-select:focus-visible {
+  box-shadow: 0 0 0 4px rgba(2,120,255,0.12);
+}
+
+.custom-selected {
+  font-weight: 700;
+}
+
+/* lista de opções */
+.custom-options {
+  display: none;
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  right: 0;
+  margin: 0;
+  padding: 8px;
+  list-style: none;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+  max-height: 220px;
+  overflow: auto;
+  z-index: 20;
+}
+
+/* mostra quando aberto */
+.custom-select[aria-expanded="true"] .custom-options {
+  display: block;
+}
+
+/* item da lista */
+.custom-option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap:8px;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: var(--text);
+}
+.custom-option + .custom-option { margin-top: 6px; }
+.custom-option:hover,
+.custom-option:focus {
+  background: linear-gradient(90deg, rgba(0,0,0,0.02), rgba(255,255,255,0.02));
+  outline: none;
+}
+
+/* label e ícone */
+.option-left {
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+.option-icon {
+  width: 20px;
+  height: 20px;
+  flex: 0 0 20px;
+}
+.option-label {
+  font-weight: 600;
+}
+
+/* badge ou chevron no extremo */
+.custom-chevron {
+  color: rgba(0,0,0,0.5);
+}
