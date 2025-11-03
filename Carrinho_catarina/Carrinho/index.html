@@ -134,25 +134,55 @@
                 <section class="formas-pagamento">
                     <div class="pagamento-selecao">
                     <h2 class="cep entrega">Forma de pagamento:</h2>
-                    <!-- <select name="escolhaPagamento" id="formaPagamento">
-                        <option value="">Não Selecionado</option>
-                        <option value="Pix">Pix </option>
-                        <option value="Cartao">Cartão</option>
-                        <option value="Boleto">Boleto</option>
-                    </select>                     -->
                     <select name="escolhaPagamento" id="formaPagamento">
                         <option value="" class="oi">Não Selecionado</option>
+                        <option value="" class="pixSelecionado">Pix</option>
+                        <option value="" class="cartaoSelecionado">Cartao</option>
+                        <option value="" class="boletoSelecionado">Boleto</option>
                     </select>                    
 </div>
-                    <div class="pagamento-selecionado">
+                    <div class="pix-selecionado">
                         <section class="tipo-selecionado">
                         <img src="assets/img/png/pix.png" alt="image selecionada" class="img-selecionada">     
 
-                        <p class="texto-complementar">
+                        <p class="texto-complementar pix">
                             Finalize sua compra lendo o QRCode.
                         </p>
-
                         </section>
+                    </div>
+                    <div class="cartao-selecionado">
+                        <!-- <section class="tipo-selecionado"> -->
+                        <aside class="esquerda-cartao">
+                            <div class="cpf-inserir">
+                            <p class="texto-complementar cartao">Numero do cartão de crédito:</p>
+                            <input type="text" name="numero-inserir" id="numero-cartao" class="inputs cartaos" placeholder="000.000.000-00">
+                            </div>
+
+                            <div class="validade">
+                            <p class="texto-complementar cartao">Nome impresso no cartão de crédito:</p>
+                            <input type="text" name="nome-inserir" id="nome" class="inputs cartaos" placeholder="Insira seu Nome">                          
+
+                            <div class="codigo-seguranca">
+                            <p class="texto-complementar cartao">Código de segurança:</p>
+                            <input type="text" name="mes-inserir" id="mes" class="inputs cartaos" placeholder="000">                          
+                        </aside>
+
+                        <aside class="direita-cartao">
+                            <div class="cpf-inserir">
+                                <p class="texto-complementar cartao">CPF do Titular</p>
+                                <input type="text" name="" id="cpf" class="inputs cartaos" placeholder="000.000.000-00">
+                            </div>
+
+                            <div class="validade">
+                                <p class="texto-complementar cartao">Validade</p>
+                                <input type="text" name="mes-inserir" id="mes" class="inputs cartaos" placeholder="Mês">
+                                <input type="text" name="ano-inserir" id="ano" class="inputs cartaos" placeholder="Ano">
+                        </aside>
+
+                        <button class="concluir">
+                            Concluir
+                        </button>
+                        <!-- </section> -->
                     </div>
                 </section>
 

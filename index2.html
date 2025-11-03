@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Select com imagens</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .custom-select {
+      position: relative;
+      width: 200px;
+      user-select: none;
+    }
+
+    .selected {
+      background: white;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+    }
+
+    .selected img {
+      width: 20px;
+      height: 14px;
+      margin-right: 8px;
+      border: 1px solid #ddd;
+    }
+
+    .options {
+      position: absolute;
+      width: 100%;
+      background: white;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      margin-top: 5px;
+      display: none;
+      z-index: 10;
+    }
+
+    .option {
+      padding: 8px;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+    }
+
+    .option img {
+      width: 20px;
+      height: 14px;
+      margin-right: 8px;
+      border: 1px solid #ddd;
+    }
+
+    .option:hover {
+      background: #eee;
+    }
+
+    .show {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="custom-select" id="select-pais">
+    <div class="selected">
+      <img src="https://flagcdn.com/w20/br.png" alt="BR"> Brasil
+    </div>
+    <div class="options">
+      <div class="option"><img src="https://flagcdn.com/w20/br.png" alt="BR"> Brasil</div>
+      <div class="option"><img src="https://flagcdn.com/w20/us.png" alt="US"> EUA</div>
+      <div class="option"><img src="https://flagcdn.com/w20/jp.png" alt="JP"> Japão</div>
+    </div>
+  </div>
+
+  <script>
+    const select = document.getElementById("select-pais");
+    const selected = select.querySelector(".selected");
+    const options = select.querySelector(".options");
+    const optionItems = select.querySelectorAll(".option");
+
+    // abre/fecha a lista
+    selected.addEventListener("click", () => {
+      options.classList.toggle("show");
+    });
+
+    // troca o valor quando clica numa opção
+    optionItems.forEach(opt => {
+      opt.addEventListener("click", () => {
+        selected.innerHTML = opt.innerHTML;
+        options.classList.remove("show");
+      });
+    });
+
+    // fecha se clicar fora
+    window.addEventListener("click", e => {
+      if (!select.contains(e.target)) {
+        options.classList.remove("show");
+      }
+    });
+  </script>
+
+</body>
+</html>

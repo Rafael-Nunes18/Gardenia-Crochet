@@ -261,6 +261,8 @@ body
     font-family: var(--Poppins);
     font-weight: 700;
     color: var(--marrom);
+    white-space: nowrap;
+    /* =================================================================== */
 }
 .titulo, .inputs
 {
@@ -367,6 +369,7 @@ body
 {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    /* gap: 1vw; */
 }
 
 .pagamento-selecao
@@ -379,7 +382,7 @@ body
 #formaPagamento, option
 {
     background-color: var(--cinza-branco);
-    width: 50%;
+    width: 70%;
     /* height: 2.5vw;     */
     height: 4vh;    
     font-size: .9vw;
@@ -387,10 +390,8 @@ body
     color: var(--cinza-azulado);
     font-weight: 600;
     border-radius: .5vw;
+    padding-left: 5%;
 }
-
-
-
 
 /*
 Droptable:
@@ -443,17 +444,74 @@ Boleto
     display: grid;
     /* display: none; */
     grid-template-columns: 1fr 1fr;
+    gap: 1vw;
     /* width: 100%; */
-    width: 22.628vw;
+    width: 27vw;
+    height: 22vw;
+    /* height: 40vh; */
 }
+
+.esquerda-cartao, .direita-cartao
+{
+    margin-top: 1.5vh;
+
+    
+}
+
+.esquerda-cartao
+{
+    margin-left: 5%;
+}
+
+.direita-cartao
+{
+    margin-right: 5%;
+}
+
 
 .cartao
 {
     font-size: .9vw;
+    white-space: nowrap;
 }
 
 .cartaos
 {
-    width: 90%;
-    height: 10%;
+    border: none;
+    border-radius: .5vw;
+    font-size: .9vw;
+    font-family: var(--Poppins);
+    color: #62727F;
+
+    width: 100%;
+    height: 1.9vw;
+    text-align: justify;
+    text-justify:inter-word;
+    padding: 0 .1vw;
 }
+
+#numero-cartao
+{
+    padding: 0 8.5%;
+    font-size: 1.1vw;
+    width: 14vw;
+}
+
+#cpf
+{
+    width: 11vw;
+}
+
+
+
+/* .inputs
+{
+    border: none;
+    border-radius: .5vw;
+    font-size: 1vw;
+    font-family: var(--Poppins);
+    color: #62727F;
+    padding: 0 .7vw;
+    height: 2.5vw;
+} */
+
