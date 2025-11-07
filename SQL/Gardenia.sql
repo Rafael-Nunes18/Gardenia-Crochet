@@ -60,7 +60,7 @@ CREATE TABLE ProdutoPedido (
 
 
 
-/*****************TRRIGGERS**********************************************************/
+
 CREATE TABLE Auditoria_ProdutoPedido(
 ID_LogCliente INT PRIMARY KEY IDENTITY,
 UsuarioResponsavel VARCHAR(45),
@@ -139,7 +139,7 @@ END;
 
 
 
-/***********************PROCEDURES***************************************/
+
 
 
 
