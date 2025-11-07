@@ -59,8 +59,12 @@ body
 
 .lado-esquerdo
 {
+    /*
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; 
+    */
+    display: flex;
+    flex-direction: column;
     border-radius: 1vw;
     background-color: transparent;
 
@@ -83,7 +87,8 @@ body
     border: 5px solid var(--cinza-claro-azulado);
     border-radius: .5vw;
     padding: 3.5% 2%;
-    height: 90%;
+    /* height: 90%; */
+    height: 58%;
 }
 
 
@@ -241,33 +246,38 @@ body
 {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    height: 100%;
 }
 
 .enderecos
 {
     color: var(--marrom);
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    gap: 15%;
+    /* display: grid;
+    grid-template-rows: 1fr 1fr; */
+    /* gap: 15%; */
+    /* gap: 2%; */
     margin-bottom: 9%;
-    /* display: flex;
+    display: flex;
     flex-direction: column;
-    gap: .4vw; */
 }
 
-.titulo, .entrega
+/* Titulo abaixo garai 
+    
+    o Rua, Numero, Bairro, Cidade, Estado, CEP e Nome 
+    
+*/
+
+
+.titulo
 {
     font-size: 1.59vw;
     font-family: var(--Poppins);
     font-weight: 700;
     color: var(--marrom);
     white-space: nowrap;
-    /* =================================================================== */
 }
-.titulo, .inputs
-{
-    margin-right: 15%;
-}
+
+
 
 .inputs
 {
@@ -275,64 +285,64 @@ body
     border-radius: .5vw;
     font-size: 1vw;
     font-family: var(--Poppins);
-    color: #62727F;
+    background-color: var(--cinza-branco);
+    color: black;
     padding: 0 .7vw;
     height: 2.5vw;
+    /* height: 2.4rem; */
+    /* width: 20vw; */
+    width: 100%;
+
+     
 }
 
-/* #rua, .ruas
+.ruas 
 {
-    margin-right: -5%;
-
-} */
-
-#numer0, .numero
-{
-    margin-left: 30%;
+    width: 30vw;
+    /* margin-right: 2.5vw; */
 }
 
-#estado, .estados
+.numeros
 {
-    margin-right: 10%;
+    width: 12vw;
+    margin-left: 2.5vw;
+}
+
+.estados
+{
+    width: 19vw;
 }
 
 .cidades
 {
-    margin-left: 5%;
+    width: 22vw;
+    margin-left: -7.5vw;
 }
 
-#cidade
+.bairros
 {
-    text-align: center;
-}
-
-#bairro, .bairros
-{
-    margin-right: 0%;
+    width: 24vw;
 }
 
 .ceps
 {
-    margin-left: 15%;
+    width: 14vw;
 }
 
-.nomes
+#nome-input
 {
-    width: 20vw;
-}
-
-#nome
-{
-    width: 100%;
-}
-
-.inputs:focus
-{
-    outline: none;
+    width: calc(100% + 14vw);
 }
 
 
 
+
+/* 
+    =============
+    botão prosseguir 
+    =============
+
+*/
 
 
 .botao-prosseguir
@@ -363,7 +373,7 @@ body
 
 
 
-/* Formas Pagamento:droptable */
+/* Formas Pagamento:droptable vulgo capeta*/
 
 .formas-pagamento
 {
@@ -376,7 +386,7 @@ body
 {
     display: flex;
     flex-direction: column;
-    gap: 5%;
+    gap: 2.5%;
 }
 
 #formaPagamento, option
@@ -401,15 +411,20 @@ Cartao
 Boleto
 */
 
+.pagamento-selecionado
+{
+    margin-top: 15%;
+    display: flex;
+}
 
 .pix-selecionado
 {
+    
     background-color: var(--cinza-azulado);
-    display: grid;
+    
+    display: flex;
     display: none;
-    grid-template-columns: 1fr;
-    /* display: flex;
-    flex-direction: column; */
+    flex-direction: column;
     justify-content: center;
     text-align: center;
     align-items: center;
@@ -439,39 +454,48 @@ Boleto
 
 .cartao-selecionado
 {
-    margin-top: 10%;
     background-color: var(--cinza-azulado);
     display: grid;
     /* display: none; */
     grid-template-columns: 1fr 1fr;
     gap: 1vw;
     /* width: 100%; */
+    /* width: 27vw; */
     width: 27vw;
-    height: 22vw;
+    padding-right: 10vw;
+    height: 18vw;
     /* height: 40vh; */
+    margin-left: -4%;
+    border-radius: 2vw;
+
+
 }
 
 .esquerda-cartao, .direita-cartao
 {
-    margin-top: 1.5vh;
-
-    
+    margin-top: 1.5vh;    
 }
 
 .esquerda-cartao
 {
     margin-left: 5%;
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
 }
 
 .direita-cartao
 {
     margin-right: 5%;
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
 }
 
 
 .cartao
 {
-    font-size: .9vw;
+    font-size: .8vw;
     white-space: nowrap;
 }
 
@@ -483,7 +507,7 @@ Boleto
     font-family: var(--Poppins);
     color: #62727F;
 
-    width: 100%;
+    width: 60%;
     height: 1.9vw;
     text-align: justify;
     text-justify:inter-word;
@@ -491,6 +515,78 @@ Boleto
 }
 
 #numero-cartao
+{
+    width: 14vw;
+}
+
+#cpf
+{
+    width: 10vw;
+}
+
+.texto-complementar, .cartao
+{
+    text-align: left;
+}
+
+#nome-colocar
+{
+    width: 100%;
+}
+
+.validade
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.inputs-inline
+{
+    display: inline-flex;
+    gap: 1vw;
+}
+
+#mes
+{
+    width: 4vw;
+    text-align: center;
+}
+
+#ano
+{
+    width: 3.5vw;
+    text-align: center;
+}
+
+
+.concluir
+{
+    margin-left: 5%;
+    border-radius: .5vw;
+    background-color: var(--cinza-claro-azulado);
+    border: 2px solid #444F58;
+    color: var(--marrom);
+    text-align: center;
+    font-family: var(--Poppins);
+    font-weight: 600;
+    font-size: 1.1vw;
+    width: 80%;
+    height: 2.8vw;
+    margin-top: 10%;
+}
+
+.concluir:hover
+{
+    background-color: transparent;
+    color: var(--cinza-branco);
+    border: 2px solid var(--cinza-branco);
+    
+}
+
+
+
+
+/* #numero-cartao
 {
     padding: 0 8.5%;
     font-size: 1.1vw;
@@ -500,7 +596,7 @@ Boleto
 #cpf
 {
     width: 11vw;
-}
+} */
 
 
 

@@ -98,44 +98,44 @@
                 <section class="inserir-informacoes">
                 <div class="enderecos ruas">
                 <h2 class="ruas titulo">Rua:</h2>
-                <input type="text" name="" id="rua" class="inputs" placeholder="Insira sua rua">
+                <input type="text" name="" id="rua-input" class="inputs" placeholder="Insira sua rua">
                 </div>
 
                 <div class="enderecos numeros">
                 <h2 class="numero titulo">Número:</h2>
-                <input type="text" name="" id="numer0" class="inputs" placeholder="Insira o número">
+                <input type="text" name="" id="numero-input" class="inputs" placeholder="Insira o número">
                 </div>
 
                 <div class="enderecos estados">
                     <h2 class="estados titulo">Estado:</h2>
-                    <input type="text" name="" id="estado" class="inputs" placeholder="Insira o estado">
+                    <input type="text" name="" id="estado-input" class="inputs" placeholder="Insira o estado">
                 </div>
 
                 <div class="enderecos cidades">
                     <h2 class="cidade titulo">Cidade:</h2>
-                    <input type="text" name="" id="cidade" class="inputs" placeholder="Insira a cidade">
+                    <input type="text" name="" id="cidade-input" class="inputs" placeholder="Insira a cidade">
                 </div>
 
                 <div class="enderecos bairros">
                     <h2 class="bairro titulo">Bairro:</h2>
-                    <input type="text" name="" id="bairro" class="inputs" placeholder="Insira o bairro">
+                    <input type="text" name="" id="bairro-input" class="inputs" placeholder="Insira o bairro">
                 </div>
 
                 <div class="enderecos ceps">
                     <h2 class="cep titulo">CEP:</h2>
-                    <input type="text" name="" id="cep" class="inputs" placeholder="Insira o CEP">
+                    <input type="text" name="" id="cep-input" class="inputs" placeholder="Insira o CEP">
                 </div>
 
                 <div class="enderecos nomes">
                     <h2 class="cep titulo">Nome para entrega:</h2>
-                    <input type="text" name="" id="nome" class="inputs" placeholder="Insira o nome para entrega">
+                    <input type="text" name="" id="nome-input" class="inputs" placeholder="Insira o nome para entrega">
                 </div>
 </section>
                 <section class="formas-pagamento">
                     
                     <div class="pagamento-selecao">
                         <!-- primeiro grid -->
-                    <h2 class="cep entrega">Forma de pagamento:</h2>
+                    <h2 class="titulo">Forma de pagamento:</h2>
                     <select name="escolhaPagamento" id="formaPagamento">
                         <option value="" class="oi">Não Selecionado</option>
                         <option value="" class="pixSelecionado">Pix</option>
@@ -147,13 +147,13 @@
                     <div class="pagamento-selecionado">
 
                     <div class="pix-selecionado">
-                    <section class="tipo-selecionado">
+                    
                     <img src="assets/img/png/pix.png" alt="image selecionada" class="img-selecionada">     
 
                         <p class="texto-complementar pix">
                             Finalize sua compra lendo o QRCode.
                         </p>
-                        </section>
+                    
                     </div>
 
                     <div class="cartao-selecionado">
@@ -164,13 +164,16 @@
                             <input type="text" name="numero-inserir" id="numero-cartao" class="cartaos" placeholder="0000 0000 0000 0000">
                             </div>
 
-                            <div class="validade">
-                            <p class="texto-complementar cartao">Nome impresso no cartão de crédito:</p>
-                            <input type="text" name="nome-inserir" id="nome-inserir" class="cartaos" placeholder="Insira seu Nome">                          
+                            <div class="nome-inserir">
+                            <p class="texto-complementar cartao">Nome impresso no cartão:</p>
+                            <input type="text" name="nome-inserir" id="nome-colocar" class="cartaos" placeholder="Insira seu Nome"> 
+                            </div>                         
 
                             <div class="codigo-seguranca">
                             <p class="texto-complementar cartao">Código de segurança:</p>
-                            <input type="text" name="mes-inserir" id="mes" class="cartaos" placeholder="000">                          
+                            <input type="text" name="mes-inserir" id="mes" class="cartaos" placeholder="000">        
+                            </div>                         
+
                         </aside>
 
                         <aside class="direita-cartao">
@@ -181,8 +184,12 @@
 
                             <div class="validade">
                                 <p class="texto-complementar cartao">Validade</p>
+                                <div class="inputs-inline">
                                 <input type="text" name="mes-inserir" id="mes" class="cartaos" placeholder="Mês">
                                 <input type="text" name="ano-inserir" id="ano" class="cartaos" placeholder="Ano">
+                                </div>
+                            </div>                         
+
 
                         <button class="concluir">
                             Concluir
