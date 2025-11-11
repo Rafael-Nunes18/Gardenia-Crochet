@@ -16,7 +16,7 @@ Este repositório contém o código-fonte do site Gardenia Crochet. O objetivo d
 ## Tecnologias Utilizadas
 - Figma
 - HTML, CSS e JavaScript
-- Microsoft SQL Server 22
+- Microsoft SQL Server 21
 - C#
 - AWS EC2
 
