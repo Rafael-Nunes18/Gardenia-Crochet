@@ -12,8 +12,6 @@ Municipio VARCHAR(45) NOT NULL,
 Estado VARCHAR(5) NOT NULL
 );
 
-CREATE UNIQUE INDEX UQ_Endereco 
-ON Endereco(CEP, Rua, Complemento) WHERE Complemento IS NOT NULL;
 
 
 CREATE TABLE Cliente(
