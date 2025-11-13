@@ -5,31 +5,26 @@ USE GardeniaCrochet;
 
 CREATE TABLE Endereco(
 ID_Endereco INT PRIMARY KEY IDENTITY,
-CEP VARCHAR(9) NOT NULL,
 Rua VARCHAR(86) NOT NULL,
-Complemento VARCHAR(10) NULL,
+Numero INT NOT NULL,
+Complemento VARCHAR(20) UNIQUE NULL,
+Bairro VARCHAR(45) NOT NULL,
+CEP VARCHAR(9) NOT NULL,
 Municipio VARCHAR(45) NOT NULL,
-Estado VARCHAR(5) NOT NULL
+Estado CHAR(2) NOT NULL
 );
 
 
 
 CREATE TABLE Cliente(
 ID_Cliente INT PRIMARY KEY IDENTITY,
-Nome VARCHAR(75) NOT NULL,
-Telefone VARCHAR(15) NOT NULL,
-Email VARCHAR(86) UNIQUE NOT NULL,
+NomeCompleto VARCHAR(85) NOT NULL,
+Email VARCHAR(200) UNIQUE NOT NULL,
+HashSenha NVARCHAR(500) NOT NULL,
+AlgoSenha NVARCHAR(50) NOT NULL
+Telefone VARCHAR(14) NOT NULL,
 CPF VARCHAR(14) UNIQUE NOT NULL,
 ID_Endereco INT CONSTRAINT F_K_Endereco FOREIGN KEY(ID_Endereco) REFERENCES Endereco(ID_Endereco)
-);
-
-
-
-CREATE TABLE Pedido(
-ID_Pedido INT PRIMARY KEY IDENTITY,
-DataPedido DATE NOT NULL,
-StatusPagamento VARCHAR(25) NOT NULL CHECK (StatusPagamento IN('Pagamento Aprovado','Pagamento Não Aprovado','Pagamento Pendente')),
-ID_Cliente INT CONSTRAINT F_K_Cliente FOREIGN KEY(ID_Cliente) REFERENCES Cliente(ID_Cliente) ON DELETE CASCADE
 );
 
 
@@ -41,15 +36,38 @@ CategoriaProduto VARCHAR(75) NOT NULL CHECK(CategoriaProduto IN('Bolsas e mochil
 );
 
 
-CREATE TABLE ProdutoPedido (
+
+CREATE TABLE Pedido(
+ID_Pedido INT PRIMARY KEY IDENTITY,
+DataHoraPedido DATETIME NOT NULL DEFAULT GETDATE(),
+StatusPagamento VARCHAR(25) NOT NULL CHECK (StatusPagamento IN('Pagamento Aprovado','Pagamento Não Aprovado','Pagamento Pendente')),
+ID_Cliente INT CONSTRAINT F_K_Cliente FOREIGN KEY(ID_Cliente) REFERENCES Cliente(ID_Cliente)
+);
+
+
+
+
+CREATE TABLE ItensCarrinho (
+  ID_ItemCarrinho INT IDENTITY PRIMARY KEY,
+  ID_Cliente INT NOT NULL,
+  ID_Produto INT NOT NULL,
+  Quantidade INT NOT NULL DEFAULT 1 CHECK (Quantidade > 0),
+  PrecoUnitario DECIMAL(10,2) NOT NULL CHECK (PrecoUnitario >= 0),
+  CONSTRAINT FK_ItensCarrinho_Cliente FOREIGN KEY (ID_Cliente) REFERENCES Cliente(ID_Cliente),
+  CONSTRAINT FK_ItensCarrinho_Produto FOREIGN KEY (ID_Produto) REFERENCES Produto(ID_Produto)
+);
+
+
+
+CREATE TABLE ItensPedidos (
   ID_ProdutoPedido INT PRIMARY KEY IDENTITY,
-  ID_Pedido INT NULL,
+  ID_Pedido INT NOT NULL,
   ID_Produto INT NOT NULL,
   Quantidade INT NOT NULL DEFAULT 1,
-  ValorTotal DECIMAL(10,2) NOT NULL,
-  StatusProduto VARCHAR(25) NOT NULL CHECK (StatusProduto IN('No carrinho','Pedido feito','A Caminho','Entregue')),
-  CONSTRAINT F_K_Pedido FOREIGN KEY (ID_Pedido) REFERENCES Pedido(ID_Pedido) ON DELETE CASCADE,
-  CONSTRAINT F_K_Produto FOREIGN KEY (ID_Produto) REFERENCES Produto(ID_Produto)
+  PrecoUnitario DECIMAL(10,2) NOT NULL,
+  StatusProduto VARCHAR(25) NOT NULL CHECK (StatusProduto IN('Pedido Confirmado','Em Transporte','Entregue','Cancelado','Devolvido')),
+  CONSTRAINT F_K_ItensPedidos_Pedido FOREIGN KEY (ID_Pedido) REFERENCES Pedido(ID_Pedido),
+  CONSTRAINT F_K_ItensPedidos_Produtos FOREIGN KEY (ID_Produto) REFERENCES Produto(ID_Produto)
 );
 
 
@@ -59,15 +77,15 @@ CREATE TABLE ProdutoPedido (
 
 
 
-CREATE TABLE Auditoria_ProdutoPedido(
+CREATE TABLE Auditoria_ItensPedidos(
 ID_LogCliente INT PRIMARY KEY IDENTITY,
 UsuarioResponsavel VARCHAR(45),
 DataHora DATETIME,
 TipoEvento VARCHAR(20) CHECK(TipoEvento IN('Insert','Update','Delete')),
-ID_ProdutoPedido INT,
+ID_ItensPedidos INT,
 ID_Pedido INT,
 ID_Produto INT,
-StatusProduto VARCHAR(25) NOT NULL CHECK (StatusProduto IN('No Carrinho','Pedido feito','A Caminho','Entregue'))
+StatusProduto VARCHAR(25) NOT NULL CHECK (StatusProduto IN('Pedido Confirmado','Em Transporte','Entregue','Cancelado','Devolvido'))
 );
 
 
@@ -76,14 +94,14 @@ StatusProduto VARCHAR(25) NOT NULL CHECK (StatusProduto IN('No Carrinho','Pedido
 
 
 
-CREATE TRIGGER trg_ProdutoPedido_Insert
-ON ProdutoPedido
+CREATE TRIGGER trg_ItensPedidos_Insert
+ON ItensPedidos
 AFTER INSERT
 AS
 BEGIN
 
-    INSERT INTO Auditoria_ProdutoPedido(UsuarioResponsavel,DataHora,TipoEvento, ID_Pedido, ID_Produto, StatusProduto)
-    SELECT SUSER_NAME(),GETDATE(),'Insert', ID_Pedido, ID_Produto, StatusProduto
+    INSERT INTO Auditoria_ItensPedidos(UsuarioResponsavel,DataHora,TipoEvento, ID_ItensPedidos, ID_Pedido, ID_Produto, StatusProduto)
+    SELECT SUSER_NAME(),GETDATE(),'Insert', ID_ItensPedidos , ID_Pedido, ID_Produto, StatusProduto
     FROM INSERTED 
 END;
 
@@ -96,14 +114,14 @@ END;
 
 
 
-CREATE TRIGGER trg_ProdutoPedido_Update
-ON ProdutoPedido
+CREATE TRIGGER trg_ItensPedidos_Update
+ON ItensPedidos
 AFTER UPDATE
 AS
 BEGIN
 
-    INSERT INTO Auditoria_ProdutoPedido(UsuarioResponsavel,DataHora,TipoEvento, ID_Pedido, ID_Produto, StatusProduto)
-    SELECT SUSER_NAME(),GETDATE(),'Update', ID_Pedido, ID_Produto, StatusProduto
+    INSERT INTO Auditoria_ItensPedidos(UsuarioResponsavel,DataHora,TipoEvento, ID_ItensPedidos, ID_Pedido, ID_Produto, StatusProduto)
+    SELECT SUSER_NAME(),GETDATE(),'Update', ID_ItensPedidos ,ID_Pedido, ID_Produto, StatusProduto
     FROM INSERTED 
 END;
 
@@ -117,14 +135,14 @@ END;
 
 
 
-CREATE TRIGGER trg_ProdutoPedido_Delete
-ON ProdutoPedido
+CREATE TRIGGER trg_ItensPedidos_Delete
+ON ItensPedidos
 AFTER DELETE
 AS
 BEGIN
 
-    INSERT INTO Auditoria_ProdutoPedido(UsuarioResponsavel,DataHora,TipoEvento, ID_Pedido, ID_Produto, StatusProduto)
-    SELECT SUSER_NAME(), GETDATE(),'Delete', ID_Pedido, ID_Produto, StatusProduto
+    INSERT INTO Auditoria_ItensPedidos(UsuarioResponsavel,DataHora,TipoEvento, ID_ItensPedidos,  ID_Pedido, ID_Produto, StatusProduto)
+    SELECT SUSER_NAME(), GETDATE(),'Delete', ID_ItensPedidos, ID_Pedido, ID_Produto, StatusProduto
     FROM DELETED
 END;
 
@@ -143,21 +161,23 @@ END;
 
 
 CREATE PROCEDURE CadastrarEndereco
-    @CEP VARCHAR(9),
     @Rua VARCHAR(86),
-    @Complemento VARCHAR(10),
+    @Numero INT,
+    @Complemento VARCHAR(20),
+    @Bairro Varchar(45),
+    @CEP VARCHAR(9),
     @Municipio VARCHAR(45),
-    @Estado VARCHAR(5)
+    @Estado CHAR(2)
 AS 
 BEGIN
-  IF EXISTS(SELECT 1 FROM Endereco WHERE CEP = @CEP AND Rua = @Rua)
+  IF EXISTS(SELECT 1 FROM Endereco WHERE CEP = @CEP AND Rua = @Rua AND Numero = @Numero)
     BEGIN
         RAISERROR('Endereço já cadastrado.', 16, 1);
         RETURN;
     END
 
-    INSERT INTO Endereco (CEP, Rua, Complemento,Municipio,Estado)
-    VALUES (@CEP, @Rua, @Complemento,@Municipio, @Estado);
+    INSERT INTO Endereco (Rua, Numero, Complemento, Bairro, CEP, Municipio, Estado)
+    VALUES (@Rua, @Numero, @Complemento, @Bairro, @CEP, @Municipio, @Estado);
 END;
 
 
@@ -171,9 +191,11 @@ END;
 
 CREATE PROCEDURE CadastrarCliente
 
-@Nome VARCHAR(75),
-@Telefone VARCHAR(15),
-@Email VARCHAR(86),
+@NomeCompleto VARCHAR(85),
+@Email VARCHAR(200),
+@HashSenha VARCHAR(500),
+@AlgoSenha VARCHAR(50),
+@Telefone VARCHAR(14),
 @CPF VARCHAR(14),
 @ID_Endereco INT
 
@@ -186,8 +208,8 @@ IF EXISTS(SELECT 1 FROM Cliente WHERE CPF = @CPF)
     RETURN;
   END
 
-INSERT INTO Cliente(Nome, Telefone, Email, CPF, ID_Endereco)
-VALUES(@Nome, @Telefone, @Email, @CPF, @ID_Endereco)
+INSERT INTO Cliente(Nome, Email, HashSenha, AlgoSenha, Telefone, CPF, ID_Endereco)
+VALUES(@NomeCompleto, @Email, @HashSenha, @AlgoSenha, @Telefone, @CPF, @ID_Endereco)
 END;
 
 
@@ -202,9 +224,8 @@ END;
 
 
 CREATE PROCEDURE CadastrarPedido
-@Data_Pedido DATE,
-@ID_Cliente INT,
-@StatusPagamento VARCHAR(25)
+@StatusPagamento VARCHAR(25),
+@ID_Cliente INT
 
 AS
 BEGIN
@@ -214,13 +235,8 @@ RAISERROR('Não é possivel encontrar o cliente', 16,1)
 RETURN;
 END
 
-IF @StatusPagamento NOT IN ('Pagamento Aprovado','Pagamento Não Aprovado','Pagamento Pendente')
-    BEGIN
-        RAISERROR('Status de pagamento inválido', 16, 1);
-        RETURN;
-    END
 
-INSERT INTO Pedido(Data_Pedido,ID_Cliente,StatusPagamento) VALUES
-(@Data_Pedido,@ID_Cliente,@StatusPagamento)
+INSERT INTO Pedido(StatusPagamento, ID_Cliente) VALUES
+(@StatusPagamento, @ID_Cliente)
 END;
 
