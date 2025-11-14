@@ -1,4 +1,5 @@
 
+
 CREATE DATABASE GardeniaCrochet;
 USE GardeniaCrochet;
 
@@ -21,7 +22,7 @@ ID_Cliente INT PRIMARY KEY IDENTITY,
 NomeCompleto VARCHAR(85) NOT NULL,
 Email VARCHAR(200) UNIQUE NOT NULL,
 HashSenha NVARCHAR(500) NOT NULL,
-AlgoSenha NVARCHAR(50) NOT NULL
+AlgoSenha NVARCHAR(50) NOT NULL,
 Telefone VARCHAR(14) NOT NULL,
 CPF VARCHAR(14) UNIQUE NOT NULL,
 ID_Endereco INT CONSTRAINT F_K_Endereco FOREIGN KEY(ID_Endereco) REFERENCES Endereco(ID_Endereco)
@@ -46,7 +47,6 @@ ID_Cliente INT CONSTRAINT F_K_Cliente FOREIGN KEY(ID_Cliente) REFERENCES Cliente
 
 
 
-
 CREATE TABLE ItensCarrinho (
   ID_ItemCarrinho INT IDENTITY PRIMARY KEY,
   ID_Cliente INT NOT NULL,
@@ -60,7 +60,7 @@ CREATE TABLE ItensCarrinho (
 
 
 CREATE TABLE ItensPedidos (
-  ID_ProdutoPedido INT PRIMARY KEY IDENTITY,
+  ID_ItensPedidos INT PRIMARY KEY IDENTITY,
   ID_Pedido INT NOT NULL,
   ID_Produto INT NOT NULL,
   Quantidade INT NOT NULL DEFAULT 1,
@@ -69,11 +69,6 @@ CREATE TABLE ItensPedidos (
   CONSTRAINT F_K_ItensPedidos_Pedido FOREIGN KEY (ID_Pedido) REFERENCES Pedido(ID_Pedido),
   CONSTRAINT F_K_ItensPedidos_Produtos FOREIGN KEY (ID_Produto) REFERENCES Produto(ID_Produto)
 );
-
-
-
-
-
 
 
 
@@ -87,8 +82,6 @@ ID_Pedido INT,
 ID_Produto INT,
 StatusProduto VARCHAR(25) NOT NULL CHECK (StatusProduto IN('Pedido Confirmado','Em Transporte','Entregue','Cancelado','Devolvido'))
 );
-
-
 
 
 
@@ -159,7 +152,6 @@ END;
 
 
 
-
 CREATE PROCEDURE CadastrarEndereco
     @Rua VARCHAR(86),
     @Numero INT,
@@ -208,7 +200,7 @@ IF EXISTS(SELECT 1 FROM Cliente WHERE CPF = @CPF)
     RETURN;
   END
 
-INSERT INTO Cliente(Nome, Email, HashSenha, AlgoSenha, Telefone, CPF, ID_Endereco)
+INSERT INTO Cliente(NomeCompleto, Email, HashSenha, AlgoSenha, Telefone, CPF, ID_Endereco)
 VALUES(@NomeCompleto, @Email, @HashSenha, @AlgoSenha, @Telefone, @CPF, @ID_Endereco)
 END;
 
@@ -239,4 +231,3 @@ END
 INSERT INTO Pedido(StatusPagamento, ID_Cliente) VALUES
 (@StatusPagamento, @ID_Cliente)
 END;
-
