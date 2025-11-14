@@ -456,7 +456,7 @@ Boleto
 {
     background-color: var(--cinza-azulado);
     display: grid;
-    /* display: none; */
+    display: none;
     grid-template-columns: 1fr 1fr;
     gap: 1vw;
     /* width: 100%; */
@@ -548,18 +548,65 @@ Boleto
 
 #mes
 {
-    width: 4vw;
+    width: 5.5vw;
     text-align: center;
 }
 
 #ano
 {
-    width: 3.5vw;
+    width: 3.45vw;
     text-align: center;
 }
 
+#cvv
+{
+    margin-top: 1%;
+    width: 3vw;
+    height: 2vw;
+    text-align: center;
+}
 
-.concluir
+.boleto-selecionado
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin: 2%;
+    background-color: var(--cinza-azulado);
+    border-radius: 2vw;    
+    width: 25vw;
+    height: 100%;
+    gap: 2vw;
+}
+
+.titulo-complementar
+{
+    font-family: var(--Poppins);
+    color: var(--marrom);
+    text-align: center;
+    margin: 0 1vw;
+    padding-top: 1vh;
+    font-size: 1.6vw;
+    font-weight: 700;
+    margin-top: 5%;
+}
+
+.boleto-img
+{
+    width: 30%;
+}
+
+.boleto-botao
+{
+    width: 40%;
+    height: 10%;
+    border-radius: .5vw;
+}
+
+
+.cartao-concluir
 {
     margin-left: 5%;
     border-radius: .5vw;
@@ -573,6 +620,8 @@ Boleto
     width: 80%;
     height: 2.8vw;
     margin-top: 10%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .concluir:hover
@@ -582,32 +631,4 @@ Boleto
     border: 2px solid var(--cinza-branco);
     
 }
-
-
-
-
-/* #numero-cartao
-{
-    padding: 0 8.5%;
-    font-size: 1.1vw;
-    width: 14vw;
-}
-
-#cpf
-{
-    width: 11vw;
-} */
-
-
-
-/* .inputs
-{
-    border: none;
-    border-radius: .5vw;
-    font-size: 1vw;
-    font-family: var(--Poppins);
-    color: #62727F;
-    padding: 0 .7vw;
-    height: 2.5vw;
-} */
 
