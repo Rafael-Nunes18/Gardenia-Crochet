@@ -166,9 +166,10 @@ body {
 .modelos-grid {
     padding-top: 5px;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
+    grid-template-columns: repeat(3, .1fr);
+    gap: 2vw;
     background-color: #F2E0C0;
+    justify-content: center;
 }
 
 .modelo1 {
@@ -188,7 +189,6 @@ body {
     max-width: 100%;
     height: auto;
     text-align: center;
-    padding-left: 20px;
     font-weight: bold;
     
 
@@ -202,20 +202,12 @@ body {
     max-width: 100%;
     height: auto;
     text-align: center;
-    padding-left: 20px;
+    padding-right: 20px;
     font-weight: bold;
 
 }
 
-.modelo4 {
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    text-align: center;
-    padding-left: 20px;
-    font-weight: bold;
 
-}
 
 
 .quem-somos {
