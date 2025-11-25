@@ -1,0 +1,62 @@
+.secao-sobre {
+  position: relative;
+  background: #8ca0b3; /* seu fundo azul */
+  padding: 60px 40px;
+  overflow: hidden; /* evita que as bolinhas vazem */
+}
+
+/* Bolinha 1 */
+.secao-sobre::before {
+  content: "";
+  position: absolute;
+  width: 140px;
+  height: 140px;
+  background: rgba(255,255,255,0.55);
+  border-radius: 50%;
+  top: 40px;
+  left: 80px;
+  filter: blur(20px);
+}
+
+/* Bolinha 2 */
+.secao-sobre::after {
+  content: "";
+  position: absolute;
+  width: 110px;
+  height: 110px;
+  background: rgba(255,255,255,0.45);
+  border-radius: 50%;
+  bottom: 60px;
+  right: 70px;
+  filter: blur(18px);
+}
+
+/* Layout interno */
+.conteudo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+/* Texto */
+.texto {
+  max-width: 600px;
+  color: #2d2d2d;
+}
+
+.frase {
+  font-size: 26px;
+  font-style: italic;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+/* Foto */
+.foto {
+  width: 300px;
+  border-radius: 12px;
+  border: 4px solid #4a5568;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+  object-fit: cover;
+}
