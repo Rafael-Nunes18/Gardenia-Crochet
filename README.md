@@ -21,3 +21,8 @@ Este repositório contém o código-fonte do site Gardenia Crochet. O objetivo d
 - AWS EC2
 
 Você já pode conferir nosso design UX/UI aqui no nosso Figma: https://www.figma.com/design/WCrHF3gmgDjSv7qQxXPjd2/G1---Gard%C3%AAnia-Crochet?node-id=1-3&p=f&t=xRDMvlRTz63lBNPl-0
+
+## Diagrama Entidade-Relacionamento
+
+
+<img width="1434" height="822" alt="Screenshot 2025-11-27 102429" src="https://github.com/user-attachments/assets/52cef534-67a2-4b66-9a6a-4d928c82df28" />
