@@ -28,7 +28,7 @@ Você já pode conferir nosso design UX/UI aqui no nosso Figma: https://www.figm
 
 
 
-*Design da tela de pedidos
+*Design da tela de perfil
 
 <br>
 
