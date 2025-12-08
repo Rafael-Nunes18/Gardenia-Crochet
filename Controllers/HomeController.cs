@@ -1,31 +1,24 @@
-using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
-using Gardenia_MVC.Models;
 
 namespace Gardenia_MVC.Controllers;
 
 public class HomeController : Controller
 {
-    private readonly ILogger<HomeController> _logger;
+     public IActionResult Index()
+        {
+            return View();
+        }
 
-    public HomeController(ILogger<HomeController> logger)
-    {
-        _logger = logger;
-    }
+        public IActionResult VerificarAcesso()
+        {
+            var usuarioId = HttpContext.Session.GetInt32("UsuarioId");
 
-    public IActionResult Index()
-    {
-        return View();
-    }
+            if (usuarioId == null)
+            {
+                return RedirectToAction("Index", "Login");
+            }
 
-    public IActionResult Privacy()
-    {
-        return View();
-    }
-
-    [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-    public IActionResult Error()
-    {
-        return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-    }
-}
+            return RedirectToAction("Dashboard", "Dashboard");
+        }
+ }
+    

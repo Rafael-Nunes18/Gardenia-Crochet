@@ -1,0 +1,150 @@
+body{
+    background-color:#F2E0C0;
+    color: var(--texto-escuro);
+}
+
+.login
+{
+display: grid;
+grid-template-columns: 1fr 2fr;
+height: 100vh;
+}
+ 
+/*Lado esquerdo*/
+.lado_esquerdo
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 50px;
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    background-color: var(--cinza-claro-azulado);
+    color: var(--branco);
+}
+
+.logo
+{
+    width: 275px;
+}
+
+.titulo_marca
+{
+    color: var(--marrom);
+}
+.descricao
+{
+    margin: 0 0 60px;
+    font-size: 0.9em;
+    font-weight: 300;
+    
+}
+
+/*Lado direito*/
+.lado_direito
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 50px;
+    padding: 40px 60px;
+}
+
+.cabecalho_login
+{
+    margin-bottom: 30px;
+}
+
+.titulo_login
+{
+    font-size: 2rem;
+    margin: 0;
+}
+
+.subtitulo_login
+{
+    margin: 8px 0 0;
+    color: #333;
+}
+
+.formulario-login
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;  
+
+}
+
+label 
+{
+    font-weight: 600;
+    align-self: flex-start;
+}
+
+input
+{
+    padding: 8px;
+    border: 2px solid var(--borda);
+    border-radius: 5px;
+    font-size: 1rem;
+    width: 150%;
+}
+
+.campo_senha
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    position: relative;
+}
+
+.icone-olho
+{
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%); /*move o elemento para cima, metade da usa propria altura*/
+}
+
+.botao-login
+{
+    background-color: var(--fundo);
+    color: var(--cinza-claro-azulado);
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 5rem;
+    width: 100%;
+}
+
+.botao-login:hover
+{
+    background-color: #26394e;
+    cursor: pointer;
+}
+
+.link-esqueci
+{
+    text-align: center;
+    font-size: 0.9rem;
+    text-decoration: underline;
+    font-weight: 600;
+    color: var(--texto-escuro);
+    margin-top: 10px;
+}
+
+.erro-login
+{
+    color: var(--erro);
+    font-weight: 600;
+    text-align: center;
+    margin-top: 20px;
+}

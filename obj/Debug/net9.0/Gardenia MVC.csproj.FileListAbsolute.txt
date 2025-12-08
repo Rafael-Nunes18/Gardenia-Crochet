@@ -239,73 +239,9 @@ C:\Users\47258134867\Desktop\Gardenia MVC\obj\Debug\net9.0\Gardenia MVC.RazorAss
 C:\Users\47258134867\Desktop\Gardenia MVC\obj\Debug\net9.0\rjimswa.dswa.cache.json
 C:\Users\47258134867\Desktop\Gardenia MVC\obj\Debug\net9.0\rjsmrazor.dswa.cache.json
 C:\Users\47258134867\Desktop\Gardenia MVC\obj\Debug\net9.0\rjsmcshtml.dswa.cache.json
-C:\Users\47258134867\Desktop\Gardenia MVC\obj\Debug\net9.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 C:\Users\47258134867\Desktop\Gardenia MVC\obj\Debug\net9.0\scopedcss\bundle\Gardenia MVC.styles.css
-C:\Users\47258134867\Desktop\Gardenia MVC\obj\Debug\net9.0\scopedcss\projectbundle\Gardenia MVC.bundle.scp.css
-C:\Users\47258134867\Desktop\Gardenia MVC\obj\Debug\net9.0\compressed\bunu8dil6d-b9sayid5wm.gz
 C:\Users\47258134867\Desktop\Gardenia MVC\obj\Debug\net9.0\compressed\bpfmrhrktr-61n19gt1b8.gz
 C:\Users\47258134867\Desktop\Gardenia MVC\obj\Debug\net9.0\compressed\7q2cbdxuld-xtxxf3hu2r.gz
-C:\Users\47258134867\Desktop\Gardenia MVC\obj\Debug\net9.0\compressed\30yh73dggl-bqjiyaj88i.gz
-C:\Users\47258134867\Desktop\Gardenia MVC\obj\Debug\net9.0\compressed\mlte1obe67-c2jlpeoesf.gz
-C:\Users\47258134867\Desktop\Gardenia MVC\obj\Debug\net9.0\compressed\35xaa0f43r-erw9l3u2r3.gz
-C:\Users\47258134867\Desktop\Gardenia MVC\obj\Debug\net9.0\compressed\wzpm6w6qbr-aexeepp0ev.gz
-C:\Users\47258134867\Desktop\Gardenia MVC\obj\Debug\net9.0\compressed\vu035k65hu-d7shbmvgxk.gz
-C:\Users\47258134867\Desktop\Gardenia MVC\obj\Debug\net9.0\compressed\y7w7u5tzr1-ausgxo2sd3.gz
-C:\Users\47258134867\Desktop\Gardenia MVC\obj\Debug\net9.0\compressed\kpe0ewgwl5-k8d9w2qqmf.gz
-C:\Users\47258134867\Desktop\Gardenia MVC\obj\Debug\net9.0\compressed\431e70dijk-cosvhxvwiu.gz
-C:\Users\47258134867\Desktop\Gardenia MVC\obj\Debug\net9.0\compressed\u5w9fbg45z-ub07r2b239.gz
-C:\Users\47258134867\Desktop\Gardenia MVC\obj\Debug\net9.0\compressed\mavg1wa3mi-fvhpjtyr6v.gz
-C:\Users\47258134867\Desktop\Gardenia MVC\obj\Debug\net9.0\compressed\6yx77znarc-b7pk76d08c.gz
-C:\Users\47258134867\Desktop\Gardenia MVC\obj\Debug\net9.0\compressed\fnw7fpla1v-fsbi9cje9m.gz
-C:\Users\47258134867\Desktop\Gardenia MVC\obj\Debug\net9.0\compressed\fwtm41ax14-rzd6atqjts.gz
-C:\Users\47258134867\Desktop\Gardenia MVC\obj\Debug\net9.0\compressed\7nsh3qdoid-ee0r1s7dh0.gz
-C:\Users\47258134867\Desktop\Gardenia MVC\obj\Debug\net9.0\compressed\lppcglcyr2-dxx9fxp4il.gz
-C:\Users\47258134867\Desktop\Gardenia MVC\obj\Debug\net9.0\compressed\jywbsi5t5p-jd9uben2k1.gz
-C:\Users\47258134867\Desktop\Gardenia MVC\obj\Debug\net9.0\compressed\fft8wp2jm2-khv3u5hwcm.gz
-C:\Users\47258134867\Desktop\Gardenia MVC\obj\Debug\net9.0\compressed\fwto77y9ym-r4e9w2rdcm.gz
-C:\Users\47258134867\Desktop\Gardenia MVC\obj\Debug\net9.0\compressed\wyymqf2b7f-lcd1t2u6c8.gz
-C:\Users\47258134867\Desktop\Gardenia MVC\obj\Debug\net9.0\compressed\rtp303rocs-c2oey78nd0.gz
-C:\Users\47258134867\Desktop\Gardenia MVC\obj\Debug\net9.0\compressed\vend2s82wl-tdbxkamptv.gz
-C:\Users\47258134867\Desktop\Gardenia MVC\obj\Debug\net9.0\compressed\7diklc1nru-j5mq2jizvt.gz
-C:\Users\47258134867\Desktop\Gardenia MVC\obj\Debug\net9.0\compressed\pxr1jt7bw1-06098lyss8.gz
-C:\Users\47258134867\Desktop\Gardenia MVC\obj\Debug\net9.0\compressed\sdq79y01o3-nvvlpmu67g.gz
-C:\Users\47258134867\Desktop\Gardenia MVC\obj\Debug\net9.0\compressed\3vnmbbuhu3-s35ty4nyc5.gz
-C:\Users\47258134867\Desktop\Gardenia MVC\obj\Debug\net9.0\compressed\dqxfl6ru1w-pj5nd1wqec.gz
-C:\Users\47258134867\Desktop\Gardenia MVC\obj\Debug\net9.0\compressed\r5g6qrgy6x-46ein0sx1k.gz
-C:\Users\47258134867\Desktop\Gardenia MVC\obj\Debug\net9.0\compressed\zwc5jbyxvr-v0zj4ognzu.gz
-C:\Users\47258134867\Desktop\Gardenia MVC\obj\Debug\net9.0\compressed\do2unazwpo-37tfw0ft22.gz
-C:\Users\47258134867\Desktop\Gardenia MVC\obj\Debug\net9.0\compressed\4m1784vi56-hrwsygsryq.gz
-C:\Users\47258134867\Desktop\Gardenia MVC\obj\Debug\net9.0\compressed\cl2ckgy3lt-pk9g2wxc8p.gz
-C:\Users\47258134867\Desktop\Gardenia MVC\obj\Debug\net9.0\compressed\4dluflq3fu-ft3s53vfgj.gz
-C:\Users\47258134867\Desktop\Gardenia MVC\obj\Debug\net9.0\compressed\e208ykpqa5-6cfz1n2cew.gz
-C:\Users\47258134867\Desktop\Gardenia MVC\obj\Debug\net9.0\compressed\o47gjk73lu-6pdc2jztkx.gz
-C:\Users\47258134867\Desktop\Gardenia MVC\obj\Debug\net9.0\compressed\2qn91s03sd-493y06b0oq.gz
-C:\Users\47258134867\Desktop\Gardenia MVC\obj\Debug\net9.0\compressed\szp7ic2ofg-iovd86k7lj.gz
-C:\Users\47258134867\Desktop\Gardenia MVC\obj\Debug\net9.0\compressed\ykkcrufwa4-vr1egmr9el.gz
-C:\Users\47258134867\Desktop\Gardenia MVC\obj\Debug\net9.0\compressed\bd6abetfyh-kbrnm935zg.gz
-C:\Users\47258134867\Desktop\Gardenia MVC\obj\Debug\net9.0\compressed\4ax8wcc4so-jj8uyg4cgr.gz
-C:\Users\47258134867\Desktop\Gardenia MVC\obj\Debug\net9.0\compressed\p2zhnrx08f-y7v9cxd14o.gz
-C:\Users\47258134867\Desktop\Gardenia MVC\obj\Debug\net9.0\compressed\tb29bs2lf6-notf2xhcfb.gz
-C:\Users\47258134867\Desktop\Gardenia MVC\obj\Debug\net9.0\compressed\qzpkqixz07-h1s4sie4z3.gz
-C:\Users\47258134867\Desktop\Gardenia MVC\obj\Debug\net9.0\compressed\bedzsf9er4-63fj8s7r0e.gz
-C:\Users\47258134867\Desktop\Gardenia MVC\obj\Debug\net9.0\compressed\nglsuw9vm8-0j3bgjxly4.gz
-C:\Users\47258134867\Desktop\Gardenia MVC\obj\Debug\net9.0\compressed\ayw11jsdwr-47otxtyo56.gz
-C:\Users\47258134867\Desktop\Gardenia MVC\obj\Debug\net9.0\compressed\20ujbdmbv2-4v8eqarkd7.gz
-C:\Users\47258134867\Desktop\Gardenia MVC\obj\Debug\net9.0\compressed\8265robt3k-356vix0kms.gz
-C:\Users\47258134867\Desktop\Gardenia MVC\obj\Debug\net9.0\compressed\rh3y161by9-83jwlth58m.gz
-C:\Users\47258134867\Desktop\Gardenia MVC\obj\Debug\net9.0\compressed\xv9oc9i0mc-mrlpezrjn3.gz
-C:\Users\47258134867\Desktop\Gardenia MVC\obj\Debug\net9.0\compressed\95abm3y0dn-lzl9nlhx6b.gz
-C:\Users\47258134867\Desktop\Gardenia MVC\obj\Debug\net9.0\compressed\pmwrld8gib-ag7o75518u.gz
-C:\Users\47258134867\Desktop\Gardenia MVC\obj\Debug\net9.0\compressed\cftmnubwhx-x0q3zqp4vz.gz
-C:\Users\47258134867\Desktop\Gardenia MVC\obj\Debug\net9.0\compressed\dzqnhkc6bp-0i3buxo5is.gz
-C:\Users\47258134867\Desktop\Gardenia MVC\obj\Debug\net9.0\compressed\3cte3vgzbs-o1o13a6vjx.gz
-C:\Users\47258134867\Desktop\Gardenia MVC\obj\Debug\net9.0\compressed\j51q0qv5kv-ttgo8qnofa.gz
-C:\Users\47258134867\Desktop\Gardenia MVC\obj\Debug\net9.0\compressed\dqysyukfog-2z0ns9nrw6.gz
-C:\Users\47258134867\Desktop\Gardenia MVC\obj\Debug\net9.0\compressed\n5psky3iw3-muycvpuwrr.gz
-C:\Users\47258134867\Desktop\Gardenia MVC\obj\Debug\net9.0\compressed\bxt3r7tcpq-87fc7y1x7t.gz
-C:\Users\47258134867\Desktop\Gardenia MVC\obj\Debug\net9.0\compressed\akji68pov5-mlv21k5csn.gz
-C:\Users\47258134867\Desktop\Gardenia MVC\obj\Debug\net9.0\compressed\wo98iogoqz-cpcd4ftd2d.gz
-C:\Users\47258134867\Desktop\Gardenia MVC\obj\Debug\net9.0\compressed\2nd2a08fil-cpcd4ftd2d.gz
 C:\Users\47258134867\Desktop\Gardenia MVC\obj\Debug\net9.0\staticwebassets.build.json
 C:\Users\47258134867\Desktop\Gardenia MVC\obj\Debug\net9.0\staticwebassets.build.json.cache
 C:\Users\47258134867\Desktop\Gardenia MVC\obj\Debug\net9.0\staticwebassets.development.json
@@ -316,3 +252,8 @@ C:\Users\47258134867\Desktop\Gardenia MVC\obj\Debug\net9.0\refint\Gardenia MVC.d
 C:\Users\47258134867\Desktop\Gardenia MVC\obj\Debug\net9.0\Gardenia MVC.pdb
 C:\Users\47258134867\Desktop\Gardenia MVC\obj\Debug\net9.0\Gardenia MVC.genruntimeconfig.cache
 C:\Users\47258134867\Desktop\Gardenia MVC\obj\Debug\net9.0\ref\Gardenia MVC.dll
+C:\Users\47258134867\Desktop\Gardenia MVC\obj\Debug\net9.0\Gardenia MVC.sourcelink.json
+C:\Users\47258134867\Desktop\Gardenia MVC\obj\Debug\net9.0\compressed\xd0zc46e88-8ffqek3w2g.gz
+C:\Users\47258134867\Desktop\Gardenia MVC\obj\Debug\net9.0\compressed\fmvyfrmz75-fg193pab1h.gz
+C:\Users\47258134867\Desktop\Gardenia MVC\obj\Debug\net9.0\compressed\5vinapsalf-718fofugej.gz
+C:\Users\47258134867\Desktop\Gardenia MVC\obj\Debug\net9.0\compressed\le7cc191as-jr3gvnq8lb.gz

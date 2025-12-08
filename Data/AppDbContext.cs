@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using Gardenia_MVC.Models;
+﻿using Gardenia_MVC.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace Gardenia_MVC.Data;
