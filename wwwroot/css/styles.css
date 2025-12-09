@@ -141,10 +141,9 @@ input
     margin-top: 10px;
 }
 
-.erro-login
-{
-    color: var(--erro);
-    font-weight: 600;
-    text-align: center;
-    margin-top: 20px;
+.mensagem-erro {
+    color: red;
+    font-weight: bold;
+    margin: 10px 0;
+    text-align: center; 
 }

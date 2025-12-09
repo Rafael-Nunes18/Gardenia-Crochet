@@ -35,20 +35,21 @@ namespace Gardenia_MVC.Controllers;
 
             if(usuario == null)
             {
-                ViewBag.Erro = "E-mail ou senha incorretos.";
+                ViewBag.Erro = "Email ou senha incorretos.";
+                ViewBag.EmailDigitado = email;
                 return View("Index");
             }
 
             if(!usuario.SenhaHash.SequenceEqual(senhaDigitadaHash))
             {
-                ViewBag.Erro = "E-mail ou senha incorretos.";
+                ViewBag.Erro = "Email ou senha incorretos.";
                 return View("Index");
             }
 
             HttpContext.Session.SetString("UsuarioNome", usuario.NomeCompleto);
             HttpContext.Session.SetInt32("UsuarioId", usuario.ID_Cliente);
 
-            return RedirectToAction("index", "Home");
+            return RedirectToAction("Index","Home");
         }
 
         public IActionResult Sair()
