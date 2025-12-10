@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gardênia crochet</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/styleGlobal.css">
+
+</head>
+<body>
+<header>
+  <nav class="navegacao">
+    <ul class="lista-menu">
+      <li> <img src="assets/img/logoR.png" alt="logo-gardenia-crochet" class="logo"></li>
+
+      <div class="linha-separadora"></div>
+      <li class="nav-links">
+        <a href="#" class="link-ativo sub-texto" id="portifolio">Portifólio</a>
+        <a href="#" class="link-ativo sub-texto" id="Encomenda">Encomenda</a>
+        <a href="#" class="link-ativo sub-texto" id="Carrinho">Carrinho</a>
+        <a href="#" class="link-ativo sub-texto" id="Contato">Entre em Contato</a>
+      </li>
+      <div class="linha-separadora"></div>
+
+      <li class="perfil-links">
+        <a href="#" class="link-ativo" id="perfil">Perfil</a>
+        <button type="submit" onclick="console.log('eh')"><img class="login" src="assets/svg/perfil.svg" alt=""></button>
+      </li>
+    </ul>
+  </nav>
+  
+  
+  <section class="secao-banner">
+    <div class="texto-banner">
+      
+      <h1 class="titulo-banner textoBanner">
+          Bem-vindo(a) ao 
+      <br>Gardênia Crochet.</h1>
+      <p class="subtitulo-banner-sobre textoBanner textoSub">
+        Aceitamos encomendas , usamos referências desejadas <br>
+         e trabalhamos com fio conduzido.</p>
+      <p class="subtitulo-banner-encomenda textoBanner">Encomende já!</p>
+    </div>
+  </section>
+  
+</header>
+    <main>
+  <div class="linha-divisoria"></div>
+  <section class="modelos">
+    <div class="cabecalho-modelos">
+      <h2 class="texto-titulo">Modelos</h2>
+
+    </div>
+    <div class="modelos-grid">
+      <div class="modelo" >
+        <div class="modelo-img" id="modelo1"></div>
+        <!-- <img src="assets/img/bolsa_personalizada.png" alt="Bolsa Personalizada" class="img-modelo"> -->
+        <p class="sub-texto modelo-texto">Bolsa Personalizada</p>
+      </div>
+      <div class="modelo">
+        <div class="modelo-img" id="modelo2"></div>
+        <!-- <img src="assets/img/croppets.png" alt="Cropped" class="img-modelo"> -->
+        <p class="sub-texto modelo-texto">Cropped</p>
+      </div>
+      <div class="modelo">
+        <div class="modelo-img" id="modelo3"></div>
+        <!-- <img src="assets/img/porta_jóias.png" alt="Porta-joias" class="img-modelo"> -->
+        <p class="sub-texto modelo-texto">Porta-joias</p>
+      </div>
+
+    </div>
+
+    <a href="" class="link" id="">Confira nosso portifólio!</a>
+    
+  </section>
+
+    <article class="sobre-nos">
+      <div class="painel-esquerdo">
+        <p class="texto-titulo titulo">“Cada ponto é um detalhe, cada <br> peça é uma história.”</p>
+        <p class="texto-esquerdo sub-texto textoSub">
+      A Gardênia Crochet é mais do que uma loja — é um <br>espaço dedicado a valorizar a arte do crochê,
+      mostrando <br> como essa técnica tradicional pode ser ao mesmo tempo sustentável,
+      elegante e cheia de significado.
+        </p>
+        <p class="texto-esquerdo sub-texto textoSub">
+        Cada ponto carrega cuidado, criatividade e o <br> compromisso com uma produção mais consciente e <br>sustentável. 
+        Roupas, acessórios, peças de decoração ou <br> presentes especiais: tudo pode ser feito com carinho e <br>qualidade. 
+        Transformamos fios em afeto, e ideias em <br>realidade.
+        </p>      
+      </div>
+
+      <div class="painel-direito">
+        <div class="direito-imagem" id="direito-catarina"></div>
+      </div>
+
+    </article>
+
+  
+    <article class="contato">
+      <h2 class="texto-titulo titulo-informacoes">Contato</h2>
+      <div class="linha-divisoria" id="linha-contato"></div>
+      <section class="dados">
+        <aside class="informacoes">
+          <!-- <ul class="contatos-dados"> -->
+          <ul class="contatos">
+                <li class="linha whatsApp">
+                    <img src="assets/svg/whatsapp.svg" alt="" class="icone-contato">
+                    <p class="texto-informacoes">+55 35998300652</p>
+                </li>
+
+                <li class="linha telefone">
+                    <img src="assets/svg/telefone.svg" alt="" class="icone-contato">
+                    <p class="texto-informacoes">35 3464-1020</p>
+                </li>
+
+                <li class="linha email">
+                    <img src="assets/svg/email.svg" alt="" class="icone-contato">
+                    <p class="texto-informacoes">gardeniacrochet86@gmail.com</p>
+                </li>
+
+                <li class="linha localizacao">
+                    <img src="assets/svg/localizacao.svg" alt="" class="icone-contato" id="local-contato">
+                    <p class="texto-informacoes">R.Niteroi, 180 - São Caetano do Sul/SP. 09510-200</p>
+                </li>
+
+                <li class="linha instagram">
+                    <img src="assets/svg/instagram.svg" alt="" class="icone-contato" id="instagram">
+                    <p class="texto-informacoes">Instagram</p>
+                </li>
+            </ul>
+        </aside>
+
+        <aside class="lado-direito">
+          <form action="" class="mensagem">
+                <ul class="lista-inserir">
+                    <li class="inserir">
+                        <label for="email" class="titulo-caixa">E-mail:</label>
+                        <!-- <input type="email" name="email" id="inserir-dados" placeholder="email@email.com"> -->
+                        <input type="email" name="email" class="inserir-dados" placeholder="">
+                    </li>
+                    <li class="inserir">
+                        <label for="telefone" class="titulo-caixa">Telefone:</label>
+                        <!-- <input type="tel" name="telefone" id="inserir-dados" placeholder="(00) 9999-8888" > -->
+                        <input type="tel" name="telefone" class="inserir-dados" placeholder="" >
+                    </li>
+                    <li class="inserir">
+                        <label for="mensagem" class="titulo-caixa">Mensagem:</label>
+                        <!-- <input type="text" name="mensagem" id="inserir-dados" placeholder="Digite sua mensagem aqui"> -->
+                        <input type="text" name="mensagem" class="inserir-dados" placeholder="">
+                    </li>
+                </ul>
+                <button type="submit" class="botao-envio">Enviar</button>
+            </form>
+      </aside>
+      </section>
+    </article>
+</main>
+
+
+<footer>
+  <article class="rodape-conteudo">
+      <img src="assets/img/logo.png" alt="logo-rodape" class="logo-rodape">
+      <nav>
+        <ul class="lista-rodape">
+            <li class="lista-lista"><a href="#" class="titulo-footer">Saiba mais</a></li>
+            <li class="lista-lista"><a href="#" class="nav-lists">Quem Somos?</a></li>  
+            <li class="lista-lista"><a href="#" class="nav-lists">Nossos meios:</a></li>
+            <li class="lista-lista"><a href="#" class="nav-lists">Feedbacks</a></li>
+        </ul>
+        
+
+        <ul class="lista-rodape">
+            <li class="lista-lista"><a href="#" class="titulo-footer" id="titulo-footer-trabalhe">Trabalhe Conosco</a></li>
+            <li class="lista-lista"><a href="#" class="nav-lists">Vagas Abertas:</a></li>
+            <li class="lista-lista"><a href="#" class="nav-lists" >Sobre Crochet:</a></li>
+        </ul>
+        
+        <div class="procurar">
+          <input type="text" class="procurar-campo" placeholder="O que você procura?">
+          <button type="submit" class="procurar-enviar"><img src="assets/svg/lupinha.svg" alt="" class="procurar-botao"></button>
+        </div>
+      </nav>
+    </article>
+
+  <section class="final-rodape">
+   <div class="linha-divisoria" id="linha-footer"></div> 
+   <p class="direitos"> Todos os direitos reservados | TM® & Copyright © 2025 Senai "Paulo Antônio Skaf"</p>
+  </section>
+</footer>
+</body>
+
+</html>
