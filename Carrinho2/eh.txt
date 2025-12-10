@@ -1,0 +1,68 @@
+    .informacoes-endereco {
+        height: clamp(85vh, 90vh, 100%);
+        padding-bottom: 10%;
+        width: 87vw;
+    }
+
+.endereco-titulo {
+    font-family: var(--Poppins);
+    color: var(--marrom);
+    font-weight: 600;
+    font-size: 3vw;
+}
+
+.titulo {
+        font-size: 2.9vw;
+    }
+
+    .inputs {
+        font-size: 2.34vw;
+    }
+
+
+.cartao-selecionado {
+        width: 52vw;
+        height: clamp(20vh, 21vh, 30vh);
+        gap: 2vw;
+    }
+
+    .cartao {
+        font-size: 2.1vw;
+    }
+
+
+
+.cartaos {
+        font-size: 2vw;
+        height: 4.5vw;
+    }
+
+
+    .cartao-concluir {
+        margin-top: 20%;
+        width: 95%;
+        height: clamp(3vh, 8vw, 44vh);
+        /* font-size: 1.4vw; */
+    }
+
+
+.select {
+        width: 29vw;
+    }
+
+.texto-complementar1 {
+        font-size: clamp(1.7vw, 3vw, 4rem);
+    }
+
+
+    .img-svg {
+        width: clamp(2vw, 5vw, 44rem);
+    }
+
+
+#selecionarPagamento-menu {
+        width: 100%;
+        height: clamp(.1vh, 1vw, 30rem);
+        /* height: 2vh; */
+        padding: 1rem .4vw;
+    }
