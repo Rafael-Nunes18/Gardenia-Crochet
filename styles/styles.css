@@ -1,3 +1,6 @@
+/*************************************/
+/*              GERAL                */
+/*************************************/
 body {
     background-color: #F2E0C0;
     color: var(--texto-escuro);
@@ -9,6 +12,11 @@ body {
     height: 100vh;
 }
 
+/*************************************/
+
+/*************************************/
+/*          LADO ESQUERDO            */
+/*************************************/
 .lado_esquerdo {
     display: flex;
     flex-direction: column;
@@ -51,6 +59,11 @@ body {
     color: var(--cinza-branco);
 }
 
+/*************************************/
+
+/*************************************/
+/*          LADO DIREITO             */
+/*************************************/
 .lado_direito {
     display: flex;
     flex-direction: column;
@@ -175,8 +188,11 @@ input {
     display: none;
 }
 
-/*! AJUSTES RESPONSIVIDADE -MEDIA QUERY */
+/*************************************/
 
+/*************************************/
+/*          RESPONSIVIDADE           */
+/*************************************/
 @media (max-width: 900px) {
     .login {
         grid-template-columns: 1fr;
