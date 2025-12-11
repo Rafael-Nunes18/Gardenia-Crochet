@@ -17,83 +17,99 @@ height: 100vh;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 50px;
-    padding: 40px;
+    margin: 25px;
+    padding: 90px;
     border-radius: 20px;
     text-align: center;
     background-color: var(--cinza-claro-azulado);
-    color: var(--branco);
+    color: var(--cinza-branco);
 }
 
 .logo
 {
-    width: 275px;
+    margin: 5%;
+    width: 255px;
 }
 
-.titulo_marca
-{
-    color: var(--marrom);
-}
 .descricao
 {
     margin: 0 0 60px;
-    font-size: 0.9em;
-    font-weight: 300;
-    
+    font-size: 18.5px;
+    font-weight: 600;
+    font-family:'Poppins';
 }
-
+.cadastro
+{
+    font-size: 16.5px;
+    font-weight: 600;
+    font-family: 'Poppins';
+    color: var(--bege-claro);
+}
 /*Lado direito*/
 .lado_direito
 {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    text-align: center;
+    justify-content: center;
+    text-align: start;
     gap: 50px;
     padding: 40px 60px;
 }
 
-.cabecalho_login
-{
-    margin-bottom: 30px;
-}
-
 .titulo_login
 {
-    font-size: 2rem;
     margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Lobster';
+    font-size: clamp(1.75rem, 0.90rem + 4.25vw, 3.125rem);
+    font-weight: 100;
+    color: var(--marrom);
 }
 
 .subtitulo_login
 {
-    margin: 8px 0 0;
-    color: #333;
+    margin: 8px;
+    color: var(--marrom);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins';
+    font-weight: 600;
 }
 
-.formulario-login
+.formulario_login
 {
+    width: 50%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 5px;  
-
+    color: var(--vermelho-escuro);
 }
 
 label 
 {
+    align-self:flex-start;
+    margin: 50px;
     font-weight: 600;
-    align-self: flex-start;
+    margin: 5% 0;
+    color: var(--marrom);
 }
 
 input
 {
     padding: 8px;
-    border: 2px solid var(--borda);
+    border: 2px solid;
+    border-color: var(--borda-azul-escura);
     border-radius: 5px;
     font-size: 1rem;
-    width: 150%;
+    width: 100%;
+    background-color: var(--cinza-claro-azulado);
+    color: var(--cinza-azulado);
+
 }
 
 .campo_senha
@@ -105,45 +121,84 @@ input
     position: relative;
 }
 
-.icone-olho
+.icone_olho
 {
     position: absolute;
-    right: 5%;
-    top: 50%;
+    right:5%;
+    top: 85%;
     transform: translateY(-50%); /*move o elemento para cima, metade da usa propria altura*/
 }
 
-.botao-login
+.botao_login
 {
-    background-color: var(--fundo);
-    color: var(--cinza-claro-azulado);
-    padding: 14px;
-    border: none;
+    margin: 20px;
+    background-color: var(--cinza-claro-azulado);
+    color: var(--marrom);
+    padding: 10px;
+    border: 2px solid;
+    border-color: var(--borda-azul-escura);
     border-radius: 10px;
-    font-weight: 700;
-    font-size: 5rem;
+    font-weight: 600;
+    font: size 20px; ;
     width: 100%;
 }
 
-.botao-login:hover
+.botao_login:hover
 {
+    color: var(--cinza-branco);
     background-color: #26394e;
     cursor: pointer;
 }
 
-.link-esqueci
+.link_esqueci
 {
+    margin: 13.5px;
     text-align: center;
-    font-size: 0.9rem;
+    font-size: 14.5px;
     text-decoration: underline;
     font-weight: 600;
-    color: var(--texto-escuro);
+    color: var(--marrom);
     margin-top: 10px;
 }
 
-.mensagem-erro {
-    color: red;
-    font-weight: bold;
-    margin: 10px 0;
-    text-align: center; 
+
+.erro-login
+{
+    font-weight: 600;
+    text-align: center;
+    margin-top: 20px;
+    display: none; /*Esconde o elemento na tela*/
+}
+
+/*! AJUSTES RESPONSIVIDADE -MEDIA QUERY */
+
+@media (max-width: 900px) {
+    .login {
+        grid-template-columns: 1fr;
+    }
+
+    .lado_esquerdo {
+        margin: 0;
+        border-radius: 0px 0px 20px 20px;
+    }
+
+    .descricao {
+        font-size: 1.1em;
+        max-width: 55%;
+    }
+
+   /* .logo {
+        display: none;
+    }
+*/
+}
+
+@media (max-width: 600px) {
+    .formulario_login {
+        width: 100%;
+    }
+
+    .campo_senha {
+        width: 100%;
+    }
 }
