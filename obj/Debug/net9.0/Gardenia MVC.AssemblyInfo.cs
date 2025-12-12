@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Gardenia MVC")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+70eadf3a3d71436a62a97e3d1b3bce8b5ab16987")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e99e2618b9920ffca24e9038177c67c13c89e21b")]
 [assembly: System.Reflection.AssemblyProductAttribute("Gardenia MVC")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Gardenia MVC")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
