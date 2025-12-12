@@ -1,357 +1,317 @@
+/*******************************************************
+ * SUMÁRIO DO STYLE
+ *
+ * 1. GERAL
+ * 2. LADO ESQUERDO (botões de cadastro e captcha)
+ * 3. LADO DIREITO (Bem vindo, imagem e botão de cadastrar)
+ * 4. RESPONSIVIDADE MOBILE (425px/620px)
+ /* ********************************************************/
 
-body
-{
+/*===================================================
+1. GERAL
+===================================================*/
+body {
     background-color: var(--bege-claro);
-
+    height: 100vh;
 }
-main
-{
+
+main {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    /* margin: 10%; */
     margin: 0 10%;
 }
 
-.lado-esquerdo
-{
+/* ................................................... */
+
+
+/*===================================================
+2. LADO ESQUERDO (botões de cadastro e captcha)
+===================================================*/
+.lado-esquerdo {
     width: 45vw;
     display: flex;
     flex-direction: column;
-    gap: 3vw;
-
+    gap: 4vh;
     align-items: center;
-    margin-top: 22%;
-    padding-right: 16vw;
+    margin-top: 20vh;
+    padding-right: 15vw;
 }
 
-.texto-botao
-{
+.texto-botao {
     font-family: var(--Poppins);
-    font-size: clamp(1.5vw, 1.6vw, 1.8rem);
+    font-size: 1.5rem;
     color: var(--marrom);
-    font-weight: 800;
+    font-weight: 700;
     white-space: nowrap;
 }
 
-.cadastro
-{
-    width: 29vw;
-    /* background-color: black; */
+.cadastro {
+    width: 31vw;
 }
 
-.cadastro-botao
-{
-    height: 80%;
-    width: 100%;
+.cadastro-botao {
+    height: 10vh;
+    width: 31vw;
     display: inline-flex;
     align-items: center;
-    
-    border-radius: .5vw;  
+    border-radius: 10px;
     background-color: var(--cinza-claro-azulado);
-    border: .2vw solid var(--cinza-azulado);
+    border: 3px solid var(--cinza-azulado);
 
 }
 
-.cadastro-botao:active
-{
+.cadastro-botao:hover {
     background-color: var(--botao-ativo);
+    height: 10.5vh;
+    width: 31.5vw;
+    cursor: pointer;
+    transition: all 0.3s ease;
 
 }
 
-.img
-{
-    height: 100%;
-    width: 11%;
-    margin: 3%;
+#telefone {
+    align-items: center;
+    justify-content: center;
 }
 
-
-.telefone-img
-{
-    margin-right: -1%;
+.img {
+    height: 9vh;
+    width: 3vw;
+    margin: 4%;
 }
 
-#display-none
-{
+#display-none {
     display: none;
 }
 
-#telefone
-{
-    padding: 1vw;
-    text-align: center;
-    align-items: center;
-    padding-left: 3vw;
-}
-
-.linha-divisoria
-{
+.linha-divisoria {
     display: flex;
-    width: 100%;
-    height: clamp(1vh, .7vw, 2vh);
+    width: 30vw;
+    height: 0.5vh;
     background-color: var(--cinza-claro-azulado);
-    border-radius: .1vw;
+    border-radius: 5px;
 }
 
-.nao-sou-robo
-{
-
-}
-.form-robo
-{
+.botao-robo {
     display: inline-flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     gap: 1vw;
+    height: 13vh;
 }
 
-/* Parte do Input:checkbox */
-
-.checkbox-robo
-{
-  margin-right: 10%;
-  /* width: 2.4vw; */
-  width: clamp(1rem, 2.4vw, 3rem);
-  height: clamp(1rem, 2.4vw ,3rem);
-
-  cursor: pointer;
-
-  appearance: none;
-
-  border: .2vw solid var(--cinza-azulado);
-  background-color: #FFFF;
-  border-radius: .6vw;
+.botao-robo:hover {
+    height: 13.5vh;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
-.checkbox-robo:checked
-{
-  /* background: #4caf50; */
-  /* position: relative; */
-
-  position: static;
-
-  /* background-size: cover; */
-  background-image: url(../img/svg/check.svg);
-  background-size: 2vw;
-  background-repeat: no-repeat;
-  background-position: center;
-  
-
+.checkbox-robo {
+    margin-right: 10%;
+    width: clamp(1rem, 2.4vw, 3rem);
+    height: clamp(1rem, 2.4vw, 3rem);
+    cursor: pointer;
+    appearance: none;
+    border: 3px solid var(--cinza-azulado);
+    background-color: #FFFF;
+    border-radius: 10px;
 }
 
-.robo-img
-{
-    width: 15%;
-    height: 90%;
+.checkbox-robo:checked {
+    position: static;
+    background-image: url(../img/svg/check.svg);
+    background-size: 2vw;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.robo-img {
+    width: 5vw;
+    height: 9vh;
     margin: 5% 0% 5% 5%;
 }
 
-.lado-direito
-{
-    margin-top: 10%;
-    margin-bottom: 100%;
-    
-    height: clamp(40vh, 50vw, 60rem);
-    width: clamp(30vw, 35vw, 50rem);
+/* ................................................... */
 
-    border: .4vw solid var(--borda-azul-escura);
-    border-radius: 1vw;
-    background-color: var(--cinza-azulado);
-}
 
-.gardenia-bemvindo
-{
+/*===================================================
+2. LADO DIREITO (Bem vindo, imagem e botão de cadastrar)
+===================================================*/
+
+.lado-direito {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* justify-content: center; */
-
-    width: 100%;
-    height: 100%;
-
+    margin-top: 5vh;
+    height: 90vh;
+    width: 35vw;
+    border: 5px solid var(--borda-azul-escura);
+    border-radius: 25px;
+    background-color: var(--cinza-azulado);
     gap: 1.4vw;
     padding: 10% 10% 20% 10%;
-    /* margin-bottom: 20%; */
-
 }
 
-.gardenia-img
-{
-    margin-top: 0%;
-    width: clamp(10vw, 15.5vw, 20rem);
+.logo-img {
+    width: clamp(10vw, 13vw, 20rem);
     height: auto;
-    border-radius: 50%;
-    border: .2vw solid var(--marrom);
+    border-radius: 500px;
+    border: 3px solid var(--marrom);
 }
 
-.gardenia-textos
-{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 1.5vw;
-    margin-bottom: 15%;
-}
-
-.texto-titulo
-{
-    font-size: clamp(2vw, 3vw, 4rem);
+.texto-titulo {
+    font-size: clamp(2rem, 2.5rem, 4rem);
     font-family: var(--Lobster);
-    font-weight: 400;
+    font-weight: 100;
     color: var(--bege-claro);
+    text-align: center;
 }
 
-.texto-pequeno
-{
-    font-size: clamp(1vw, 1.5vw, 1.5rem);
+.texto-pequeno {
+    font-size: clamp(1vw, 1.25rem, 1.5rem);
     font-family: var(--Poppins);
-    font-weight: 550;
+    font-weight: 600;
     color: var(--branco);
-    white-space: nowrap;
-
+    text-align: center;
+    margin-bottom: 3vh;
 }
 
 
-.gardenia-botao
-{
+.gardenia-botao {
     width: 95%;
-    /* height: clamp(33vh, 30vw, 50rem); */
-    /* padding: .5vh 0; */
-    padding: clamp(.3vh, .1vw, 1rem) 0;
-    
+    padding: clamp(.3vh, .1vw, 1rem);
     border-radius: 1vw;
     border: .2vw solid var(--borda-azul-escura);
     background-color: var(--cinza-claro-azulado);
 
 }
 
-.gardenia-botao:hover
-{
+.gardenia-botao:hover {
     cursor: pointer;
     background-color: transparent;
     border: .2vw solid var(--cinza-branco);
     color: var(--cinza-branco);
 }
 
-.gardenia-botao:active
-{
+.gardenia-botao:active {
     background-color: var(--botao-ativo);
 }
 
+/* ................................................... */
 
-@media (max-width: 425px) {
+
+/*===================================================
+2. LADO ESQUERDO (botões de cadastro e captcha)
+===================================================*/
+@media (max-width: 600px) {
 
 
-    body
-    {
+    body {
         display: flex;
         flex-direction: column;
         margin: 0 auto;
     }
-    
 
-    main
-    {
+
+    main {
         display: flex;
         flex-direction: column-reverse;
         justify-content: center;
         align-items: center;
     }
 
-    .lado-direito
-    {
-        height: 50%;
-        width: 80%;
-        margin-bottom: 0;
-    }
-
-    .gardenia-bemvindo
-    {
-        padding: 15% 10% 20% 10%;
-        height: 100%;
-        gap: 2vw;
-    }
-
-    .gardenia-img
-    {
-        width: 55%;
-
-    }
-
-    .gardenia-textos
-    {
-        gap: 3vw;
-    }
-
-    .texto-titulo
-    {
-        font-size: clamp(2vw, 5.2vw, 4rem);
-    }
-
-    .texto-pequeno
-    {
-        font-size: 85%;
-    }
-
-    .gardenia-botao
-    {
-        width: 100%;
-        padding: clamp(.1vh, .3w, 1rem) 0;
-    }
-    
-
-
-    .lado-esquerdo
-    {
-        padding: 0;
+    .lado-direito {
+        height: 100vh;
+        width: 100vw;
         margin: 0;
-        margin-top: 10%;
-        width: 60vw;
-        gap: 2vw;
+        border: none;
+        border-radius: 0;
+    }
 
+    .logo-img {
+        width: 40vw;
+        margin: 5vh;
+    }
+
+    .texto-titulo {
+        margin: 5vh 0 3vh 0;
+        font-size: clamp(2vw, 5.2vw, 4rem);
+        width: 40vw;
+    }
+
+    .texto-pequeno {
+        font-size: 85%;
+        margin: 0 0 5vh 0;
+        width: 60vw;
+    }
+
+    .gardenia-botao {
+        width: 50vw;
+        height: 5vh;
+        padding: clamp(.1vh, .3w, 1rem) 0;
+        border: 3px solid var(--borda-azul-escura);
+        border-radius: 10px;
+    }
+
+
+
+    .lado-esquerdo {
+        padding: 0;
+        margin: 10vh 0 10vh 0;
+        width: 90vw;
+        gap: 2vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
 
     }
 
-    .cadastro
-    {
-        /* width: 44vw; */
+    .cadastro-botao {
+        width: 70vw;
+        height: clamp(5vh, 8vh, 20rem);
+    }
+
+    .cadastro {
         width: 80%;
         height: clamp(5vh, 15vw, 30rem);
     }
 
-    .img
-    {
-        width: 15%;
-        margin: 0 2%;
+    .img {
+        width: clamp(3vw, 5vw, 10rem);
+        margin: 0 5% 0 5%;
     }
 
-    .texto-botao
-    {
-        font-size: clamp(1vw, 2.5vw, 1.8rem);
+    .texto-botao {
+        font-size: 1rem;
     }
 
-    #telefone
-    {
-        padding-left: 6vw;
+    #telefone {
+        justify-content: center;
     }
 
-    .telefone-img
-    {
+    .telefone-img {
         margin-right: -3%;
     }
 
-    .checkbox-robo
-    {
-        width:  clamp(1.2rem, 2.5vw, 5rem);
-        height: clamp(1.2rem, 2vw ,5rem);
+    .botao-robo {
+        height: 10vh;
     }
 
-    .checkbox-robo:checked
-    {
+    .robo-img {
+        width: 10vw;
+        height: 6vh;
+        margin: 0 0 0 2%;
+    }
+
+
+    .checkbox-robo {
+        width: clamp(1.2rem, 2.5vw, 5rem);
+        height: clamp(1.2rem, 2vw, 5rem);
+    }
+
+    .checkbox-robo:checked {
         background-size: 4vw;
     }
-
-    
 }
