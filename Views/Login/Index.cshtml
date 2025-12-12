@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gardênia Crochet-Login</title>
-    <link rel="stylesheet" href="styles/styles.css"> <!--Uso para linkar o html ao css-->
+    <link rel="stylesheet" href="styles/styleLogin.css"> <!--Uso para linkar o html ao css-->
     <link rel="stylesheet" href="styles/global.css">
 </head>
 
@@ -13,7 +13,7 @@
     <main class="login">
         <!--Lado esquerdo-->
         <aside class="lado_esquerdo">
-            <img src="imgs/image 5.svg" alt="Logo Gardênia Crochet" class="logo">
+            <img src="assets/login/logo.svg" alt="Logo Gardênia Crochet" class="logo">
             <p class="descricao">Loja online de peças <br> artesanais em crochet</p>
             <a href="#" class="cadastro">Cadastre-se</a>
         </aside>
@@ -32,14 +32,14 @@
                     <label for="senha">Senha:</label>
                     <input type="senha" id="senha" placeholder ="********" required>
                     <span class="icone_olho">
-                        <img src="imgs/eye.svg" alt="">
+                        <img src="assets/login/eye.svg" alt="">
                     </span>
                 </div>
                 <button type="submit" class="botao_login">ENTRAR</button>
 
                 <a href="#" class="link_esqueci">Esqueceu sua senha?</a>
 
-                <p class="erro_login">E-mail ou senha incorretos</p>
+                @* <p class="erro_login" (@ViewBag.Erro != null ? "mostrar" : "")>E-mail ou senha incorretos</p> *@
             </form>
         </section>
     </main>
