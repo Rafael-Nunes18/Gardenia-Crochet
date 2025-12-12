@@ -1,0 +1,521 @@
+/*! Lobster */
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+/*! Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body
+{
+    color: var(--marrom); /* Texto em marrom. */
+    background-color: var(--bege-claro); /* Fundo bege claro. */
+}
+
+/*! Header */
+
+.cabecalho
+{
+    width: 100%;
+    position: fixed;
+}
+
+.navegacao
+{
+    display: flex;
+    color: var(--cinza-branco);
+    background-color: var(--cinza-azulado);
+    box-shadow: 0 0 15px rgba(0,0,0,0.65);
+    height: 130px
+}
+
+.barra-topo
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1%;
+}
+
+.logo
+{
+    margin-left: 75%;
+    height: 100px;
+    width: 100px;
+    border: 2px solid var(--marrom);
+    border-radius: 90px;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover
+{
+    transform: scale(1.10);
+}
+
+.logo:active
+{
+    border: solid 1px var(--vermelho-escuro);
+    border-radius: 90px;
+}
+
+.linha-separadora
+{
+    margin-left: 50%;
+    padding: 1.9%;
+    background-color: var(--cinza-claro-azulado);
+    height: 100%;
+}
+
+.linha-separadora-2
+{
+    padding: .30%;
+    background-color: var(--cinza-claro-azulado);
+    height: 75%;
+}
+
+.lista-menu
+{
+    list-style: none;
+    align-items: center;
+    display: flex;
+    gap: 13.3%;
+}
+
+.lista-menu a
+{
+    color: white;
+}
+
+.poppins
+{
+    font-family: var(--Poppins);
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.poppins:hover
+{
+    color: var(--vermelho-escuro);
+    transition: .2s;
+}
+
+.contato
+{
+    display: none;
+    font-size: 0px;
+}
+
+.perfil-links
+{
+    display: flex;
+    align-items: center;
+    gap: 20%;
+}
+
+#perfil
+{
+    font-size: 1.5rem;
+    font-weight: 600;
+    font-family: var(--Poppins);
+}
+
+.link-ativo
+{
+    color: #fff;
+    text-decoration: none;
+}
+
+.link-ativo:hover
+{
+    color: var(--vermelho-escuro);
+    transition: .2s;
+}
+
+.perfil-foto
+{
+    height: clamp(4rem, 5vh, 8rem);
+    width: clamp(4rem, 5vh, 8rem);
+}
+
+.perfil-foto:hover
+{
+    transform: scale(1.05);
+    transition: transform 0.1s ease;
+    border: solid 3px var(--vermelho-escuro);
+    border-radius: 90px;
+}
+
+.perfil-foto:active
+{
+    border: none;
+    transform: scale(0.95);
+}
+
+button
+{
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/*! Background (Abaixo do Header) */
+
+.bg
+{
+    display: grid;
+    grid-template-columns: 0.8fr 1fr;
+}
+
+/*! Lado Esquerdo */
+
+.lado-esquerdo
+{
+    display: flex;
+    background-color: var(--cinza-azulado);
+    color: var(--bege-claro);
+    height: clamp(31rem, 15vh, 50rem);
+    width: clamp(35rem, 25vw, 65rem);
+    border: 5px solid var(--borda-azul-escura);
+    border-radius: 20px;
+    cursor: pointer;
+
+/** Fixar na tela */
+
+    position: sticky;
+    top: 28%;
+    left: 3%;
+    box-shadow: 0 0 15px rgba(0,0,0,0.35);
+    transition: transform 0.3s ease;
+}
+
+.lado-esquerdo:hover
+{
+    transform: scale(1.02);
+}
+
+.lado-esquerdo:active
+{
+    border: solid 3px var(--vermelho-escuro);
+    border-radius: 20px;
+}
+
+.textos-lado-esquerdo
+{
+    margin-top: 5%;
+    margin-left: 5%;
+    text-align: left;
+}
+
+.titulo-tipos-de-peca
+{
+    font-size: 250%;
+    margin-bottom: 7%;
+    font-family: var(--Lobster);
+    font-weight: normal;
+}
+
+.titulo-fio-conduzido
+{
+    font-size: 250%;
+    margin-bottom: 2%;
+    font-family: var(--Lobster);
+    font-weight: normal;
+}
+
+.texto-fio-conduzido
+{
+    font-size: 120%;
+    font-weight: 600;
+    margin-bottom: 5%;
+    color: white;
+    font-family: var(--Poppins);
+}
+
+.titulo-referencias
+{
+    font-size: 250%;
+    margin-bottom: 2%;
+    font-family: var(--Lobster);
+    font-weight: normal;
+}
+
+.texto-referencias
+{
+    font-size: 120%;
+    font-weight: 600;
+    color: white;
+    font-family: var(--Poppins);
+}
+
+/*! Lado Direito */
+
+.lado-direito
+{
+    margin-top: 25%;
+    height: clamp(31rem, 15vh, 50rem);
+    width: clamp(50rem, 30vw, 80rem);
+    border: 5px solid var(--borda-azul-escura);
+    border-radius: 20px;
+    overflow-y: scroll;
+}
+
+::-webkit-scrollbar
+{
+    width: auto;
+}
+
+::-webkit-scrollbar-track
+{
+    background: var(--cinza-azulado);
+    border: solid 4px var(--borda-azul-escura);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb
+{
+    background: var(--cinza-claro-azulado);
+    border: solid 4px var(--borda-azul-escura);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover
+{
+    background: var(--cinza-branco);
+}
+
+.textos-lado-direito
+{
+    margin: 3%;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1.1fr 1.1fr;
+}
+
+.foto
+{
+    margin: 5%;
+    border: 2px solid var(--cinza-azulado);
+    border-radius: 10px;
+    width: 75%;
+    cursor: pointer;
+}
+
+.foto:hover
+{
+    transition: transform 0.2s ease;
+    transform: scale(1.15);
+}
+
+.foto:active
+{
+    border: solid 4px var(--vermelho-escuro);
+    border-radius: 10px;
+}
+
+.titulo-foto
+{
+    margin-left: 5%;
+    margin-right: 5%;
+    font-size: 135%;
+    font-family: var(--Poppins);
+    font-weight: bold;
+}
+
+.texto-foto
+{
+    margin-right: 5%;
+    margin-left: 5%;
+    margin-bottom: 5%;
+    font-size: 90%;
+    font-family: var(--Poppins);
+    font-weight: normal;
+}
+
+/*! Responsividade */
+
+@media (max-width: 600px)
+{
+    .cabecalho
+    {
+        position: static;
+    }
+
+    .navegacao
+    {
+        padding: 0;
+        box-shadow: none;
+        height: 100px;
+    }
+
+    .barra-topo
+    {
+        justify-content: center;
+        padding: 0;
+        width: 100%;
+    }
+
+    .logo, .logo:hover
+    {
+        margin-left: 4px;
+        width: 60px;
+        height: 60px;
+        transform: none;
+        border: solid 1px var(--marrom);
+    }
+
+    .linha-separadora, .linha-separadora-2
+    {
+        display: none;
+    }
+
+    .lista-menu
+    {
+        gap: 10px;
+        padding: 0;
+        margin-top: 10px;
+        margin-right: 4px;
+    }
+
+    .lista-menu a, #perfil
+    {
+        font-size: .80rem;
+        justify-content: center;
+    }
+
+    .poppins:hover
+    {
+        transition: .2s;
+    }
+
+    .entre-em-contato
+    {
+        display: none;
+        font-size: 0px;
+    }
+
+    .contato
+    {
+        margin-top: 2px;
+        display: flex;
+        align-items: center;
+    }
+
+    .perfil-links
+    {
+        gap: 0px;
+    }
+
+    .link-ativo
+    {
+        display: none;
+    }
+
+    .perfil-foto
+    {
+        width: 50px;
+        height: 50px;
+        margin-right: 10px;
+    }
+
+    .perfil-foto:hover
+    {
+        transform: none;
+        border: solid 2px var(--vermelho-escuro);
+    }
+
+    .bg
+    {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .lado-esquerdo, .lado-esquerdo:hover
+    {
+        position: static;
+        width: auto;
+        height: 350px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        border: 3px solid var(--borda-azul-escura);
+        border-radius: 10px;
+        box-shadow: none;
+        transform: none;
+    }
+
+    .textos-lado-esquerdo
+    {
+        text-align: center;
+        margin: 25px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .titulo-tipos-de-peca, .titulo-fio-conduzido,
+    .titulo-referencias
+    {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .texto-fio-conduzido, .texto-referencias
+    {
+        font-size: 0.95rem;
+        text-align: center;
+    }
+
+    .lado-direito
+    {
+        width: 100%;
+        height: auto;
+        margin-top: 10px;
+        border: none;
+        border-radius: 10px;
+    }
+
+    ::-webkit-scrollbar
+    {
+        display: none;
+    }
+
+    .textos-lado-direito
+    {
+        grid-template-columns: 1fr;
+        margin: 0;
+    }
+
+    .janela
+    {
+        margin-bottom: 25px;
+    }
+
+    .foto
+    {
+        width: 75%;
+        margin: 0 auto;
+        display: block;
+        border: 1px solid var(--cinza-azulado);
+        border-radius: 5px;
+    }
+
+    .foto:hover, .foto:active
+    {
+        transform: none;
+        border: 1px solid var(--cinza-azulado);
+    }
+
+    .titulo-foto
+    {
+        text-align: center;
+        font-size: 1.8rem;
+        margin-top: 5px;
+    }
+
+    .texto-foto
+    {
+        text-align: center;
+        font-size: 1rem;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
