@@ -1,62 +1,64 @@
-using Gardenia_MVC.Data;
-using Gardenia_MVC.Models;
-using Gardenia_MVC.Services;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Google;
 using Microsoft.AspNetCore.Mvc;
+using GoogleLogin.Data;
+using GoogleLogin.Models;
 
+namespace GoogleLogin.Controllers
+{
+    public class AuthController : Controller
+    {
+        private readonly AppDbContext _db;
 
-namespace Gardenia_MVC.Controllers;
-
-        public class CadastroController : Controller
+        public AuthController(AppDbContext db)
         {
-    
-        private readonly AppDbContext _context;
-
-        public CadastroController(AppDbContext context)
-        {
-            _context = context;
+            _db = db;
         }
 
-        public IActionResult Index()
+        public IActionResult Login()
         {
             return View();
         }
 
-        [HttpPost]
-        public IActionResult Registrar(string nomeCompleto, string email, string senha)
+        public IActionResult LoginGoogle()
         {
-            if(string.IsNullOrWhiteSpace(nomeCompleto) || string.IsNullOrWhiteSpace(email) || string.IsNullOrWhiteSpace(senha))
-            {
-                ViewBag.Erro = "Preencha todos os campos.";
-                return View("Index");
-            }
-
-            var usuarioExistente = _context.Clientes.FirstOrDefault(u => u.Email == email);
-            if(usuarioExistente != null)
-            {
-                ViewBag.Erro = "E-mail já cadastrado.";
-                return View("Index");
-            }
-
-            byte[] senhaHash = HashService.GerarHashBytes(senha);
-
-            var novoUsuario = new Cliente
-            {
-                NomeCompleto = nomeCompleto,
-                Email = email,
-                SenhaHash = senhaHash
-            };
-
-            _context.Clientes.Add(novoUsuario);
-            _context.SaveChanges();
-
-            HttpContext.Session.SetString("UsuarioNome", novoUsuario.NomeCompleto);
-            HttpContext.Session.SetInt32("UsuarioId", novoUsuario.ID_Cliente);
-
-            return RedirectToAction("index", "Home");
+            var redirectUrl = Url.Action("GoogleResponse", "Auth");
+            return Challenge(new AuthenticationProperties { RedirectUri = redirectUrl }, GoogleDefaults.AuthenticationScheme);
         }
-      }
 
+        public async Task<IActionResult> GoogleResponse()
+        {
+            var result = await HttpContext.AuthenticateAsync();
 
+            var email = result.Principal.FindFirst(c => c.Type.Contains("email"))?.Value;
+            var nome = result.Principal.FindFirst(c => c.Type.Contains("name"))?.Value;
 
+            // Buscar no banco
+            var usuario = _db.Usuario.FirstOrDefault(u => u.Email == email);
 
-    
+            if (usuario == null)
+            {
+                usuario = new Usuario
+                {
+                    Email = email,
+                    NomeCompleto = nome,
+                    NomeUsuario = nome,
+                    Senha = null,
+                    CriadoEm = DateTime.Now,
+                    RegraId = 2
+                };
+
+                _db.Usuario.Add(usuario);
+                _db.SaveChanges();
+            }
+
+            return RedirectToAction("Index", "Home");
+        }
+
+        public async Task<IActionResult> Logout()
+        {
+            await HttpContext.SignOutAsync();
+            return RedirectToAction("Login");
+        }
+    }
+}
