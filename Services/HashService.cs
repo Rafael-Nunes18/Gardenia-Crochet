@@ -5,9 +5,11 @@ namespace Gardenia_MVC.Services
 {
     public static class HashService
     {
-        public static byte[] GerarHashBytes(string senha)
+        public static string GerarHash(string senha)
         {
-            return SHA256.HashData(Encoding.UTF8.GetBytes(senha));
+            using var sha256 = SHA256.Create();
+            byte[] hashBytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(senha));
+            return Convert.ToBase64String(hashBytes);
         }
     }
 }

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/global.css">
+    <link rel="stylesheet" href="/css/perfil.css">
+    <title>Perfil</title>
+</head>
+
+<body>
+    <!-- =================== -->
+    <!-- ===== HEADER ===== -->
+    <!-- =================== -->
+
+    <header class="cabecalho">
+        <nav class="navegacao">
+
+            <a href="#" class="barra-topo">
+                <img src="/assets\Logos/login/logo.svg" alt="" class="logo-header">
+
+                <div>
+                    <hr class="linha-separadora-1">
+                </div>
+
+                <ul class="lista-menu">
+
+                    <li><a href="#" class="poppins">Portfólio</a></li>
+                    <li><a href="#" class="poppins">Encomenda</a></li>
+                    <li><a href="#" class="poppins">Carrinho</a></li>
+                    <li class="entre-em-contato"><a href="#" class="poppins">Entre em Contato</a></li>
+
+                    <div>
+                        <hr class="linha-separadora-2">
+                    </div>
+
+                    <li class="perfil">
+                        <a href="#" class="perfil-texto" id="perfil">Perfil</a>
+                        <button type="submit" onclick="console.log('eh')"><img class="perfil-foto"
+                                src="assets\Logos\Portfolio\Perfil.png" alt=""></button>
+                    </li>
+                </ul>
+            </a>
+        </nav>
+    </header>
+
+    <!-- ========================
+    PAINEL ACIMA - LADO ESQUERDO
+    ============================= -->
+    <main>
+        <section class="painel-acima">
+            <div class="foto">
+                <img src="/assets\Logos/Portfolio/Perfil.svg" alt="" class="foto-perfil-main">
+                <button class="editar-perfil">Editar</button>
+            </div>
+            <aside class="info-usuario">
+                <h1 class="nome-usuario">Lilia Andrade</h1>
+                <ul class="texto-informacoes">
+                    <li>Aniversário: <p id="aniversario"> 05/12/2005</p>
+                    </li>
+                    <li>CPF: <p id="cpf"> 123.456.789-33</p>
+                    </li>
+                    <li>Telefone: <p id="telefone"> (11) 99999-9999</p>
+                    </li>
+                    <li>Email: <p id="email"> lilia.andrads@gmail.com</p>
+                    </li>
+                </ul>
+            </aside>
+
+            <div class="separador"> </div>
+
+    <!-- ========================
+    PAINEL ACIMA - LADO DIREITO
+    ============================= -->
+
+            <aside class="info-endereco">
+                <ul class="texto-informacoes">
+                    <li>Rua: <p id="rua">Alameda dos Jacarandás</p>
+                    </li>
+                    <li>Estado: <p id="estado">São Paulo</p>
+                    </li>
+                    <li>CEP: <p id="cep">03612-520</p>
+                    </li>
+                </ul>
+                <ul class="texto-informacoes">
+                    <li>Número: <p id="numero">55</p>
+                    </li>
+                    <li>Cidade: <p id="estado">São Cateano do Sul</p>
+                    </li>
+                    <li>Bairro: <p id="bairro">Jardim Ana</p>
+                    </li>
+                </ul>
+            </aside>
+        </section>
+
+    <!-- ========================
+    PAINEL ABAIXO - LADO ESQUERDO
+    ============================= -->
+        
+        <section class="painel-abaixo">
+
+            <aside class="info-pedidos">
+                <h2 class="titulo-painel-abaixo">Pedidos</h2>
+                <aside class="fundo-pedidos">
+                    
+                    <ul class="pedidos">
+                        <li class="pedido-selecionado">
+                            <img src="/assets\Logos/perfil/pedido.svg" alt="" class="pedido-img">
+                            <div class="pedido-dados">
+                                <h2 class="pedido-id" id="ID">Pedido ID: 555000555</h2>
+                                <div class="pedido-informacoes">
+                                    <p class="pedido-conteudo"> Data: 14/11/2025 </p>
+                                    <p class="pedido-conteudo"> Status: Saiu para entrega </p>
+                                    <p class="pedido-preco">Valor Total: R$80,00</p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <hr class="linha-divisoria">
+
+                    <ul class="pedidos">
+                        <li class="pedido-selecionado">
+                            <img src="/assets\Logos/perfil/pedido.svg" alt="" class="pedido-img">
+                            <div class="pedido-dados">
+                                <h2 class="pedido-id" id="ID">Pedido ID: 444000555</h2>
+                                <div class="pedido-informacoes">
+                                    <p class="pedido-conteudo"> Data: 10/03/2025 </p>
+                                    <p class="pedido-conteudo"> Status: Entregue </p>
+                                    <p class="pedido-preco">Valor Total: R$120,00</p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <hr class="linha-divisoria">
+                </aside>
+            </aside>
+
+    <!-- ========================
+    PAINEL ABAIXO - LADO DIREITO
+    ============================= -->
+
+            <aside class="info-avaliacoes">
+                <h2 class="titulo-painel-abaixo-2">Avaliações</h2>
+                <aside class="fundo-avaliacoes">
+
+                    <ul class="pedidos">
+                        <li class="pedido-selecionado">
+                            <img src="/assets\Logos\perfil\pedido.svg" alt="" class="pedido-img">
+                            <div class="pedido-dados">
+                                <h2 class="pedido-id-2" id="ID">Pedido ID: 555000555</h2>
+                                <div class="pedido-informacoes-2">
+                                    <p class="pedido-conteudo"> Nota: <img src="/assets/Logos/perfil/estrela.svg"
+                                            class="estrela-preenchida"> <img src="/assets/Logos/perfil/estrela.svg"
+                                            class="estrela-preenchida"> <img src="/assets/Logos/perfil/estrela.svg"
+                                            class="estrela-preenchida"> <img src="/assets/Logos/perfil/estrela.svg"
+                                            class="estrela-preenchida"> <img src="/assets/Logos/perfil/estrela.svg"
+                                            class="estrela-preenchida"></p>
+                                    <p class="pedido-conteudo"> Avaliação: Peça confortavel e versátil para o dia a dia </p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <hr class="linha-divisoria-2">
+
+                    <ul class="pedidos">
+                        <li class="pedido-selecionado">
+                            <img src="/assets\Logos/perfil/pedido.svg" alt="" class="pedido-img">
+                            <div class="pedido-dados">
+                                <h2 class="pedido-id-2" id="ID">Pedido ID: 444002222</h2>
+                                <div class="pedido-informacoes-2">
+                                    <p class="pedido-conteudo"> Nota: <img src="/assets/Logos/perfil/estrela.svg"
+                                            class="estrela-preenchida"> <img src="/assets/Logos/perfil/estrela.svg"
+                                            class="estrela-preenchida"> <img src="/assets/Logos/perfil/estrela.svg"
+                                            class="estrela-preenchida"> <img src="/assets/Logos/perfil/estrela.svg"
+                                            class="estrela-preenchida"> <img src="/assets/Logos/perfil/estrelavazia.svg"
+                                            class="estrela-sem-preenchimento"></p>
+                                    <p class="pedido-conteudo"> Avaliação: Peça bonita e usável, tom um pouco diferente do da foto </p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <hr class="linha-divisoria-2">
+
+                </aside>
+            </aside>
+        </section>
+    </main>
+</body>

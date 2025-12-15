@@ -12,17 +12,17 @@ public partial class AppDbContext : DbContext
 
     public virtual DbSet<CategoriaProduto> CategoriaProdutos { get; set; }
 
-    public virtual DbSet<Cliente> Clientes { get; set; }
+    public virtual DbSet<Cliente> Cliente { get; set; }
 
-    public virtual DbSet<Endereco> Enderecos { get; set; }
+    public virtual DbSet<Endereco> Endereco { get; set; }
 
     public virtual DbSet<ItensPedido> ItensPedidos { get; set; }
 
-    public virtual DbSet<Pagamento> Pagamentos { get; set; }
+    public virtual DbSet<Pagamento> Pagamento { get; set; }
 
-    public virtual DbSet<Pedido> Pedidos { get; set; }
+    public virtual DbSet<Pedido> Pedido { get; set; }
 
-    public virtual DbSet<Produto> Produtos { get; set; }
+    public virtual DbSet<Produto> Produto { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

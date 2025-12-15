@@ -1,48 +1,60 @@
+@{
+    Layout = null; 
+}
+
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gardênia Crochet-Login</title>
-    <link rel="stylesheet" href="styles/styles.css"> <!--Uso para linkar o html ao css-->
-    <link rel="stylesheet" href="styles/global.css">
+    <title>Gardênia Crochet - Login</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/global.css">
 </head>
-
 <body>
     <main class="login">
-        <!--Lado esquerdo-->
+
+        <!-- Lado esquerdo -->
         <aside class="lado_esquerdo">
-            <img src="imgs/image 5.svg" alt="Logo Gardênia Crochet" class="logo">
+            <img src="/assets/Logos/login/logo.svg" alt="Logo Gardênia Crochet" class="logo">
             <p class="descricao">Loja online de peças <br> artesanais em crochet</p>
-            <a href="#" class="cadastro">Cadastre-se</a>
+        <a href="@Url.Action("Index", controller: "Cadastro")" class="link-ativo sub-texto" id="cadastro">Cadastro</a>
         </aside>
 
-        <!--Lado direito-->
+        <!-- Lado direito -->
         <section class="lado_direito">
             <header class="cabecalho_login">
                 <h2 class="titulo_login">Bem vindo(a)!</h2>
-                <p class="subtitulo_login">Entre para adquirir peças unicas</p>
+                <p class="subtitulo_login">Entre para adquirir peças únicas</p>
             </header>
-            <form class="formulario_login">
-                <label  for="email">Email:</label>
-                <input type="email" id="email" placeholder="email@email.com" required>
 
+            <!-- Formulário -->
+             <form class="formulario_login" action="/Login/Entrar" method="post">
+
+                <!-- Email -->
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="email@email.com" 
+                       value="@ViewBag.EmailDigitado">
+
+                <!-- Senha -->
                 <div class="campo_senha">
                     <label for="senha">Senha:</label>
-                    <input type="senha" id="senha" placeholder ="********" required>
-                    <span class="icone_olho">
-                        <img src="imgs/eye.svg" alt="">
-                    </span>
+                    <input type="password" id="senha" name="senha" placeholder="********">
                 </div>
+
+                <!-- Botão Entrar -->
                 <button type="submit" class="botao_login">ENTRAR</button>
 
+                <!-- Link esqueci senha -->
                 <a href="#" class="link_esqueci">Esqueceu sua senha?</a>
 
-                <p class="erro_login">E-mail ou senha incorretos</p>
+                <!-- Mensagem de erro -->
+                <p class="erro-login" style="@(ViewBag.Erro != null ? "display:block;" : "display:none;")">
+                    @ViewBag.Erro
+                </p>
+
             </form>
         </section>
     </main>
 </body>
-
 </html>

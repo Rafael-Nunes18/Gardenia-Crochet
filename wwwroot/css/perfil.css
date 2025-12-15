@@ -1,0 +1,373 @@
+body {
+  color: var(--marrom);
+  background-color: var(--bege-claro);
+}
+
+/*===================*/
+/*===== HEADER =====*/
+/*===================*/
+
+.cabecalho {
+  width: 100%;
+}
+
+.navegacao {
+  display: flex;
+  color: var(--cinza-branco);
+  background-color: var(--cinza-azulado);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.65);
+  height: 130px;
+}
+
+.barra-topo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1%;
+}
+
+.logo-header {
+  margin-left: 30%;
+  height: 100px;
+  width: 100px;
+  border: 2px solid var(--marrom);
+  border-radius: 90px;
+  transition: transform 0.3s ease;
+}
+
+.logo-header:hover {
+  transform: scale(1.1);
+}
+
+.logo-header:active {
+  border: solid 1px var(--vermelho-escuro);
+  border-radius: 90px;
+}
+
+.linha-separadora-1 {
+  margin-left: 50px;
+  height: 100px;
+  width: 6px;
+  border: none;
+  background-color: var(--cinza-claro-azulado);
+}
+
+.linha-separadora-2 {
+  height: 100px;
+  width: 6px;
+  border: none;
+  background-color: var(--cinza-claro-azulado);
+}
+
+.lista-menu {
+  list-style: none;
+  align-items: center;
+  display: flex;
+  gap: 13.3%;
+}
+
+.lista-menu a {
+  color: white;
+}
+
+.poppins {
+  font-family: var(--Poppins);
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.poppins:hover {
+  color: var(--vermelho-escuro);
+  transition: 0.2s;
+}
+
+.contato {
+  display: none;
+  font-size: 0px;
+}
+
+.perfil {
+  display: flex;
+  align-items: center;
+  gap: 20%;
+}
+
+#perfil {
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-family: var(--Poppins);
+}
+
+.perfil-texto {
+  color: #fff;
+  text-decoration: none;
+}
+
+.perfil-texto:hover {
+  color: var(--vermelho-escuro);
+  transition: 0.2s;
+}
+
+.perfil-foto {
+  height: clamp(4rem, 5vh, 8rem);
+  width: clamp(4rem, 5vh, 8rem);
+}
+
+.perfil-foto:hover {
+  transform: scale(1.05);
+  transition: transform 0.1s ease;
+  border: solid 3px var(--vermelho-escuro);
+  border-radius: 90px;
+}
+
+.perfil-foto:active {
+  border: none;
+  transform: scale(0.95);
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/*===================
+PAINEIS ACIMA
+===================*/
+main {
+  height: 100vh;
+  width: auto;
+}
+
+.painel-acima {
+  display: grid;
+  grid-template-columns: 0.5fr 1fr 1vw 2fr;
+  gap: 30px;
+}
+
+.foto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5vh;
+  margin-left: 50px;
+}
+
+.foto-perfil-main {
+  height: clamp(8rem, 11rem, 15rem);
+  width: auto;
+  border: 3px solid var(--marrom);
+  border-radius: 200px;
+}
+
+.editar-perfil {
+  margin-top: 3vh;
+  padding: 0.75vh 2vw;
+  background-color: var(--cinza-azulado);
+  font-family: "Poppins", sans-serif;
+  color: var(--cinza-branco);
+  font-weight: 600;
+  border: 3px solid var(--borda-azul-escura);
+  border-radius: 10px;
+  font-size: 1.3rem;
+}
+
+.editar-perfil:hover {
+  background-color: var(--bege-claro);
+  color: var(--marrom);
+  border: 3px solid var(--marrom);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.info-usuario {
+  display: flex;
+  flex-direction: column;
+  align-items: right;
+  gap: 10px;
+  margin: 3rem;
+}
+
+.nome-usuario {
+  font-family: var(--Lobster);
+  font-size: 3rem;
+  font-weight: 200;
+  margin-bottom: 2vh;
+}
+
+.texto-informacoes {
+  list-style: none;
+  font-family: var(--Poppins);
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 3rem;
+}
+
+#aniversario,
+#cpf,
+#telefone,
+#email {
+  display: inline;
+  flex-direction: row;
+}
+
+.separador {
+  margin: 2rem 0rem;
+  background-color: var(--borda-azul-escura);
+  border-radius: 10px;
+  width: 5px;
+}
+
+.info-endereco {
+  display: flex;
+  flex-direction: row;
+  align-items: right;
+  gap: 4vw;
+  margin-top: 3rem;
+}
+
+#rua,
+#numero,
+#estado,
+#cidade,
+#bairro,
+#cep {
+  display: flex;
+  margin-top: -15px;
+  margin-bottom: 10px;
+}
+
+/*===================
+PAINEIS ABAIXO
+===================*/
+
+.painel-abaixo {
+  margin-top: 2vh;
+  margin-right: 6vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.info-pedidos {
+  width: 100%;
+}
+
+.titulo-painel-abaixo {
+  font-family: var(--Lobster);
+  font-size: 3rem;
+  font-weight: 200;
+  text-align: center;
+  margin-right: 120px;
+}
+
+.titulo-painel-abaixo-2 {
+  font-family: var(--Lobster);
+  font-size: 3rem;
+  font-weight: 200;
+  text-align: center;
+  margin-right: 300px;
+}
+
+.fundo-pedidos {
+  background-color: var(--cinza-azulado);
+  border: 5px solid var(--borda-azul-escura);
+  border-radius: 10px;
+  height: 460px;
+  width: 75%;
+  color: var(--cinza-branco);
+  margin-left: 50px;
+}
+
+.pedidos {
+  gap: 20px;
+  margin: 15px;
+}
+
+.pedido-selecionado {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.pedido-img {
+  height: 175px;
+  width: auto;
+}
+
+.pedido-id {
+  font-family: var(--Poppins);
+  color: var(--bege-claro);
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.pedido-informacoes {
+  font-family: var(--Poppins);
+  color : white;
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin-top: 15px;
+}
+
+.pedido-preco {
+  font-family: var(--Poppins);
+  color: var(--bege-claro);
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-top: 15px;
+}
+
+.linha-divisoria {
+  display: block;
+  height: 5px;
+  width: 90%;
+  margin-left: 20px;
+  margin-right: 80px;
+  background-color: white;
+  color: white;
+}
+
+.fundo-avaliacoes {
+  border: 5px solid var(--borda-azul-escura);
+  border-radius: 10px;
+  height: 460px;
+  width: 65%;
+  color: var(--cinza-branco);
+}
+
+.pedido-id-2 {
+  font-family: var(--Poppins);
+  color: var(--marrom);
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.pedido-informacoes-2 {
+  font-family: var(--Poppins);
+  color : var(--marrom);
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-top: 15px;
+}
+
+.estrela-preenchida {
+  height: 20px;
+  width: auto;
+}
+
+.estrela-sem-preenchimento {
+  height: 20px;
+  width: auto;
+}
+
+.linha-divisoria-2 {
+  display: block;
+  height: 5px;
+  width: 90%;
+  margin-left: 20px;
+  margin-right: 80px;
+  background-color: var(--marrom);
+  color: var(--marrom);
+}

@@ -1,6 +1,6 @@
 body{
     background-color:#F2E0C0;
-    color: var(--texto-escuro);
+    color: var(--marrom);
 }
 
 .login
@@ -139,7 +139,7 @@ input
     border-color: var(--borda-azul-escura);
     border-radius: 10px;
     font-weight: 600;
-    font: size 20px; ;
+    font-size: 20px; ;
     width: 100%;
 }
 

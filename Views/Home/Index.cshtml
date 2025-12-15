@@ -5,19 +5,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gardênia crochet</title>
-  <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="stylesheet" href="assets/css/styleGlobal.css">
+  <link rel="stylesheet" href="/css/home.css">
+  <link rel="stylesheet" href="/css/global.css">
 
 </head>
 <body>
 <header>
   <nav class="navegacao">
     <ul class="lista-menu">
-      <li> <img src="assets/img/logoR.png" alt="logo-gardenia-crochet" class="logo"></li>
+      <li> <img src="/assets\Logos/login/logo.svg" alt="logo-gardenia-crochet" class="logo"></li>
 
       <div class="linha-separadora"></div>
       <li class="nav-links">
-        <a href="#" class="link-ativo sub-texto" id="portifolio">Portifólio</a>
+        <a href="@Url.Action("Index", controller: "Portfolio")" class="link-ativo sub-texto" id="portifolio">Portfólio</a>
         <a href="#" class="link-ativo sub-texto" id="Encomenda">Encomenda</a>
         <a href="#" class="link-ativo sub-texto" id="Carrinho">Carrinho</a>
         <a href="#" class="link-ativo sub-texto" id="Contato">Entre em Contato</a>
@@ -25,7 +25,7 @@
       <div class="linha-separadora"></div>
 
       <li class="perfil-links">
-        <a href="#" class="link-ativo" id="perfil">Perfil</a>
+        <a href="@Url.Action("Index", controller: "Perfil")" class="link-ativo sub-texto" id="perfil">Perfil</a>
         <button type="submit" onclick="console.log('eh')"><img class="login" src="assets/svg/perfil.svg" alt=""></button>
       </li>
     </ul>
@@ -106,27 +106,27 @@
           <!-- <ul class="contatos-dados"> -->
           <ul class="contatos">
                 <li class="linha whatsApp">
-                    <img src="assets/svg/whatsapp.svg" alt="" class="icone-contato">
+                    <img src="/assets\Logos/home/whatsapp.svg" alt="" class="icone-contato">
                     <p class="texto-informacoes">+55 35998300652</p>
                 </li>
 
                 <li class="linha telefone">
-                    <img src="assets/svg/telefone.svg" alt="" class="icone-contato">
+                    <img src="/assets\Logos/home/telefone.svg" alt="" class="icone-contato">
                     <p class="texto-informacoes">35 3464-1020</p>
                 </li>
 
                 <li class="linha email">
-                    <img src="assets/svg/email.svg" alt="" class="icone-contato">
+                    <img src="/assets\Logos/home/email.svg" alt="" class="icone-contato">
                     <p class="texto-informacoes">gardeniacrochet86@gmail.com</p>
                 </li>
 
                 <li class="linha localizacao">
-                    <img src="assets/svg/localizacao.svg" alt="" class="icone-contato" id="local-contato">
+                    <img src="/assets\Logos/home/localizacao.svg" alt="" class="icone-contato" id="local-contato">
                     <p class="texto-informacoes">R.Niteroi, 180 - São Caetano do Sul/SP. 09510-200</p>
                 </li>
 
                 <li class="linha instagram">
-                    <img src="assets/svg/instagram.svg" alt="" class="icone-contato" id="instagram">
+                    <img src="/assets\Logos/home/instagram.svg" alt="" class="icone-contato" id="instagram">
                     <p class="texto-informacoes">Instagram</p>
                 </li>
             </ul>
@@ -161,7 +161,7 @@
 
 <footer>
   <article class="rodape-conteudo">
-      <img src="assets/img/logo.png" alt="logo-rodape" class="logo-rodape">
+      <img src="/assets/Logo/login/logo.svg" alt="logo-rodape" class="logo-rodape">
       <nav>
         <ul class="lista-rodape">
             <li class="lista-lista"><a href="#" class="titulo-footer">Saiba mais</a></li>

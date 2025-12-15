@@ -19,8 +19,9 @@ public partial class Cliente
     [Unicode(false)]
     public string Email { get; set; } = null!;
 
-    [MaxLength(320)]
-    public byte[] SenhaHash { get; set; } = null!;
+    [StringLength(32)]
+    [Unicode(false)]
+    public string Senha { get; set; } = null!;
 
     [StringLength(14)]
     [Unicode(false)]

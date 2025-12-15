@@ -14,6 +14,7 @@ namespace Gardenia_MVC.Controllers;
         {
             _context = context;
         }
+        
 
         public IActionResult Index()
         {
@@ -29,25 +30,19 @@ namespace Gardenia_MVC.Controllers;
                 return View("Index");
             }
 
-            byte[] senhaDigitadaHash = HashService.GerarHashBytes(senha);
+            string senhaDigitadaHash = HashService.GerarHash(senha);
 
-            var usuario = _context.Clientes.FirstOrDefault(usuario => usuario.Email == email);
+            var usuario = _context.Cliente.FirstOrDefault(usuario => usuario.Email == email);
 
-            if(usuario == null)
+    if (usuario == null || usuario.Senha != senhaDigitadaHash)
             {
-                ViewBag.Erro = "Email ou senha incorretos.";
+                ViewBag.Erro = "email ou senha incorretos.";
                 ViewBag.EmailDigitado = email;
                 return View("Index");
             }
 
-            if(!usuario.SenhaHash.SequenceEqual(senhaDigitadaHash))
-            {
-                ViewBag.Erro = "Email ou senha incorretos.";
-                return View("Index");
-            }
-
+            HttpContext.Session.SetInt32("ID_Cliente", usuario.ID_Cliente);
             HttpContext.Session.SetString("UsuarioNome", usuario.NomeCompleto);
-            HttpContext.Session.SetInt32("UsuarioId", usuario.ID_Cliente);
 
             return RedirectToAction("Index","Home");
         }
