@@ -1,6 +1,16 @@
+<<<<<<< HEAD
 using Microsoft.AspNetCore.Mvc;
 
 using Gardenia_MVC.Data;
+=======
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Google;
+using Microsoft.AspNetCore.Mvc;
+
+using Gardenia_MVC.Data;
+using Gardenia_MVC.Models;
+using System.Security.Claims;
+>>>>>>> 171399d6080b09c1a848a1754b7b868eb726a6f5
 
 namespace Gardenia_Crochet.Controllers
 {
@@ -72,4 +82,8 @@ namespace Gardenia_Crochet.Controllers
             }
         }
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 171399d6080b09c1a848a1754b7b868eb726a6f5

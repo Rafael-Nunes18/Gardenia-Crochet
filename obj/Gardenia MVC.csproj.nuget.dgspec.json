@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\47258134867\\Desktop\\Gardenia MVC\\Gardenia MVC.csproj": {}
+    "C:\\Users\\54930515831\\Desktop\\Gardenia\\Gardenia-Crochet\\Gardenia MVC.csproj": {}
   },
   "projects": {
-    "C:\\Users\\47258134867\\Desktop\\Gardenia MVC\\Gardenia MVC.csproj": {
+    "C:\\Users\\54930515831\\Desktop\\Gardenia\\Gardenia-Crochet\\Gardenia MVC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\47258134867\\Desktop\\Gardenia MVC\\Gardenia MVC.csproj",
+        "projectUniqueName": "C:\\Users\\54930515831\\Desktop\\Gardenia\\Gardenia-Crochet\\Gardenia MVC.csproj",
         "projectName": "Gardenia MVC",
-        "projectPath": "C:\\Users\\47258134867\\Desktop\\Gardenia MVC\\Gardenia MVC.csproj",
-        "packagesPath": "C:\\Users\\47258134867\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\47258134867\\Desktop\\Gardenia MVC\\obj\\",
+        "projectPath": "C:\\Users\\54930515831\\Desktop\\Gardenia\\Gardenia-Crochet\\Gardenia MVC.csproj",
+        "packagesPath": "C:\\Users\\54930515831\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\54930515831\\Desktop\\Gardenia\\Gardenia-Crochet\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\47258134867\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\54930515831\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
@@ -84,7 +84,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.306/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.307/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
