@@ -7,26 +7,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<<<<<<< HEAD
     <title>Gardênia Crochet - Login</title>
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/global.css">
-=======
-    <title>Gardênia Crochet-Login</title>
-    <link rel="stylesheet" href="styles/styleLogin.css"> <!--Uso para linkar o html ao css-->
-    <link rel="stylesheet" href="styles/global.css">
->>>>>>> 171399d6080b09c1a848a1754b7b868eb726a6f5
 </head>
 <body>
     <main class="login">
 
         <!-- Lado esquerdo -->
         <aside class="lado_esquerdo">
-<<<<<<< HEAD
             <img src="/assets/Logos/login/logo.svg" alt="Logo Gardênia Crochet" class="logo">
-=======
-            <img src="assets/login/logo.svg" alt="Logo Gardênia Crochet" class="logo">
->>>>>>> 171399d6080b09c1a848a1754b7b868eb726a6f5
             <p class="descricao">Loja online de peças <br> artesanais em crochet</p>
         <a href="@Url.Action("Index", controller: "Cadastro")" class="link-ativo sub-texto" id="cadastro">Cadastro</a>
         </aside>
@@ -49,14 +39,11 @@
                 <!-- Senha -->
                 <div class="campo_senha">
                     <label for="senha">Senha:</label>
-<<<<<<< HEAD
                     <input type="password" id="senha" name="senha" placeholder="********">
-=======
                     <input type="senha" id="senha" placeholder ="********" required>
                     <span class="icone_olho">
                         <img src="assets/login/eye.svg" alt="">
                     </span>
->>>>>>> 171399d6080b09c1a848a1754b7b868eb726a6f5
                 </div>
 
                 <!-- Botão Entrar -->
@@ -65,15 +52,11 @@
                 <!-- Link esqueci senha -->
                 <a href="#" class="link_esqueci">Esqueceu sua senha?</a>
 
-<<<<<<< HEAD
                 <!-- Mensagem de erro -->
                 <p class="erro-login" style="@(ViewBag.Erro != null ? "display:block;" : "display:none;")">
                     @ViewBag.Erro
                 </p>
 
-=======
-                @* <p class="erro_login" (@ViewBag.Erro != null ? "mostrar" : "")>E-mail ou senha incorretos</p> *@
->>>>>>> 171399d6080b09c1a848a1754b7b868eb726a6f5
             </form>
         </section>
     </main>

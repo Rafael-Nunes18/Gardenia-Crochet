@@ -311,11 +311,7 @@ body
     flex-direction: column;
 }
 
-/* Titulo abaixo garai 
-    
-    o Rua, Numero, Bairro, Cidade, Estado, CEP e Nome 
-    
-*/
+
 
 
 .titulo
@@ -390,7 +386,6 @@ body
 
 
 
-/* Formas Pagamento:droptable vulgo capeta*/
 
 .formas-pagamento
 {
@@ -457,7 +452,6 @@ input[type="radio"] {
     user-select: none;
     height: 4vh;         
     height: 3rem; 
-    /* PORRRRRRRRRRRA */
 }
 
 #pagamentoSelecionado {
@@ -474,14 +468,13 @@ input[type="radio"] {
   padding-left: .1vw;
 }
 
-/* lista de opções - inicialmente escondida */
 #opcoes {
    margin-top: .25rem; 
   background-color: var(--cinza-branco); 
   margin-top: .25rem; 
   border-radius: .5vw;
   width: 13vw;
-  display: none; /* controlado via JS */
+  display: none;  
   background-color: var(--cinza-branco); 
 }
 
@@ -497,11 +490,9 @@ input[type="radio"] {
     align-items: center;
     border-radius: .5vw;
     margin-bottom: .01vw;
-    /* padding: 0.9rem 1rem; */
-    padding: 2.5vh 1vw;
+     padding: 2.5vh 1vw;
     width: 100%;
-    /* border-bottom: 1px solid #252529; */
-    transition: background-color .18s ease;
+     transition: background-color .18s ease;
     cursor: pointer;
     background-color: var(--cinza-branco);
     height: 3vh;
@@ -530,8 +521,7 @@ input[type="radio"] {
    color: black;
 }
 
-/* REMOVE a bolinha padrão do radio (sem ponto interno).
-   Indicação de seleção: muda a borda e adiciona leve halo, sem 'bolinha' preenchida. */
+ 
 .opcao input[type="radio"] {
   -webkit-appearance: none;
   appearance: none;
@@ -548,56 +538,41 @@ input[type="radio"] {
 
 }
 
-/* checked: sem preenchimento interno (sem bolinha), apenas cor/borda */
-.opcao input[type="radio"]:checked {
-  background-color: transparent; /* sem bolinha */
+ .opcao input[type="radio"]:checked {
+  background-color: transparent;  
   border-color: #A881E6;
-  box-shadow: 0 0 0 3px rgba(168,129,230,0.08); /* halo suave opcional */
+  box-shadow: 0 0 0 3px rgba(168,129,230,0.08);  
   
 }
 
-/* open state: #opcoes é irmão direto (adjacent) do container .dropdown */
-.dropdown.open + #opcoes {
+ .dropdown.open + #opcoes {
   display: block;
 }
 
-/* seta rotaciona quando a div container tem .open */
-.dropdown.open #seta-img {
+ .dropdown.open #seta-img {
   transform: rotate(180deg);
 }
 
-/* foco acessível */
-.opcao:focus-within{
+ .opcao:focus-within{
  outline: 1px solid #A881E6; 
   background-color: var(--cinza-azulado);
   
 }
 
-/* Destaque para a opção selecionada: altera label e ícone (não background) */
-.opcao--selected .texto-complementar1,
+ .opcao--selected .texto-complementar1,
 .opcao:focus-within .texto-complementar1 {
   color: #ffffff !important;
 }
 
-/* ícone branco via filtro (para SVG/PNG monocromáticos usados com <img>) */
-
-/* Pequeno hover para feedback (sem alterar cor principal) */
-
-/* foco por teclado (mais visível) */
-.opcao:focus {
+ 
+ 
+ .opcao:focus {
   outline: 2px solid rgba(168,129,230,0.25);
   outline-offset: 2px;
   border-radius: .5vw;
   color:  var(--cinza-branco); 
 }
-
-/*
-Droptable:
-ordem:
-Pix
-Cartao
-Boleto
-*/
+ 
 
 .pagamento-selecionado
 {
@@ -860,12 +835,7 @@ Boleto
 
 
 
-/* 
-    =============
-    botão prosseguir 
-    =============
-
-*/
+ 
 
 
 .botao-prosseguir
@@ -1040,8 +1010,7 @@ Boleto
 {
     width: 100%;
     height: clamp(2vh, 3vw, 3vh);
-    /* height: 2vh; */
-}
+ }
 
 #pagamentoSelecionado
 {

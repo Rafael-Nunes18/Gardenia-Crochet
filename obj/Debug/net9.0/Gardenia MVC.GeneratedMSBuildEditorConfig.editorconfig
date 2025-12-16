@@ -17,57 +17,57 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Gardenia_MVC
 build_property.RootNamespace = Gardenia_MVC
-build_property.ProjectDir = C:\Users\47258134867\Desktop\Gardenia MVC\
+build_property.ProjectDir = C:\Users\54930515831\Documents\ATUAL\Gardenia-Crochet\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 9.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\47258134867\Desktop\Gardenia MVC
+build_property.MSBuildProjectDirectory = C:\Users\54930515831\Documents\ATUAL\Gardenia-Crochet
 build_property._RazorSourceGeneratorDebug = 
 build_property.EffectiveAnalysisLevelStyle = 9.0
 build_property.EnableCodeStyleSeverity = 
 
-[C:/Users/47258134867/Desktop/Gardenia MVC/Views/Cadastro/index.cshtml]
+[C:/Users/54930515831/Documents/ATUAL/Gardenia-Crochet/Views/Cadastro/index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FkYXN0cm9caW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/47258134867/Desktop/Gardenia MVC/Views/Carrinho/index.cshtml]
+[C:/Users/54930515831/Documents/ATUAL/Gardenia-Crochet/Views/Carrinho/index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FycmluaG9caW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/47258134867/Desktop/Gardenia MVC/Views/Contato/index.cshtml]
+[C:/Users/54930515831/Documents/ATUAL/Gardenia-Crochet/Views/Contato/index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGF0b1xpbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/47258134867/Desktop/Gardenia MVC/Views/Encomenda/index.cshtml]
+[C:/Users/54930515831/Documents/ATUAL/Gardenia-Crochet/Views/Encomenda/index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW5jb21lbmRhXGluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/47258134867/Desktop/Gardenia MVC/Views/Home/Index.cshtml]
+[C:/Users/54930515831/Documents/ATUAL/Gardenia-Crochet/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/47258134867/Desktop/Gardenia MVC/Views/Login/Index.cshtml]
+[C:/Users/54930515831/Documents/ATUAL/Gardenia-Crochet/Views/Login/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/47258134867/Desktop/Gardenia MVC/Views/Perfil/index.cshtml]
+[C:/Users/54930515831/Documents/ATUAL/Gardenia-Crochet/Views/Perfil/index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyZmlsXGluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/47258134867/Desktop/Gardenia MVC/Views/Portfolio/index.cshtml]
+[C:/Users/54930515831/Documents/ATUAL/Gardenia-Crochet/Views/Portfolio/index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9ydGZvbGlvXGluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/47258134867/Desktop/Gardenia MVC/Views/Shared/_Layout.cshtml]
+[C:/Users/54930515831/Documents/ATUAL/Gardenia-Crochet/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/47258134867/Desktop/Gardenia MVC/Views/Shared/_ViewImports.cshtml]
+[C:/Users/54930515831/Documents/ATUAL/Gardenia-Crochet/Views/Shared/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WaWV3SW1wb3J0cy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/47258134867/Desktop/Gardenia MVC/Views/Shared/_ViewStart.cshtml]
+[C:/Users/54930515831/Documents/ATUAL/Gardenia-Crochet/Views/Shared/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WaWV3U3RhcnQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 

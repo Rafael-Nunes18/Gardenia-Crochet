@@ -10,7 +10,6 @@ grid-template-columns: 1fr 2fr;
 height: 100vh;
 }
  
-/*Lado esquerdo*/
 .lado_esquerdo
 {
     display: flex;
@@ -45,7 +44,6 @@ height: 100vh;
     font-family: 'Poppins';
     color: var(--bege-claro);
 }
-/*Lado direito*/
 .lado_direito
 {
     display: flex;
@@ -126,7 +124,7 @@ input
     position: absolute;
     right:5%;
     top: 85%;
-    transform: translateY(-50%); /*move o elemento para cima, metade da usa propria altura*/
+    transform: translateY(-50%); 
 }
 
 .botao_login
@@ -171,12 +169,11 @@ input
     font-weight: 600;
     text-align: center;
     margin-top: 20px;
-    display: none; /*Esconde o elemento na tela*/
+    display: none; 
 }
 
 
 
-/*! AJUSTES RESPONSIVIDADE -MEDIA QUERY */
 
 @media (max-width: 900px) {
     .login {
@@ -193,10 +190,7 @@ input
         max-width: 55%;
     }
 
-   /* .logo {
-        display: none;
-    }
-*/
+
 }
 
 @media (max-width: 600px) {

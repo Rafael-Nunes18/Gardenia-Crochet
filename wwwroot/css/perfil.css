@@ -3,9 +3,6 @@ body {
   background-color: var(--bege-claro);
 }
 
-/*===================*/
-/*===== HEADER =====*/
-/*===================*/
 
 .cabecalho {
   width: 100%;
@@ -133,9 +130,7 @@ button {
   cursor: pointer;
 }
 
-/*===================
-PAINEIS ACIMA
-===================*/
+
 main {
   height: 100vh;
   width: auto;
@@ -239,9 +234,7 @@ main {
   margin-bottom: 10px;
 }
 
-/*===================
-PAINEIS ABAIXO
-===================*/
+
 
 .painel-abaixo {
   margin-top: 2vh;

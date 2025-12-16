@@ -4,12 +4,9 @@
 :root
 {
     --cinza: #62727F;
-    --borda-cinza: #444F58;
+    --borda-cinza: #444F58;  
+
 }
-/* 
-  font-family: "Poppins", sans-serif;
-  font-family: "Lobster", sans-serif;
-*/
 
 body
 {
@@ -311,11 +308,6 @@ body
     flex-direction: column;
 }
 
-/* Titulo abaixo garai 
-    
-    o Rua, Numero, Bairro, Cidade, Estado, CEP e Nome 
-    
-*/
 
 
 .titulo
@@ -390,7 +382,6 @@ body
 
 
 
-/* Formas Pagamento:droptable vulgo capeta*/
 
 .formas-pagamento
 {
@@ -411,7 +402,6 @@ body
 {
     background-color: var(--cinza-branco);
     width: 70%;
-    /* height: 2.5vw;     */
     height: 4vh;    
     font-size: .9vw;
     font-family: var(--Inter);
@@ -473,14 +463,13 @@ input[type="radio"] {
   padding-left: .1vw;
 }
 
-/* lista de opções - inicialmente escondida */
 #opcoes {
   margin-top: .25rem; 
   background-color: var(--cinza-branco); 
   margin-top: .25rem; 
   border-radius: .5vw;
   width: 13vw;
-  display: none; /* controlado via JS */
+  display: none; 
   background-color: var(--cinza-branco); 
 }
 
@@ -525,17 +514,14 @@ input[type="radio"] {
 }
 
 .pix, .cartao, .boleto {
-  /* width: 1.5vw; */
    color: black;
 }
 
-/* REMOVE a bolinha padrão do radio (sem ponto interno).
-   Indicação de seleção: muda a borda e adiciona leve halo, sem 'bolinha' preenchida. */
+
 .opcao input[type="radio"] {
   -webkit-appearance: none;
   appearance: none;
-  /* width: 1rem; */
-  /* height: 1rem; */
+ 
   border-radius: 50%;
   border: 1px solid #AFA8B6;
   background-color: transparent;
@@ -547,32 +533,26 @@ input[type="radio"] {
 
 }
 
-/* checked: sem preenchimento interno (sem bolinha), apenas cor/borda */
 .opcao input[type="radio"]:checked {
-  background-color: transparent; /* sem bolinha */
+  background-color: transparent; 
   border-color: #A881E6;
-  box-shadow: 0 0 0 3px rgba(168,129,230,0.08); /* halo suave opcional */
+  box-shadow: 0 0 0 3px rgba(168,129,230,0.08);
   
 }
 
-/* open state: #opcoes é irmão direto (adjacent) do container .dropdown */
 .dropdown.open + #opcoes {
   display: block;
 }
 
-/* seta rotaciona quando a div container tem .open */
 .dropdown.open #seta-img {
   transform: rotate(180deg);
 }
 
-/* foco acessível */
 .opcao:focus-within{
-  /* outline: 1px solid #A881E6; */
   background-color: var(--cinza-azulado);
   
 }
 
-/* Destaque para a opção selecionada: altera label e ícone (não background) */
 .opcao--selected .texto-complementar1,
 .opcao:focus-within .texto-complementar1 {
   color: #ffffff !important;
@@ -605,8 +585,7 @@ input[type="radio"] {
     justify-content: center;
     text-align: center;
     align-items: center;
-    /* height: 25vw; */
-    /* height: 29rem; */
+
     margin: 2%;
     border-radius: 1vw;
     width: 18vw;
@@ -652,12 +631,10 @@ input[type="radio"] {
     display: none;
     grid-template-columns: 1fr 1fr;
     gap: 1vw;
-    /* width: 100%; */
-    /* width: 27vw; */
+
     width: 27vw;
     padding-right: 10vw;
     height: 18vw;
-    /* height: 40vh; */
     margin-left: -4%;
     border-radius: 2vw;
 
@@ -849,12 +826,7 @@ input[type="radio"] {
 
 
 
-/* 
-    =============
-    botão prosseguir 
-    =============
 
-*/
 
 
 .botao-prosseguir
@@ -1029,7 +1001,6 @@ input[type="radio"] {
 {
     width: 100%;
     height: clamp(2vh, 3vw, 3vh);
-    /* height: 2vh; */
 }
 
 #pagamentoSelecionado
