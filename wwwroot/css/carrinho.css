@@ -1,0 +1,1160 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+:root
+{
+    --cinza: #62727F;
+    --borda-cinza: #444F58;
+    font-family: "Poppins", sans-serif;
+    font-family: "Lobster", sans-serif;
+}
+
+
+
+body
+{
+    box-sizing: border-box;
+    background-color: var(--bege-claro);
+
+}
+
+
+.link-voltar
+{
+    display: inline-flex;
+    align-items: center;
+    color: var(--cinza);
+    text-decoration: none;
+    cursor: default;
+    gap: 1.5vw;
+
+}
+
+.icone-voltar
+{
+    width: 3.5vw;
+    cursor: pointer;
+    color: var(--cinza);
+    transition: transform 0.4s ease;
+    
+}
+
+.icone-voltar:hover
+{
+    transform: #000000;
+}
+
+.texto-voltar
+{
+    font-family: var(--Poppins);
+    font-size: 1vw;
+    cursor: pointer;
+}
+
+.tela
+{
+    display: grid;  
+    grid-template-columns: 1fr 1fr;
+    
+}
+
+.lado-esquerdo
+{
+    
+    display: grid;
+    grid-template-columns: 1fr; 
+    display: flex;
+    flex-direction: column;
+    border-radius: 1vw;
+    background-color: transparent;
+
+    margin: 6% 2% 5% 2.5%;
+    padding: 1% 4% 0% 4.5%; 
+}
+
+.titulo-esquerda, .titulo-direita
+{
+    font-family: var(--Lobster);
+    font-size: 2.9vw;
+    color: var(--marrom);
+    text-align: center;
+    margin-bottom: 4%;
+}
+
+.carrinho
+{
+    
+    border: .8vw solid var(--cinza-claro-azulado);
+    border-radius: .5vw;
+    padding: 3.5% 2%;
+     height: 90%; 
+}
+
+
+.produtos
+{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2vw;
+    margin: 2% 2%;
+     padding: 2% 2%; 
+}
+.produto-selecionado
+{
+    list-style: none;
+    display: grid;
+    grid-template-columns: .1fr 1fr .4fr;
+}
+
+.produto-img
+{
+    width: 12.5vw;
+    height: 100%;   
+    margin-right: 2vw;
+}
+
+.produto-dados
+{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+ .produto-nome, .produto-dados, #ID, .produto-preco
+{
+    font-family: var(--Poppins);
+    font-size: 1.2vw;
+    font-weight: 550;
+    color: var(--cinza-azulado);
+} 
+
+.produto-nome
+{
+    margin-bottom: 0%;
+    font-size: 1.3vw;
+    font-weight: 800;
+    color: var(--marrom);
+}
+
+.produto-informacoes
+{
+    padding-top: 4%;
+    font-family: var(--Poppins);
+    font-size: 1.2vw;
+    font-size: 1.3em; 
+    font-weight: 550;
+    color: var(--cinza-azulado);
+    display: flex;
+    flex-direction: column;
+    gap: .5vw;
+}
+
+.produto-quantidade
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40%;
+}
+
+.delete-img
+{
+    width: 2vw;
+    margin-left: 6.5vw;
+    padding-top: .5vw;
+}
+
+.produto-coordenar
+{
+    margin-top: 40%;
+    display: inline-flex;
+    border: 1px solid var(--marrom);
+    border-radius: .3vw;
+    gap: .3vw;
+}
+
+ .produto-coordenar
+{
+    display: inline-flex;
+    border: 1px solid var(--marrom);
+    border-radius: .3vw;
+    gap: .3vw;
+}
+
+.produto-quantidade
+{
+    display: inline-flex;
+    padding-top: 12.4rem; 
+    padding-top: 9.2vw;
+    font-size: 1vw;
+    align-items: center;
+    justify-content: center;
+} 
+
+.produto-diminuir, .produto-aumentar
+{
+    background-color: var(--marrom);
+    color:#F2E0C0;
+     width: 2vw; 
+    font-size: 1.5vw;
+    display: flex;
+    justify-content: center;
+    height: 40%;
+}
+
+.produto-aumentar:hover, .produto-diminuir:hover
+{
+    cursor: pointer;
+    background-color: #362e26d6;
+}
+
+
+.produto-quantia
+{
+    display: flex;
+    justify-content: center;
+    width: 1vw;
+    font-size: 1.3vw;
+    margin: 0 .1vw;
+    color: black;
+    font-weight: 500;
+}
+
+.produto-diminuir, .produto-quantia, .produto-aumentar
+{
+    font-family: var(--Poppins);
+    font-size: clamp(1vw, 1.5vw, 4rem);
+    display: flex;
+    align-items: center;
+    height: clamp(1vh, 3vw, 4rem);
+    width: 2.5vw;
+}
+
+.linha-divisoria
+{
+    margin: 1% 0;
+    border-radius: .2vw;
+    width: 100%;
+    border-bottom: .5vw solid var(--marrom); 
+    border-bottom: .2vw solid var(--cinza-azulado);
+}
+
+.preco-total
+{
+    margin-top: 5%;
+    margin-bottom: 2%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    
+    font-family: var(--Poppins);  
+    font-weight: 600;
+    font-size: 1.3vw;
+    color: var(--marrom);
+}
+
+.texto-total
+{
+    display: inline-flex;
+    gap: .4vw;
+}
+
+.lado-direito
+{
+    display: grid;
+    grid-template-columns: 1fr;
+    border-radius: 1vw;
+    background-color: transparent;
+
+    margin: 6% 2.5% 37% 2%;
+    margin: 6% 2.5% 0% 2%; 
+    padding: 1% 4% 0% 4.5%; 
+}
+
+.informacoes-endereco
+{
+    border: .8vw solid var(--borda-cinza);
+    background-color: var(--cinza-azulado); 
+    background-color: var(--cinza-claro-azulado);
+    border-radius: .5vw;
+    padding: 3.5% 2%;
+    display: grid;
+    gap: 1vw;
+    margin-bottom: 20%;
+     height: 70vw; 
+}
+
+.endereco-titulo
+{
+    font-family: var(--Poppins);
+    color: var(--marrom);
+    font-weight: 600;
+    font-size: 2vw;
+}
+
+.inserir-informacoes
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100%;
+}
+
+.enderecos
+{
+    color: var(--bege-claro);
+     display: grid;
+     grid-template-rows: 1fr 1fr; 
+     gap: 15%; 
+     gap: 2%; 
+    margin-bottom: 9%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Titulo abaixo garai 
+    
+    o Rua, Numero, Bairro, Cidade, Estado, CEP e Nome 
+    
+*/
+
+
+.titulo
+{
+    font-size: 1.59vw;
+    font-family: var(--Poppins);
+    font-weight: 700;
+    color: var(--bege-claro);
+    white-space: nowrap;
+}
+
+
+
+.inputs
+{
+    border: none;
+    border-radius: .5vw;
+    font-size: 1vw;
+    font-family: var(--Poppins);
+    background-color: var(--cinza-branco);
+    color: black;
+    padding: 0 .7vw;
+    height: 2.5vw;
+    height: 2.4rem; 
+    width: 20vw; 
+    width: 100%;
+
+     
+}
+
+.ruas 
+{
+    width: 30vw;
+    margin-right: 2.5vw; 
+}
+
+.numeros
+{
+    width: 12vw;
+    margin-left: 2.5vw;
+}
+
+.estados
+{
+    width: 19vw;
+}
+
+.cidades
+{
+    width: 22vw;
+    margin-left: -7.5vw;
+}
+
+.bairros
+{
+    width: 24vw;
+}
+
+.ceps
+{
+    width: 14vw;
+}
+
+#nome-input
+{
+    width: calc(100% + 14vw);
+}
+
+
+
+
+
+
+
+/* Formas Pagamento:droptable vulgo capeta*/
+
+.formas-pagamento
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1vw; 
+}
+
+.pagamento-selecao
+{
+    display: flex;
+    flex-direction: column;
+    gap: 2.5%;
+}
+
+
+#formaPagamento, option
+{
+    background-color: var(--cinza-branco);
+    width: 70%;
+    height: 2.5vw;     
+    height: 4vh;    
+    font-size: .9vw;
+    font-family: var(--Inter);
+    color: var(--cinza-azulado);
+    font-weight: 600;
+    border-radius: .5vw;
+    padding-left: 5%;
+}
+
+input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+:root {
+  background-color: black;
+  color: #EDEAF0;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+.select {
+    font-family: "Inter", sans-serif;
+    color: black;
+}
+
+#selecionarPagamento-menu {
+    margin-top: .5vh;
+    display: flex;
+    padding: .75rem;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: .5vw;
+    border: 1px solid #252529; 
+    background-color: var(--cinza-branco);
+    
+    width: 13vw;
+    cursor: pointer;
+    user-select: none;
+    height: 4vh;         
+    height: 3rem; 
+    /* PORRRRRRRRRRRA */
+}
+
+#pagamentoSelecionado {
+  color: var(--cinza-azulado);
+  font-size: 1vw;
+  font-family: var(--Inter);
+  font-weight: 600;
+}
+
+#seta-img {
+  transition: transform .25s ease;
+  width: 1.5vw;
+  height: 2.5rem;
+  padding-left: .1vw;
+}
+
+/* lista de opções - inicialmente escondida */
+#opcoes {
+   margin-top: .25rem; 
+  background-color: var(--cinza-branco); 
+  margin-top: .25rem; 
+  border-radius: .5vw;
+  width: 13vw;
+  display: none; /* controlado via JS */
+  background-color: var(--cinza-branco); 
+}
+
+.select
+{
+    background-color: var(--cinza-branco);
+    width: 13vw;
+    border-radius: .5vw;    
+}
+
+.opcao {
+    display: flex;
+    align-items: center;
+    border-radius: .5vw;
+    margin-bottom: .01vw;
+    /* padding: 0.9rem 1rem; */
+    padding: 2.5vh 1vw;
+    width: 100%;
+    /* border-bottom: 1px solid #252529; */
+    transition: background-color .18s ease;
+    cursor: pointer;
+    background-color: var(--cinza-branco);
+    height: 3vh;
+
+}
+
+.opcao:hover {
+   background-color: #0000ff; 
+}
+
+.texto-complementar1 {
+  font-family: var(--Inter);
+  font-size: 1vw;
+  color: var(--cinza-azulado);
+  font-weight: 500;
+  flex: 1;
+}
+
+.img-svg {
+  width: 1.3vw;
+
+}
+
+.pix, .cartao, .boleto {
+   width: 1.5vw; 
+   color: black;
+}
+
+/* REMOVE a bolinha padrão do radio (sem ponto interno).
+   Indicação de seleção: muda a borda e adiciona leve halo, sem 'bolinha' preenchida. */
+.opcao input[type="radio"] {
+  -webkit-appearance: none;
+  appearance: none;
+   width: 1rem; 
+   height: 1rem; 
+  border-radius: 50%;
+  border: 1px solid #AFA8B6;
+  background-color: transparent;
+  margin: 0;
+  margin-right: .5rem;
+  cursor: pointer;  
+  display: inline-block;
+  vertical-align: middle;
+
+}
+
+/* checked: sem preenchimento interno (sem bolinha), apenas cor/borda */
+.opcao input[type="radio"]:checked {
+  background-color: transparent; /* sem bolinha */
+  border-color: #A881E6;
+  box-shadow: 0 0 0 3px rgba(168,129,230,0.08); /* halo suave opcional */
+  
+}
+
+/* open state: #opcoes é irmão direto (adjacent) do container .dropdown */
+.dropdown.open + #opcoes {
+  display: block;
+}
+
+/* seta rotaciona quando a div container tem .open */
+.dropdown.open #seta-img {
+  transform: rotate(180deg);
+}
+
+/* foco acessível */
+.opcao:focus-within{
+ outline: 1px solid #A881E6; 
+  background-color: var(--cinza-azulado);
+  
+}
+
+/* Destaque para a opção selecionada: altera label e ícone (não background) */
+.opcao--selected .texto-complementar1,
+.opcao:focus-within .texto-complementar1 {
+  color: #ffffff !important;
+}
+
+/* ícone branco via filtro (para SVG/PNG monocromáticos usados com <img>) */
+
+/* Pequeno hover para feedback (sem alterar cor principal) */
+
+/* foco por teclado (mais visível) */
+.opcao:focus {
+  outline: 2px solid rgba(168,129,230,0.25);
+  outline-offset: 2px;
+  border-radius: .5vw;
+  color:  var(--cinza-branco); 
+}
+
+/*
+Droptable:
+ordem:
+Pix
+Cartao
+Boleto
+*/
+
+.pagamento-selecionado
+{
+    margin-top: 15%;
+    display: flex;
+}
+
+.pix-selecionado
+{
+    
+    background-color: var(--cinza-azulado);
+    border: 5px solid var(--borda-cinza);
+    display: flex;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    height: 25vw; 
+    height: 29rem; 
+    margin: 2%;
+    border-radius: 1vw;
+    width: 18vw;
+}
+
+.img-selecionada
+{
+    padding-top: 2%;
+    width: 80%;
+    margin: 5% 5% 0% 5%;
+    padding-bottom: 10%;
+}
+
+
+
+
+.texto-complementar
+{
+    font-family: var(--Poppins);
+    color: var(--marrom);
+    text-align: center;
+    font-size: 1.8vw;
+    font-weight: 700;
+}
+
+
+
+
+.pix-pagamento 
+{
+    margin-left:  2vw;
+    margin-right: 2vw;
+    margin-bottom: 10%;
+    font-size: 1.5vw;
+    
+}
+.cartao-selecionado
+{
+    background-color: var(--cinza-azulado);
+    border: 5px solid var(--borda-cinza);
+
+    display: grid;
+    display: none;
+    grid-template-columns: 1fr 1fr;
+    gap: 1vw;
+    width: 100%; 
+    width: 27vw; 
+    width: 27vw;
+    padding-right: 10vw;
+    height: 18vw;
+    height: 40vh; 
+    margin-left: -4%;
+    border-radius: 2vw;
+
+
+}
+
+.esquerda-cartao, .direita-cartao
+{
+    margin-top: 1.5vh;    
+}
+
+.esquerda-cartao
+{
+    margin-left: 5%;
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+}
+
+.direita-cartao
+{
+    margin-right: 5%;
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+}
+
+
+.cartao
+{
+    font-size: .8vw;
+    white-space: nowrap;
+}
+
+.cartaos
+{
+    border: none;
+    border-radius: .5vw;
+    font-size: .9vw;
+    font-family: var(--Poppins);
+    color: #62727F;
+
+    width: 60%;
+    height: 1.9vw;
+    text-align: justify;
+    text-justify:inter-word;
+    padding: 0 .1vw;
+}
+
+#numero-cartao
+{
+    width: 14vw;
+}
+
+#cpf
+{
+    width: 10vw;
+}
+
+.texto-complementar, .cartao
+{
+    text-align: left;
+}
+
+#nome-colocar
+{
+    width: 100%;
+}
+
+.validade
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.inputs-inline
+{
+    display: inline-flex;
+    gap: 1vw;
+}
+
+#mes
+{
+    width: 5.5vw;
+    text-align: center;
+}
+
+#ano
+{
+    width: 3.45vw;
+    text-align: center;
+}
+
+#cvv
+{
+    margin-top: 1%;
+    width: 3vw;
+    height: 2vw;
+    text-align: center;
+}
+
+.cartao-concluir
+{
+    margin-left: 5%;
+    border-radius: .5vw;
+    background-color: var(--cinza-claro-azulado);
+    border: 2px solid #444F58;
+    color: var(--marrom);
+    text-align: center;
+    font-family: var(--Poppins);
+    font-weight: 600;
+    font-size: 1.1vw;
+    width: 80%;
+    height: 2.8vw;
+    margin-top: 10%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cartao-concluir:hover
+{
+    background-color: transparent;
+    color: var(--cinza-branco);
+    border: 2px solid var(--cinza-branco);
+    
+}
+
+.boleto-selecionado
+{
+    display: flex;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--cinza-azulado);
+    border: 5px solid var(--borda-cinza);
+
+    margin: 2%;
+
+    border-radius: 1vw;    
+    width: 25vw;
+    height: 100%;
+    gap: 2vw;
+}
+
+.titulo-complementar
+{
+    font-family: var(--Poppins);
+    color: var(--marrom);
+    text-align: center;
+    margin: 0 1vw;
+    padding-top: 1vh;
+    font-size: 1.6vw;
+    font-weight: 700;
+    margin-top: 5%;
+}
+
+.boleto-img
+{
+    width: 30%;
+}
+
+.boleto-botao
+{
+    margin-left: auto;
+    margin-right: auto;
+    width: 35%;
+    height: 10%;
+    border-radius: .5vw;
+    color: var(--marrom);
+    background-color: var(--cinza-claro-azulado);    
+    border: 2px solid #444F58;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 0.8vw;
+    text-align: center;
+    margin-bottom: 10%;
+}
+
+.boleto-botao:hover
+{
+    background-color: transparent;
+    color: var(--cinza-branco);
+    border: 2px solid var(--cinza-branco);
+    
+}
+
+
+
+
+/* 
+    =============
+    botão prosseguir 
+    =============
+
+*/
+
+
+.botao-prosseguir
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: .5vw;
+    background-color: var(--cinza-claro-azulado);
+    border: 2px solid var(--cinza-azulado);
+    text-decoration: none;
+    color: var(--marrom);
+    text-align: center;
+    font-family: var(--Poppins);
+    font-weight: 600;
+    font-size: 1.5vw;
+    width: 90%;
+    margin: 20% 1% 0 1%; 
+     margin-top: 20%; 
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.botao-prosseguir:hover
+{
+    background-color: transparent;
+    color: var(--cinza-azulado);
+}
+
+
+
+.opcao:hover
+{
+    cursor: pointer;
+}
+
+
+@media (max-width: 768px){
+
+    .icone-voltar{
+        width: 6vw;
+    }
+
+    .texto-voltar
+    {
+        font-size: 2vw;
+    }
+
+ .tela
+ {
+    display: flex;
+    flex-direction: column;
+
+ }   
+
+ .lado-esquerdo
+ {
+    margin: auto;
+    width: 60vw;
+    height: clamp(60vh, 80vh, 100%);
+ }
+ .carrinho
+ {
+    height: 100%;
+ }
+
+ .produto-img
+ {
+    width: clamp(10vw, 19vw, 20rem);
+
+ }
+
+ .produto-informacoes, .produto-nome
+ {
+    font-size: clamp(1vw, 2vw, 4rem);
+ }
+
+
+ .produto-diminuir, .produto-quantia, .produto-aumentar {
+    font-family: var(--Poppins);
+    display: flex;
+    align-items: center;
+    height: 2.5vw;
+    width: 2.5vw;
+}
+
+ .lado-direito
+ {
+    margin-top: 20%;
+    display: flex;
+    flex-direction: column;
+    margin: 5% auto auto auto;
+    width: 50vw;
+    align-items: center;
+    height: clamp(60vh, 80vh, 100%);
+}
+
+
+
+.informacoes-endereco
+{
+    height: clamp(85vh, 90vh, 100%);
+    padding-bottom: 10%;
+    width: 60vw;
+}
+
+.inputs
+{
+    font-size: 1.34vw;
+}
+
+#rua-input
+{
+    width: 39vw;
+    
+}
+
+.titulo
+{
+    font-size: 2.0vw;
+}
+
+.numeros
+{
+    margin-left: 14vw;
+}
+
+.cidades
+{
+    margin-left: 3.9vw;
+}
+
+#estado-input
+{
+    width: 28vw;
+}
+
+.bairros
+{
+    width: 30vw;
+}
+
+.ceps
+{
+    margin-left: 8vw;
+    width: 18vw;
+}
+
+.nomes
+{
+    width: calc(100% + 12vw);
+}
+
+.select
+{
+    width: 18vw;
+}
+
+#opcoes
+{
+    width: auto;
+}
+
+.opcao
+{
+    width: 18vw;
+}
+
+#selecionarPagamento-menu
+{
+    width: 100%;
+    height: clamp(2vh, 3vw, 3vh);
+    /* height: 2vh; */
+}
+
+#pagamentoSelecionado
+{
+    white-space: nowrap;
+    font-size: clamp(1.4vw, 1.5vw, 4rem);
+}
+
+#seta-img
+{
+    width: 3vw;
+}
+
+.texto-complementar1
+{
+    font-size: clamp(1.7vw, 1.9vw, 4rem);
+}
+
+.img-svg
+{
+    width: clamp(2vw, 3vw, 4rem);
+}
+
+.pix-selecionado
+{
+    width: 25vw;
+    margin-left: auto;
+}
+
+
+ 
+
+.cartao-selecionado
+{
+    width: 35vw;
+    height: clamp(20vh, 21vh, 30vh);
+    gap: 2vw;
+}
+
+.cartao
+{
+    font-size: 1.4vw;
+}
+
+.cartaos
+{
+    font-size: 1.2vw;
+    height: 2.5vw;
+}
+
+#cvv
+{
+    width: 5vw;
+    height: clamp(2.5vh, 3vw, 3vh);
+}
+
+.cartao-concluir
+{
+    margin-top: 20%;
+    width: 90%;
+    height: clamp(3vh, 3vw, 4vh);
+    font-size: 1.4vw;
+}
+
+
+.boleto-selecionado
+{
+    width: 30vw;
+
+}
+
+.titulo-complementar
+{
+    font-size: clamp(2vw, 3vw, 4rem);
+}
+
+.boleto-img
+{
+    width: 40%;
+}
+
+.boleto-botao
+{
+    font-size: clamp(1vw, 2vw, 3rem);
+    width: 59%;
+    white-space: nowrap;
+    height: clamp(2vh, 6vw, 5vh);
+}
+
+.botao-prosseguir
+{
+    font-size: clamp(2vw, 3vw, 4rem);
+    width: 90%;
+    height: clamp(4vh, 5vw, 5vh);
+}
+
+.produto-coordenar
+{
+    margin-top: 40%;
+    display: inline-flex;
+    border: .5vw solid var(--marrom); 
+    border-radius: .3vw;
+    gap: .3vw;
+}
+
+
+
+.pix-pagamento
+{
+    font-size: clamp(1vw, 2.5vw, 4rem);
+}
+
+.preco-total
+{
+    font-size: clamp(1.5vw, 2.3vw, 4rem);
+}
+}

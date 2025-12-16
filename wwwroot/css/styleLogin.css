@@ -139,11 +139,11 @@ input
     border-color: var(--borda-azul-escura);
     border-radius: 10px;
     font-weight: 600;
-<<<<<<< HEAD:wwwroot/css/styles.css
+
     font-size: 20px; ;
-=======
+
     font-size:  20px; 
->>>>>>> 171399d6080b09c1a848a1754b7b868eb726a6f5:wwwroot/styles/styleLogin.css
+
     width: 100%;
 }
 

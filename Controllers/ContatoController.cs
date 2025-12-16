@@ -1,10 +1,8 @@
-
 using Microsoft.AspNetCore.Mvc;
-
 
 namespace Gardenia_MVC.Controllers
 {
-    public class CadastroController : Controller
+    public class ContatoController : Controller
     {
         public IActionResult Index()
         {
@@ -12,5 +10,3 @@ namespace Gardenia_MVC.Controllers
         }
     }
 }
-
-

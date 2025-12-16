@@ -18,15 +18,15 @@
       <div class="linha-separadora"></div>
       <li class="nav-links">
         <a href="@Url.Action("Index", controller: "Portfolio")" class="link-ativo sub-texto" id="portifolio">Portfólio</a>
-        <a href="#" class="link-ativo sub-texto" id="Encomenda">Encomenda</a>
-        <a href="#" class="link-ativo sub-texto" id="Carrinho">Carrinho</a>
-        <a href="#" class="link-ativo sub-texto" id="Contato">Entre em Contato</a>
+        <a href="@Url.Action("Index", controller: "Encomenda")" class="link-ativo sub-texto" id="encomenda">Encomenda</a>
+        <a href="@Url.Action("Index", controller: "Carrinho")" class="link-ativo sub-texto" id="carrinho">Carrinho</a>
+        <a href="@Url.Action("Index", controller: "Contato")" class="link-ativo sub-texto" id="contato">Contato</a>
       </li>
       <div class="linha-separadora"></div>
 
       <li class="perfil-links">
-        <a href="@Url.Action("Index", controller: "Perfil")" class="link-ativo sub-texto" id="perfil">Perfil</a>
-        <button type="submit" onclick="console.log('eh')"><img class="login" src="assets/svg/perfil.svg" alt=""></button>
+        <a href="@Url.Action(action: "Index", controller: "Perfil")" class="link-ativo sub-texto" id="perfil">Perfil</a>
+        <button type="submit" onclick="console.log('eh')"><img class="login" src="/assets\Logos/Portfolio/Perfil.png" alt=""></button>
       </li>
     </ul>
   </nav>
@@ -72,7 +72,8 @@
 
     </div>
 
-    <a href="" class="link" id="">Confira nosso portifólio!</a>
+           <a href="@Url.Action("Index", controller: "Portfolio")" class="link-ativo sub-texto" id="portifolio">Confira nosso portifólio!</a>
+
     
   </section>
 
