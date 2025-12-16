@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/styleGlobal.css">
+
+</head>
+
+<body>
+
+  <!-- ************************************-->
+  <!--               HEADER                -->
+  <!-- ************************************-->
+
+  <header>
+    <nav class="navegacao">
+      <ul class="lista-menu">
+        <li><img src="assets/img/logoR.png" alt="logo-gardenia-crochet" class="logo"></li>
+
+        <div><hr class="linha-separadora-1"></div>
+
+        <li class="nav-links">
+          <a href="#" class="link-ativo" id="portfolio">Portfólio</a>
+          <a href="#" class="link-ativo" id="Encomenda">Encomenda</a>
+          <a href="#" class="link-ativo" id="Carrinho">Carrinho</a>
+          <a href="#" class="e-e-contato" id="Contato">Entre em Contato</a>
+        </li>
+
+        <div><hr class="linha-separadora-2"></div>
+
+        <li class="perfil-links">
+          <a href="#" class="perfil-texto" id="perfil">Perfil</a>
+          <button type="submit" onclick="console.log('eh')"><img class="img-perfil" src="assets/svg/perfil.svg"alt=""></button>
+        </li>
+      </ul>
+    </nav>
+
+    <section class="secao-banner">
+      <h1 class="titulo-banner">
+        Bem-vindo(a) ao
+        <br>
+        Gardênia Crochet.
+      </h1>
+      <p class="texto-sobre">
+        Aceitamos encomendas , usamos referências desejadas <br>
+        e trabalhamos com fio conduzido.</p>
+      <p class="link-encomenda">Encomende já!</p>
+    </section>
+
+  </header>
+  <!-- ************************************-->
+
+
+  <main>
+
+    <!-- ************************************-->
+    <!--            SEÇÃO MODELOS            -->
+    <!-- ************************************-->
+    <section class="modelos">
+
+      <div class="cabecalho-modelos">
+
+        <h2 class="texto-titulo">Modelos</h2>
+        <hr class="linha-divisoria">
+        </hr>
+      </div>
+      <div class="modelos-grid">
+        <div class="modelo">
+          <div class="modelo-img" id="modelo1"></div>
+          <p class="modelo-texto">Bolsas</p>
+        </div>
+        <div class="modelo">
+          <div class="modelo-img" id="modelo2"></div>
+          <p class="modelo-texto">Croppeds</p>
+        </div>
+        <div class="modelo">
+          <div class="modelo-img" id="modelo3"></div>
+          <p class="modelo-texto">Porta-joias</p>
+        </div>
+
+      </div>
+
+      <a href="" class="link-portifolio" id="">Confira nosso portifólio!</a>
+
+    </section>
+    <!-- ************************************-->
+
+
+    <!-- ************************************-->
+    <!--              SOBRE NÓS              -->
+    <!-- ************************************-->
+    <article class="sobre-nos">
+      <div class="painel-esquerdo">
+        <p class="texto-titulo">“Cada ponto é um detalhe, cada peça é uma história.”</p>
+        <p class="texto-esquerdo">
+          A Gardênia Crochet é mais do que uma loja — é um espaço dedicado a valorizar a arte do crochê,
+          mostrando como essa técnica tradicional pode ser ao mesmo tempo sustentável,
+          elegante e cheia de significado.
+          <br><br>
+          Cada ponto carrega cuidado, criatividade e o compromisso com uma produção mais consciente e
+          sustentável.
+          Roupas, acessórios, peças de decoração ou presentes especiais: tudo pode ser feito com carinho e
+          qualidade.
+          Transformamos fios em afeto, e ideias em realidade.
+        </p>
+      </div>
+
+      <div class="painel-direito">
+        <div class="direito-imagem" id="direito-catarina"></div>
+      </div>
+
+    </article>
+    <!-- ************************************-->
+
+
+
+    <!-- ************************************-->
+    <!--               CONTATO               -->
+    <!-- ************************************-->
+    <section class="contato">
+      <h2 class="texto-titulo">Contato</h2>
+      <hr class="linha-divisoria" id="">
+      </hr>
+      <article class="dados">
+        <aside class="informacoes">
+          <ul class="contatos">
+            <li class="linha-contato">
+              <img src="assets/svg/whatsapp.svg" alt="" class="icone-contato">
+              <p class="texto-informacoes">+55 35998300652</p>
+            </li>
+
+            <li class="linha-contato">
+              <img src="assets/svg/telefone.svg" alt="" class="icone-contato">
+              <p class="texto-informacoes">35 3464-1020</p>
+            </li>
+
+            <li class="linha-contato">
+              <img src="assets/svg/email.svg" alt="" class="icone-contato">
+              <p class="texto-informacoes">gardeniacrochet86@gmail.com</p>
+            </li>
+
+            <li class="linha-contato">
+              <img src="assets/svg/localizacao.svg" alt="" class="icone-contato" id="local-contato">
+              <p class="texto-informacoes">R.Niteroi, 180 - São Caetano do Sul/SP <br> CEP: 09510-200</p>
+            </li>
+
+            <li class="linha-contato">
+              <img src="assets/svg/instagram.svg" alt="" class="icone-contato" id="instagram">
+              <p class="texto-informacoes">Instagram</p>
+            </li>
+          </ul>
+        </aside>
+
+        <aside class="lado-direito">
+          <form action="" class="mensagem">
+            <ul class="lista-inserir">
+              <li class="inserir">
+                <label for="email" class="titulo-caixa">E-mail:</label>
+                <input type="email" name="email" class="inserir-dados" placeholder="">
+              </li>
+              <li class="inserir">
+                <label for="telefone" class="titulo-caixa">Telefone:</label>
+                <input type="tel" name="telefone" class="inserir-dados" placeholder="">
+              </li>
+              <li class="inserir">
+                <label for="mensagem" class="titulo-caixa">Mensagem:</label>
+                <input type="text" name="mensagem" class="inserir-dados" placeholder="">
+              </li>
+            </ul>
+            <button type="submit" class="botao-envio">Enviar</button>
+          </form>
+        </aside>
+      </article>
+    </section>
+    <!-- ************************************-->
+  </main>
+
+
+  <!-- ************************************-->
+  <!--               FOOTER                -->
+  <!-- ************************************-->
+  <footer>
+    <article class="rodape-conteudo">
+      <img src="assets/img/logoR.png" alt="logo-rodape" class="logo-gardenia-crochet">
+      <nav>
+        <ul class="lista-rodape">
+          <li><a href="#" class="titulo-footer">Saiba mais</a></li>
+          <li><a href="#" class="nav-lists">Quem Somos?</a></li>
+          <li><a href="#" class="nav-lists">Portifólio</a></li>
+          <li><a href="#" class="nav-lists">Encomende</a></li>
+        </ul>
+
+
+        <ul class="lista-rodape">
+          <li><a href="#" class="titulo-footer" id="titulo-footer">Trabalhe Conosco</a>
+          </li>
+          <li><a href="#" class="nav-lists">Vagas Abertas!</a></li>
+        </ul>
+
+        <div class="procurar">
+          <input type="text" class="procurar-campo" placeholder="O que você procura?">
+          <button type="submit" class="procurar-enviar"><img src="assets/svg/lupinha.svg" alt=""
+              class="procurar-botao"></button>
+        </div>
+      </nav>
+    </article>
+
+    <hr class="linha-footer" id="linha-footer">
+    </hr>
+    <p class="direitos"> Todos os direitos reservados | TM® & Copyright © 2025 Senai "Paulo Antônio Skaf"</p>
+
+  </footer>
+
+  <!-- ************************************-->
+</body>
+
+</html>
