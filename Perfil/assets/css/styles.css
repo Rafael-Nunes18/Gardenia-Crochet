@@ -23,7 +23,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1%;
 }
 
 .logo-header {
@@ -239,6 +238,14 @@ main {
   margin-bottom: 10px;
 }
 
+.endereco-responsividade {
+  display: none;
+}
+
+.endereco-titulo {
+  display: none;
+}
+
 /*===================
 PAINEIS ABAIXO
 ===================*/
@@ -259,7 +266,7 @@ PAINEIS ABAIXO
   font-size: 3rem;
   font-weight: 200;
   text-align: center;
-  margin-right: 120px;
+  margin-left: 30px;
 }
 
 .titulo-painel-abaixo-2 {
@@ -267,7 +274,7 @@ PAINEIS ABAIXO
   font-size: 3rem;
   font-weight: 200;
   text-align: center;
-  margin-right: 300px;
+  margin-right: 100px;
 }
 
 .fundo-pedidos {
@@ -275,7 +282,7 @@ PAINEIS ABAIXO
   border: 5px solid var(--borda-azul-escura);
   border-radius: 10px;
   height: 460px;
-  width: 75%;
+  width: 85%;
   color: var(--cinza-branco);
   margin-left: 50px;
 }
@@ -330,11 +337,12 @@ PAINEIS ABAIXO
 }
 
 .fundo-avaliacoes {
-  border: 5px solid var(--borda-azul-escura);
+  border: 5px solid var(--cinza-azulado);
   border-radius: 10px;
   height: 460px;
-  width: 65%;
+  width: 85%;
   color: var(--cinza-branco);
+  margin-left: 5px;
 }
 
 .pedido-id-2 {
@@ -370,4 +378,211 @@ PAINEIS ABAIXO
   margin-right: 80px;
   background-color: var(--marrom);
   color: var(--marrom);
+}
+
+/*===================
+RESPONSIVIDADE
+===================*/
+
+@media (max-width: 600px) {
+  .logo-header {
+    margin-left: 5px;
+    margin-right: 5px;
+    height: 70px;
+    width: 70px;
+  }
+
+  .logo-header:active {
+    border: none;
+  }
+
+  .linha-separadora-1 {
+    display: none;
+  }
+
+  .linha-separadora-2 {
+    display: none;
+  }
+
+  .lista-menu {
+    gap: 2%;
+  }
+
+  .poppins {
+    font-size: .8rem;
+  }
+
+  .entre-em-contato {
+    display: none;
+    font-size: 0px;
+  }
+
+  .contato {
+    display: flex;
+  }
+
+  #perfil {
+    display: none;
+  }
+
+  .perfil-foto {
+    height: 60px;
+    width: 60px;
+  }
+
+  .perfil-foto:active {
+    border: none;
+  }
+
+  main {
+    height: auto;
+  }
+
+  .painel-acima {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1%;
+  }
+
+  .foto {
+    margin-top: 5%;
+    margin-left: 0px;
+    height: auto;
+  }
+
+  .foto-perfil-main {
+    height: 130px;
+    width: auto;
+  }
+
+  .editar-perfil {
+    margin-top: 2vh;
+    padding: 0.5vh 1vw;
+    font-size: 1.3rem;
+  }
+
+  .info-usuario {
+    margin: 0px;
+    gap: 5px;
+    align-items: center;
+    text-align: center;
+  }
+  .nome-usuario {
+    font-size: 2.5rem;
+  }
+
+  .texto-informacoes {
+    font-size: 1.2rem;
+    line-height: 2.5rem;
+  }
+
+  .separador {
+    display: none;
+  }
+
+  .info-endereco {
+    display: flex;
+    align-items: center;
+    gap: 5%;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+  }
+
+  #rua, #numero, #estado, #cidade, #bairro, #cep {
+    display: inline;
+    flex-direction: row;
+  }
+
+  .endereco-normal {
+    display: none;
+  }
+
+  .endereco-responsividade {
+    display: inline;
+    flex-direction: row;
+    white-space: nowrap;
+  }
+
+  .endereco-titulo {
+    display: inline;
+    font-family: var(--Lobster);
+    font-size: 2.5rem;
+    font-weight: 200;
+    margin-top: 2vh;
+    margin-bottom: -5vh;
+  }
+
+  .painel-abaixo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 0px;
+  }
+
+  .titulo-painel-abaixo {
+    margin-left: -30px;
+    font-size: 2.5rem;
+  }
+
+  .titulo-painel-abaixo-2 {
+    margin-right: 10px;
+    margin-top: 25px;
+    font-size: 2.5rem;
+  }
+
+  .fundo-pedidos {
+    width: 100%;
+    height: 370px;
+    margin-left: 0px;
+    margin-bottom: 0vh;
+    border: none;
+    border-radius: 0%;
+  }
+
+  .pedido-img {
+    height: 120px;
+    width: auto;
+    margin-top: 15px;
+  }
+
+  .pedido-id {
+    font-size: 1.3rem;
+    margin-top: 15px;
+  }
+
+  .pedido-informacoes {
+    font-size: 1rem;
+  }
+
+  .pedido-preco {
+    font-size: 1.2rem;
+  }
+
+  .fundo-avaliacoes {
+    width: 100%;
+    height: 370px;
+    margin-left: 0px;
+    margin-top: 2vh;
+    border-radius: 0%;
+  }
+
+  .pedido-id-2 {
+    font-size: 1.3rem;
+    margin-top: 0px;
+  }
+
+  .pedido-informacoes-2 {
+    font-size: 1rem;
+  }
+
+  .estrela-preenchida {
+    height: 15px;
+    width: auto;
+  }
+
+  .estrela-sem-preenchimento {
+    height: 15px;
+    width: auto;
+  }
 }
